@@ -6,7 +6,7 @@
  *
  */
 #pragma once
-
+#include "ofMain.h"
 class TukeApp {
 public:
 	/** 

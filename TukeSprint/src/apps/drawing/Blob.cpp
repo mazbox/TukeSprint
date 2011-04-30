@@ -21,7 +21,9 @@ blob::blob(int a, int b, float aacc, float bacc, int s, string sound,ofColor col
 	color = col;
 
 	beats.loadSound(sound,true);
-	beats.setSpeed(pow(ABS(xacc)+ABS(yacc),0.3));
+	float zz = ABS(xacc)+ABS(yacc);
+	float v = powf(zz,0.3);
+	beats.setSpeed(v);
 	//cout << beats.getSpeed() << endl;
 	beats.setPan(x/ofGetWidth());
 	beats.setVolume(180./255.);

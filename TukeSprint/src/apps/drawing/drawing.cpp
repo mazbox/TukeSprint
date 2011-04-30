@@ -142,7 +142,7 @@ void drawing::update(){
 		float dist  = ofDist(_x, _y, lastPos.x,lastPos.y);
 		
 
-		float speed = pow(dist/time,0.3);
+		float speed = powf(dist/time,0.3);
 
 		
 		float newwidth = MAX(0.5,1/speed);

@@ -329,24 +329,6 @@
 										<string>AFB9C1B7136C61BF00E8A7C1</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>TukeApp.h</string>
-										<key>_historyCapacity</key>
-										<integer>0</integer>
-										<key>bookmark</key>
-										<string>AFB9C209136C6F8300E8A7C1</string>
-										<key>history</key>
-										<array>
-											<string>AFB9C1E9136C6F4300E8A7C1</string>
-											<string>AFB9C1EA136C6F4300E8A7C1</string>
-											<string>AFB9C1EB136C6F4300E8A7C1</string>
-											<string>AFB9C1EC136C6F4300E8A7C1</string>
-											<string>AFB9C1ED136C6F4300E8A7C1</string>
-											<string>AFB9C1EE136C6F4300E8A7C1</string>
-											<string>AFB9C1EF136C6F4300E8A7C1</string>
-											<string>AFB9C1F0136C6F4300E8A7C1</string>
-											<string>AFB9C1F1136C6F4300E8A7C1</string>
-											<string>AFB9C1F2136C6F4300E8A7C1</string>
-											<string>AFB9C1F4136C6F4300E8A7C1</string>
-										</array>
 									</dict>
 									<key>SplitCount</key>
 									<string>1</string>
@@ -359,18 +341,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1233, 440}}</string>
+								<string>{{0, 0}, {1233, 422}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1440 819 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>440pt</string>
+							<string>422pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>333pt</string>
+							<string>351pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -384,7 +366,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1233, 306}}</string>
+										<string>{{10, 27}, {1233, 324}}</string>
 										<key>RubberWindowFrame</key>
 										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
@@ -468,11 +450,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AFB9C20A136C6F8300E8A7C1</string>
+				<string>AFB9C234136C70D800E8A7C1</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>AFB9C20B136C6F8300E8A7C1</string>
+				<string>AFB9C235136C70D800E8A7C1</string>
 				<string>AFB9C1B6136C61BF00E8A7C1</string>
-				<string>AFB9C20C136C6F8300E8A7C1</string>
+				<string>AFB9C236136C70D800E8A7C1</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -642,7 +624,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0061_osx_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>
+		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0062_osxSL_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1440 819 0 0 1440 878 </string>
