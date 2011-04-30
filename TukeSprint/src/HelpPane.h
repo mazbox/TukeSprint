@@ -9,10 +9,13 @@
 #include "ofxXmlGui.h"
 #include "AppSettings.h"
 #include "ColorScheme.h"
+#include "ofxDirList.h"
 
 class HelpPane: public GuiListener {
 public:
 	void setup(ofVideoGrabber &video) {
+		soundId = 0;
+		imageId = 0;
 		gui.setup(10, 10, 200);
 		gui.addDrawable("camera", video);
 		gui.addMeter("Mic level", AppSettings::micLevel);
@@ -28,10 +31,25 @@ public:
 		for(int i = 0; i < colorSchemes.size(); i++) {
 			gui.addToggle(colorSchemes[i]->name, colorSchemes[i]->enabled);
 		}
+		
+		listFilesIntoVector("./../images", imageFiles);
+		listFilesIntoVector("./../sounds", soundFiles);
+		gui.addList("image", imageId, imageFiles);
+		gui.addList("sound", soundId, soundFiles);
+		
+		
 		gui.addButton("back");
+		
 		gui.addListener(this);
 	}
 	
+	void listFilesIntoVector(string dir, vector<string> &dest) {
+		ofxDirList DIR;
+		int numEntries = DIR.listDir(dir);
+		for(int i = 0; i < numEntries; i++) {
+			dest.push_back(DIR.getName(i));
+		}
+	}
 	
 	void controlChanged(GuiControl *control) {
 		for(int i = 0; i < colorSchemes.size(); i++) {
@@ -64,5 +82,10 @@ public:
 		return gui.isEnabled();
 	}
 	ofxXmlGui gui;
+	
+	vector<string> imageFiles;
+	vector<string> soundFiles;
+	int imageId;
+	int soundId;
 };
 
