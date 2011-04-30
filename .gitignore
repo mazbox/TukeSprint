@@ -1,0 +1,5 @@
+*/build/*
+*/bin/*.app/
+*.xcuserdatad
+*.pbxuser
+*.mode1v3
