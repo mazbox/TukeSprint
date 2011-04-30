@@ -13,7 +13,7 @@ map<string,ofImage*> imageCacheImages;
 
 
 
-bool guiResFileExists(string filename) { 
+bool _guiResFileExists(string filename) { 
 	struct stat stFileInfo; 
 	
 	// Attempt to get the file attributes 
@@ -28,7 +28,7 @@ ofImage *ImageCache::getImage(string path) {
 		return NULL;
 	}
 	
-	if(!guiResFileExists(ofToDataPath(path, true))) {
+	if(!_guiResFileExists(ofToDataPath(path, true))) {
 		printf("File doesn't exist %s\n", (path).c_str());
 		return NULL;
 	}

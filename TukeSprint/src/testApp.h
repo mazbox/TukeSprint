@@ -6,6 +6,8 @@
 #include <deque.h>
 #include "MainMenu.h"
 #include "TukeApp.h"
+#include "ofxXmlGui.h"
+
 class testApp : public ofBaseApp{
 
 public:
@@ -24,8 +26,15 @@ public:
 	void audioReceived( float * input, int bufferSize, int nChannels );
 	void audioRequested( float * output, int bufferSize, int nChannels );
 	
-private:
+	static testApp *getInstance() { return instance; }
 	
+	void launchTukeApp(TukeApp *app);
+	
+	
+private:
+	ofxXmlGui help;
+	ofVideoGrabber video;
+	static testApp *instance;
 	// for storing the last 4 keys pressed.
 	deque<int> keyQueue;
 	// looks for if you keyed 'menu' or 'help'

@@ -1,8 +1,13 @@
 #include "testApp.h"
 
+testApp *testApp::instance = NULL;
+
 //--------------------------------------------------------------
 void testApp::setup(){
-
+	instance = this;
+	
+	video.initGrabber(320, 240);
+	
 	mainMenu.init();
 	currApp = NULL;
 	showMainMenu();
@@ -14,7 +19,11 @@ void testApp::showMainMenu() {
 	if(currApp!=NULL) {
 		currApp->stop();
 	} 
-	currApp = &mainMenu;
+	launchTukeApp(&mainMenu);
+}
+
+void testApp::launchTukeApp(TukeApp *app) {
+	currApp = app;
 	currApp->start();
 }
 
@@ -23,8 +32,10 @@ void testApp::showHelp() {
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void testApp::update() {
+	video.grabFrame();
 	if(currApp!=NULL) {
+		currApp->video = &video;
 		currApp->update();
 	}
 }

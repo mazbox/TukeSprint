@@ -10,6 +10,7 @@
 
 class InteractiveObject: public ofRectangle {
 public:
+	virtual bool touchOver(float xx, float yy) { return false; }
 	virtual bool touchDown(float xx, float yy, int tid) { return false; }
 	virtual bool touchMoved(float xx, float yy, int tid) { return false; }
 	virtual bool touchUp(float xx, float yy, int tid) { return false; }
