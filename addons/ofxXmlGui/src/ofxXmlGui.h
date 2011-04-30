@@ -24,6 +24,7 @@
 #include "GuiColorPicker.h"
 #include "GuiIntSlider.h"
 #include "GuiMeter.h"
+#include "GuiImage.h"
 
 /**
  * This is a simple wrapper for the ofxXmlGui library. It lets you build up
@@ -39,6 +40,7 @@ public:
 	/** Creates a tabbable gui page */
 	GuiContainer *addPage(string name);
 	
+	GuiImage *addImage(string name, ofImage &image);
 	/** show a different page */
 	void setPage(string name);
 	void setPage(int pageNumber);

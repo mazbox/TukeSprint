@@ -21,8 +21,11 @@ public:
 	void load() {
 		scalable = false;
 		img = resources->getImage(imgUrl);
-		width = img->getWidth();
-		height = img->getHeight();
+		
+		if(img!=NULL) {
+			width = img->getWidth();
+			height = img->getHeight();
+		}
 		blank = (width==0 || height==0);
 		if(blank) width = height = 20;
 	}
@@ -30,9 +33,15 @@ public:
 	// load in custom vars, then call setup, then load in defaults
 	
 	void draw() {
+		
 		ofSetColor(255, 255, 255);
 		if(blank) ofRect(x, y, width, height);
-		else img->draw(x, y, width, height);
+		else {
+			
+			// be sure to maintain aspect ratio
+			height = img->height*width/img->width;
+			img->draw(x, y, width, height);
+		}
 	}
 	
 	vector<ParameterInfo> getParameterInfo() {
