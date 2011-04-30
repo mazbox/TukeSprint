@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		AFB9C212136C6F8C00E8A7C1 /* Blob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C20E136C6F8C00E8A7C1 /* Blob.cpp */; };
 		AFB9C213136C6F8C00E8A7C1 /* drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C210136C6F8C00E8A7C1 /* drawing.cpp */; };
+		AFB9C26C136C75CA00E8A7C1 /* ParticleMemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C264136C75CA00E8A7C1 /* ParticleMemo.cpp */; };
+		AFB9C26D136C75CA00E8A7C1 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C266136C75CA00E8A7C1 /* ParticleSystem.cpp */; };
+		AFB9C26E136C75CA00E8A7C1 /* fluid001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C268136C75CA00E8A7C1 /* fluid001.cpp */; };
+		AFB9C293136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C28A136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp */; };
+		AFB9C294136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AFB9C28D136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp */; };
 		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
 		E45BE2E40E8CC69C009D7055 /* rtAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE2E30E8CC69C009D7055 /* rtAudio.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -111,6 +116,26 @@
 		AFB9C20F136C6F8C00E8A7C1 /* Blob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blob.h; sourceTree = "<group>"; };
 		AFB9C210136C6F8C00E8A7C1 /* drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawing.cpp; sourceTree = "<group>"; };
 		AFB9C211136C6F8C00E8A7C1 /* drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
+		AFB9C259136C74F900E8A7C1 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Filter.h; path = apps/deathBox/Filter.h; sourceTree = "<group>"; };
+		AFB9C25A136C74F900E8A7C1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = apps/deathBox/main.cpp; sourceTree = "<group>"; };
+		AFB9C25B136C74F900E8A7C1 /* testApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = testApp.cpp; path = apps/deathBox/testApp.cpp; sourceTree = "<group>"; };
+		AFB9C25C136C74F900E8A7C1 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = apps/deathBox/testApp.h; sourceTree = "<group>"; };
+		AFB9C261136C75CA00E8A7C1 /* msaColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msaColor.h; path = apps/fluidExample/msaColor.h; sourceTree = "<group>"; };
+		AFB9C264136C75CA00E8A7C1 /* ParticleMemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleMemo.cpp; path = apps/fluidExample/ParticleMemo.cpp; sourceTree = "<group>"; };
+		AFB9C265136C75CA00E8A7C1 /* ParticleMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleMemo.h; path = apps/fluidExample/ParticleMemo.h; sourceTree = "<group>"; };
+		AFB9C266136C75CA00E8A7C1 /* ParticleSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleSystem.cpp; path = apps/fluidExample/ParticleSystem.cpp; sourceTree = "<group>"; };
+		AFB9C267136C75CA00E8A7C1 /* ParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParticleSystem.h; path = apps/fluidExample/ParticleSystem.h; sourceTree = "<group>"; };
+		AFB9C268136C75CA00E8A7C1 /* fluid001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fluid001.cpp; path = apps/fluidExample/fluid001.cpp; sourceTree = "<group>"; };
+		AFB9C269136C75CA00E8A7C1 /* fluid001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid001.h; path = apps/fluidExample/fluid001.h; sourceTree = "<group>"; };
+		AFB9C278136C77B100E8A7C1 /* changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
+		AFB9C286136C77B100E8A7C1 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		AFB9C287136C77B100E8A7C1 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		AFB9C289136C77B100E8A7C1 /* ofxMSAFluid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMSAFluid.h; sourceTree = "<group>"; };
+		AFB9C28A136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMSAFluidDrawer.cpp; sourceTree = "<group>"; };
+		AFB9C28B136C77B100E8A7C1 /* ofxMSAFluidDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMSAFluidDrawer.h; sourceTree = "<group>"; };
+		AFB9C28C136C77B100E8A7C1 /* ofxMSAFluidParticleUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMSAFluidParticleUpdater.h; sourceTree = "<group>"; };
+		AFB9C28D136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMSAFluidSolver.cpp; sourceTree = "<group>"; };
+		AFB9C28E136C77B100E8A7C1 /* ofxMSAFluidSolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMSAFluidSolver.h; sourceTree = "<group>"; };
 		E45BE0390E8CC647009D7055 /* FreeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreeImage.h; path = ../../../libs/freeimage/include/FreeImage.h; sourceTree = SOURCE_ROOT; };
 		E45BE03F0E8CC650009D7055 /* fmod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fmod.h; path = ../../../libs/fmodex/include/fmod.h; sourceTree = SOURCE_ROOT; };
 		E45BE0400E8CC650009D7055 /* fmod.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = fmod.hpp; path = ../../../libs/fmodex/include/fmod.hpp; sourceTree = SOURCE_ROOT; };
@@ -319,9 +344,60 @@
 			path = apps/drawing;
 			sourceTree = "<group>";
 		};
+		AFB9C248136C74E300E8A7C1 /* deathBox */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9C259136C74F900E8A7C1 /* Filter.h */,
+				AFB9C25A136C74F900E8A7C1 /* main.cpp */,
+				AFB9C25B136C74F900E8A7C1 /* testApp.cpp */,
+				AFB9C25C136C74F900E8A7C1 /* testApp.h */,
+			);
+			name = deathBox;
+			sourceTree = "<group>";
+		};
+		AFB9C25F136C750B00E8A7C1 /* fluidExample */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9C261136C75CA00E8A7C1 /* msaColor.h */,
+				AFB9C264136C75CA00E8A7C1 /* ParticleMemo.cpp */,
+				AFB9C265136C75CA00E8A7C1 /* ParticleMemo.h */,
+				AFB9C266136C75CA00E8A7C1 /* ParticleSystem.cpp */,
+				AFB9C267136C75CA00E8A7C1 /* ParticleSystem.h */,
+				AFB9C268136C75CA00E8A7C1 /* fluid001.cpp */,
+				AFB9C269136C75CA00E8A7C1 /* fluid001.h */,
+			);
+			name = fluidExample;
+			sourceTree = "<group>";
+		};
+		AFB9C277136C77B100E8A7C1 /* ofxMSAFluid */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9C278136C77B100E8A7C1 /* changelog.txt */,
+				AFB9C286136C77B100E8A7C1 /* install.xml */,
+				AFB9C287136C77B100E8A7C1 /* LICENSE.txt */,
+				AFB9C288136C77B100E8A7C1 /* src */,
+			);
+			name = ofxMSAFluid;
+			path = ../addons/ofxMSAFluid;
+			sourceTree = SOURCE_ROOT;
+		};
+		AFB9C288136C77B100E8A7C1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AFB9C289136C77B100E8A7C1 /* ofxMSAFluid.h */,
+				AFB9C28A136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp */,
+				AFB9C28B136C77B100E8A7C1 /* ofxMSAFluidDrawer.h */,
+				AFB9C28C136C77B100E8A7C1 /* ofxMSAFluidParticleUpdater.h */,
+				AFB9C28D136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp */,
+				AFB9C28E136C77B100E8A7C1 /* ofxMSAFluidSolver.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				AFB9C277136C77B100E8A7C1 /* ofxMSAFluid */,
 				EA953C41136C5CF00030D789 /* ofxCvOpticalFlowLK */,
 				EA953C08136C5C7B0030D789 /* ofxOpenCv */,
 				EA953BF4136C5C430030D789 /* ofxDirList */,
@@ -809,6 +885,8 @@
 		EA953BDC136C5BB00030D789 /* apps */ = {
 			isa = PBXGroup;
 			children = (
+				AFB9C25F136C750B00E8A7C1 /* fluidExample */,
+				AFB9C248136C74E300E8A7C1 /* deathBox */,
 				AFB9C20D136C6F8C00E8A7C1 /* drawing */,
 				EA953BE1136C5BC40030D789 /* sampler */,
 			);
@@ -1073,6 +1151,11 @@
 				EA953C72136C5ED40030D789 /* AppSettings.cpp in Sources */,
 				AFB9C212136C6F8C00E8A7C1 /* Blob.cpp in Sources */,
 				AFB9C213136C6F8C00E8A7C1 /* drawing.cpp in Sources */,
+				AFB9C26C136C75CA00E8A7C1 /* ParticleMemo.cpp in Sources */,
+				AFB9C26D136C75CA00E8A7C1 /* ParticleSystem.cpp in Sources */,
+				AFB9C26E136C75CA00E8A7C1 /* fluid001.cpp in Sources */,
+				AFB9C293136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp in Sources */,
+				AFB9C294136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

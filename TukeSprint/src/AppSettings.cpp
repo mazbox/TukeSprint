@@ -13,3 +13,4 @@ ofColor AppSettings::color2;
 ofColor AppSettings::color3;
 float AppSettings::micVolume = 1;
 float AppSettings::micLevel = 0;
+bool AppSettings::cameraAvailable = true;

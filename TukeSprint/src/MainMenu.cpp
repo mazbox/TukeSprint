@@ -12,12 +12,14 @@
 #include "testApp.h"
 #include "Sampler.h"
 #include "drawing.h"
+#include "fluid001.h"
 
 void MainMenu::init() {
 
 	apps.push_back(new TestTApp());
 	apps.push_back(new Sampler());
 	apps.push_back(new drawing());
+	apps.push_back(new fluid001());
 	
 	int itemsPerRow = 3;
 	int PADDING = 10;
