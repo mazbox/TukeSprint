@@ -262,6 +262,7 @@
 		EA953C43136C5CF00030D789 /* ofxCvOpticalFlowLK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvOpticalFlowLK.h; sourceTree = "<group>"; };
 		EA953C71136C5ED40030D789 /* AppSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppSettings.cpp; sourceTree = "<group>"; };
 		EA953C9F136C603F0030D789 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		EA953D18136C65440030D789 /* HelpPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPane.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,6 +517,7 @@
 				EA20C34E136C42D10038E922 /* TukeApp.h */,
 				EA20C34F136C43090038E922 /* AppSettings.h */,
 				EA953C71136C5ED40030D789 /* AppSettings.cpp */,
+				EA953D18136C65440030D789 /* HelpPane.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 			);

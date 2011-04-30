@@ -6,7 +6,7 @@
 #include <deque.h>
 #include "MainMenu.h"
 #include "TukeApp.h"
-#include "ofxXmlGui.h"
+#include "HelpPane.h"
 
 class testApp : public ofBaseApp{
 
@@ -32,7 +32,7 @@ public:
 	
 	
 private:
-	ofxXmlGui help;
+	HelpPane help;
 	ofVideoGrabber video;
 	static testApp *instance;
 	// for storing the last 4 keys pressed.

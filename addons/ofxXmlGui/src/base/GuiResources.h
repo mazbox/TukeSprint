@@ -11,7 +11,7 @@
 #include "ofImage.h"
 #include "ofTrueTypeFont.h"
 
-#define DEFAULT_FONT "global/font/automat.ttf", 6
+#define DEFAULT_FONT "resources/arial.ttf", 12
 
 
 class GuiResources {

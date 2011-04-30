@@ -11,6 +11,8 @@ void testApp::setup(){
 	mainMenu.init();
 	currApp = NULL;
 	showMainMenu();
+	help.setup(video);
+
 	ofSoundStreamSetup(2, 1, this, 44100, 1024, 1);
 }
 
@@ -28,7 +30,7 @@ void testApp::launchTukeApp(TukeApp *app) {
 }
 
 void testApp::showHelp() {
-	
+	help.enable();
 }
 
 //--------------------------------------------------------------
@@ -114,6 +116,13 @@ void testApp::windowResized(int w, int h){
 
 
 void testApp::audioReceived( float * input, int bufferSize, int nChannels ) {
+	float max = 0;
+	for(int i = 0; i < bufferSize*nChannels; i++) {
+		if(ABS(input[i])>max) max = ABS(input[i]);
+	}
+	if(max>AppSettings::micLevel) AppSettings::micLevel = max;
+	else AppSettings::micLevel *= 0.99;
+	
 	if(currApp!=NULL) {
 		currApp->audioReceived(input, bufferSize, nChannels);
 	}

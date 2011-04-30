@@ -23,7 +23,7 @@
 #include "GuiIntField.h"
 #include "GuiColorPicker.h"
 #include "GuiIntSlider.h"
-
+#include "GuiMeter.h"
 
 /**
  * This is a simple wrapper for the ofxXmlGui library. It lets you build up
@@ -52,6 +52,8 @@ public:
 	
 	/** Add a generic slider (for floats) */
 	GuiSlider	*addSlider(string name, float &ptr, float minValue, float maxValue);
+	
+	GuiMeter	*addMeter(string name, float &ptr);
 	
 	GuiIntSlider *addSlider(string name, int &ptr, int minValue, int maxValue);
 	

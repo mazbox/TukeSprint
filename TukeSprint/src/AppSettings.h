@@ -16,8 +16,9 @@ public:
 	static ofColor color2;
 	static ofColor color3;
 	
-	static float volume;
+	static float micVolume;
 
+	static float micLevel;
 	// the default image of any imagery
 	static ofImage *image;
 	

@@ -20,7 +20,12 @@ GuiContainer *ofxXmlGui::addGui(GuiContainer *c) {
 
 #define PAGE_CHOOSER_OFFSET 30
 
-
+GuiMeter	*ofxXmlGui::addMeter(string name, float &ptr) {
+	GuiMeter *meter = (GuiMeter*)currPage->add("meter", name, name);
+	meter->value = &ptr;
+	meter->width = controlSize;
+	return meter;
+}
 
 GuiContainer *ofxXmlGui::addPage(string title) {
 	

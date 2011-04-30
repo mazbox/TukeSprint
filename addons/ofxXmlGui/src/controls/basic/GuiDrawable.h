@@ -16,6 +16,7 @@ public:
 	
 	void draw() {
 		if(drawable!=NULL) {
+			ofSetHexColor(0xFFFFFF);
 			drawable->draw(x, y, width, height);
 		}
 	}

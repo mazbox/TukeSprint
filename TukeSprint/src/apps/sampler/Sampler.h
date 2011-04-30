@@ -17,8 +17,8 @@ class Sampler : public TukeApp{
 	
 public:
 	
-	string getName() { return "Test T App!"; } 
-	string getScreenshotFileName() { return "icons/test.png"; }
+	string getName() { return "Sampler"; } 
+	string getScreenshotFileName() { return "icons/sampler.png"; }
 	void init();
 	void update();
 	void draw();
@@ -60,8 +60,6 @@ public:
 	// takes care of all the vision
 	Vision vision;
 	
-//	ofxControlPanel gui;
-//	customDrawer particleColorPicker;
 	float noteLastTime;
 	int lastNote;
 	vector<string> sounds;
