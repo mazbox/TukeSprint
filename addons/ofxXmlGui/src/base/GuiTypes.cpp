@@ -51,6 +51,7 @@ GuiControl* GuiControl::instantiator(string _type, string _name, string _control
 	
 BEGIN_REGISTRY()
 	
+	REGISTER("image", GuiImage)
 	REGISTER("container", GuiContainer)
 	REGISTER("button", GuiButton)
 	REGISTER("drawable", GuiDrawable)

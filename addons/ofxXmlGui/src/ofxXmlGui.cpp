@@ -19,6 +19,11 @@ GuiContainer *ofxXmlGui::addGui(GuiContainer *c) {
 }
 
 #define PAGE_CHOOSER_OFFSET 30
+GuiImage	*ofxXmlGui::addImage(string name, ofImage &img) {
+	GuiImage *image = (GuiImage*)currPage->add("image", name, name);
+	image->img = &img;
+	return image;
+}
 
 GuiMeter	*ofxXmlGui::addMeter(string name, float &ptr) {
 	GuiMeter *meter = (GuiMeter*)currPage->add("meter", name, name);

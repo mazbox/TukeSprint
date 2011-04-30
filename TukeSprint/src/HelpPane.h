@@ -16,6 +16,7 @@ public:
 	void setup(ofVideoGrabber &video) {
 		soundId = 0;
 		imageId = 0;
+		imagePreview.loadImage("resources/no-image.png");
 		gui.setup(10, 10, 200);
 		gui.addDrawable("camera", video);
 		gui.addMeter("Mic level", AppSettings::micLevel);
@@ -35,8 +36,9 @@ public:
 		listFilesIntoVector("./../images", imageFiles);
 		listFilesIntoVector("./../sounds", soundFiles);
 		gui.addList("image", imageId, imageFiles);
+		gui.addImage("img", imagePreview);
 		gui.addList("sound", soundId, soundFiles);
-		
+		gui.addButton("play sound");
 		
 		gui.addButton("back");
 		
@@ -45,6 +47,20 @@ public:
 	
 	void listFilesIntoVector(string dir, vector<string> &dest) {
 		ofxDirList DIR;
+		if(dir.find("images")!=-1) {
+			DIR.allowExt("jpeg");
+			DIR.allowExt("jpg");
+			DIR.allowExt("png");
+			DIR.allowExt("gif");
+			DIR.allowExt("JPEG");
+			DIR.allowExt("JPG");
+			DIR.allowExt("PNG");
+			DIR.allowExt("GIF");
+			
+		} else {
+			DIR.allowExt("WAV");
+			DIR.allowExt("wav");
+		}
 		int numEntries = DIR.listDir(dir);
 		for(int i = 0; i < numEntries; i++) {
 			dest.push_back(DIR.getName(i));
@@ -61,6 +77,12 @@ public:
 		
 		if(control->name=="back") {
 			disable();
+		} else if(control->name=="image") {
+			imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+		} else if(control->name=="sound") {
+			soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+		} else if(control->name=="play sound") {
+			soundPreview.play();
 		}
 	}
 	
@@ -87,5 +109,7 @@ public:
 	vector<string> soundFiles;
 	int imageId;
 	int soundId;
+	ofImage imagePreview;
+	ofSoundPlayer soundPreview;
 };
 
