@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/108/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing
+END
+openFrameworks-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/96/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/openFrameworks-Info.plist
+END
+drawing.layout
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/105/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/drawing.layout
+END
+drawing.workspace
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/105/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/drawing.workspace
+END
+drawing.depend
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/105/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/drawing.depend
+END
+drawing.cbp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/105/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/drawing.cbp
+END

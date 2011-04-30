@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="drawing" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons\;src\;" />
+		<Build>
+			<Target title="release">
+				<Option output="bin\$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\release" />
+				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworks.lib;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworks.lib" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcxcore.a" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcv.a" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcvaux.a" />
+				</Linker>
+			</Target>
+			<Target title="debug">
+				<Option output="bin\$(PROJECT_NAME)_DEBUG" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\debug\" />
+				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworksDebug.lib;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworksDebug.lib" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcxcore.a" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcv.a" />
+					<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcvaux.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wno-multichar" />
+			<Add directory="..\..\..\libs\glu\include" />
+			<Add directory="..\..\..\libs\freetype\include" />
+			<Add directory="..\..\..\libs\freetype\include\freetype2" />
+			<Add directory="..\..\..\libs\FreeImage\include" />
+			<Add directory="..\..\..\libs\quicktime\include" />
+			<Add directory="..\..\..\libs\rtAudio\include" />
+			<Add directory="..\..\..\libs\fmodex\include" />
+			<Add directory="..\..\..\libs\videoInput\include" />
+			<Add directory="..\..\..\libs\glee\include" />
+			<Add directory="..\..\..\libs\glut\include" />
+			<Add directory="..\..\..\libs\openFrameworks" />
+			<Add directory="..\..\..\libs\openFrameworks\app" />
+			<Add directory="..\..\..\libs\openFrameworks\events" />
+			<Add directory="..\..\..\libs\openFrameworks\graphics" />
+			<Add directory="..\..\..\libs\openFrameworks\utils" />
+			<Add directory="..\..\..\libs\openFrameworks\sound" />
+			<Add directory="..\..\..\libs\openFrameworks\video" />
+			<Add directory="..\..\..\libs\openFrameworks\communication" />
+			<Add directory="..\..\..\libs\poco\include" />
+			<Add directory="..\..\..\addons\ofxControlPanel" />
+			<Add directory="..\..\..\addons\ofxDirList\src" />
+			<Add directory="..\..\..\addons\ofxXmlSettings\libs" />
+			<Add directory="..\..\..\addons\ofxXmlSettings\src" />
+			<Add directory="..\..\..\addons\ofxOpenCv\libs\opencv\include" />
+			<Add directory="..\..\..\addons\ofxOpenCv\src" />
+			<Add directory="..\videosampler\src" />
+		</Compiler>
+		<Linker>
+			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib" />
+			<Add option="../../../libs/rtAudio/lib/win_cb/RtAudio.a" />
+			<Add option="../../../libs/quicktime/lib/win_cb/qtmlClient.lib" />
+			<Add option="../../../libs/freetype/lib/win_cb/libfreetype.a" />
+			<Add option="../../../libs/glut/lib/win_cb/libglut.a" />
+			<Add option="../../../libs/videoInput/lib/win_cb/videoInputLib.a" />
+			<Add option="../../../libs/fmodex/lib/win_cb/libfmodex.a" />
+			<Add option="../../../libs/glee/lib/win_cb/GLee.lib" />
+			<Add option="../../../libs/glu/lib/win_cb/glu32.lib" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoNetmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoUtilmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoXMLmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoFoundationmt.a" />
+			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcxcore.a" />
+			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcv.a" />
+			<Add option="-lopengl32" />
+			<Add option="-lglu32" />
+			<Add option="-ldsound" />
+			<Add option="-lwinmm" />
+			<Add option="-ldxguid" />
+			<Add option="-lstrmbase" />
+			<Add option="-lstrmiids" />
+			<Add option="-lz" />
+			<Add option="-luuid" />
+			<Add option="-lole32" />
+			<Add option="-loleaut32" />
+			<Add option="-lsetupapi" />
+			<Add option="-lwsock32" />
+			<Add option="-lws2_32" />
+			<Add option="-lIphlpapi" />
+			<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcxcore.a" />
+			<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcv.a" />
+			<Add library="..\..\..\addons\ofxOpenCv\libs\opencv\lib\win_cb\libcvaux.a" />
+		</Linker>
+		<ExtraCommands>
+			<Add after='xcopy /e /i /y &quot;$(PROJECT_DIR)..\..\..\export\win_cb\*.dll&quot;  &quot;$(PROJECT_DIR)bin&quot;' />
+			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
+			<Mode after="always" />
+		</ExtraCommands>
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiBaseObject.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiBaseObject.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiCallback.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiCallback.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiCallbackValue.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiCallbackValue.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiColor.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiColor.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiCustomImpl.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiIncludes.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTextBase.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTextBase.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiType2DSlider.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiType2DSlider.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeButtonSlider.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeButtonSlider.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeChartPlotter.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeChartPlotter.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeCustom.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeCustom.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeDrawable.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeDrawable.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeFileLister.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeFileLister.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeLogger.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeLogger.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeMultiToggle.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeMultiToggle.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypePanel.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypePanel.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeSlider.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeSlider.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeText.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeText.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeTextDropDown.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeTextDropDown.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeToggle.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeToggle.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeVairableLister.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeVairableLister.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeVideo.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiTypeVideo.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiValue.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiValue.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\guiVariablePointer.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\ofxControlPanel.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\ofxControlPanel.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleColor.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleColor.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleFileLister.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleFileLister.h" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleLogger.cpp" />
+		<Unit filename="..\..\..\addons\ofxControlPanel\simpleLogger.h" />
+		<Unit filename="..\..\..\addons\ofxDirList\src\ofxDirList.cpp" />
+		<Unit filename="..\..\..\addons\ofxDirList\src\ofxDirList.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cv.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cv.hpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvaux.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvaux.hpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvcompat.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvmat.hpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvstreams.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvtypes.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvver.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvvidsurv.hpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cvwimage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cxcore.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cxcore.hpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cxerror.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cxmisc.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\libs\opencv\include\cxtypes.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvConstants.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvImage.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvImage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvMain.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.cpp" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.h" />
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxOpenCv.h" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+		<Unit filename="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+		<Unit filename="src\Blob.cpp" />
+		<Unit filename="src\Blob.h" />
+		<Unit filename="src\DTStroke.cpp" />
+		<Unit filename="src\DTStroke.h" />
+		<Unit filename="src\main.cpp" />
+		<Unit filename="src\testApp.cpp" />
+		<Unit filename="src\testApp.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

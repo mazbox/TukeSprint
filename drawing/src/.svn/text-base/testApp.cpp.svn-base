@@ -1,0 +1,350 @@
+#include "testApp.h"
+
+
+//--------------------------------------------------------------
+void testApp::setup(){
+	current = -1;
+	timeElapsed = ofGetElapsedTimeMillis();
+	ofEnableAlphaBlending();
+	ofSetFrameRate(40);
+	//ofSetBackgroundAuto(false);
+	ofBackground(255, 255, 255);
+	
+	BLOB_SIZE = 15;
+	//beats.loadSound("vib-ntch.st-B3-f.AIF");
+
+	// OpenCV stuff
+	vidGrabber.setVerbose(true);
+	vidGrabber.initGrabber(320,240);
+	colorImg.allocate(320,240);
+	grayImage.allocate(320,240);
+	grayBg.allocate(320,240);
+	grayDiff.allocate(320,240);
+	
+	 
+	bLearnBakground = true;
+	threshold = 40;
+	
+	ofSetFullscreen(true);
+	ofSetRectMode(OF_RECTMODE_CORNER);
+	
+	LOWPASS = 45; //must be the same as the size of the array smoothPos
+
+	ofxDirList DIR;
+	DIR.allowExt("aif");
+	DIR.allowExt("wav");
+	DIR.allowExt("mp3");
+	
+	numFiles = DIR.listDir("./");
+//	
+	for(int i = 0; i < numFiles; i++){
+		files.push_back( DIR.getPath(i));
+		printf("name is %s - path is %s \n", DIR.getName(i).c_str(), DIR.getPath(i).c_str() );
+	}
+		
+	if (numFiles==0)
+	{
+		cout << "no sounds..." << endl;
+	}
+
+	blobColor.r = 116;
+	blobColor.g= 80;
+	blobColor.b =116;
+	currentSound = (files[(int)ofRandom(0, files.size())]);
+	printf("files size: %d\n",files.size());
+	numFiles = files.size();
+	targetPos.x = ofGetWidth()/2;
+	targetPos.y = ofGetHeight()/2;
+	
+	transparency = 0;
+	explode = false;
+}
+
+//--------------------------------------------------------------
+void testApp::update(){
+	// update the sound playing system:
+	ofSoundUpdate();
+	
+	//OpenCV stuff
+	bool bNewFrame = false;	
+	vidGrabber.grabFrame();
+	bNewFrame = vidGrabber.isFrameNew();
+	
+	if (bNewFrame){
+
+		colorImg.setFromPixels(vidGrabber.getPixels(), 320,240);
+     grayImage = colorImg;
+
+	}
+	 
+	// take the abs value of the difference between background and incoming and then threshold:
+	grayDiff.absDiff(grayBg, grayImage);
+	grayDiff.threshold(threshold);
+	
+	// find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
+	// also, find holes is set to true so we will get interior contours as well....
+	contourFinder.findContours(grayDiff, 20, 320*240/3, 10, true);	// find holes
+	
+	if (contourFinder.nBlobs>0)
+	{
+		
+		lastBlobPosition = blobPosition;
+		if (_x<ofGetWidth()/2)
+		{
+			_x = blobPosition.x = ofGetWidth()-contourFinder.blobs[0].boundingRect.x*ofGetWidth()/320;
+			
+		}
+		else
+			_x = blobPosition.x = ofGetWidth()-(contourFinder.blobs[0].boundingRect.x+contourFinder.blobs[0].boundingRect.width)*ofGetWidth()/320;
+		
+			_y = blobPosition.y = contourFinder.blobs[0].boundingRect.y*ofGetHeight()/240;
+			
+		indexSmoothPos = (indexSmoothPos+1)%LOWPASS;
+		smoothPos[indexSmoothPos].x = _x;
+		smoothPos[indexSmoothPos].y = _y;
+
+		float __x, __y;
+		for (int i = 0 ; i<LOWPASS ; i++)
+		{
+			__x+=smoothPos[i].x;
+			__y+=smoothPos[i].y;
+		}
+		
+		_x = __x/LOWPASS;
+		_y = __y/LOWPASS;
+
+		
+		if (!explode && ofDist(_x, _y, targetPos.x, targetPos.y)<80) //Hit the target!
+		{
+			explode = true;
+			explosionTimer = ofGetElapsedTimeMillis();
+			
+			transparency = 180;
+			//change the sound randomly
+			int i = (int)ofRandom(0,files.size());
+			currentSound = files[i];
+			//cout <<numFiles<< " " << i << " sound changed to:" << currentSound << endl;
+			//change the position of the target
+			blobColor.b = (int)ofRandom(40,205);
+		}
+		float time = (float)(ofGetElapsedTimeMillis() - timeElapsed);
+		timeElapsed = ofGetElapsedTimeMillis();
+		float dist = ofDist(blobPosition.x, blobPosition.y, lastBlobPosition.x, lastBlobPosition.y);
+		
+
+			float speed = pow(dist/time,0.3);
+		
+			
+			float newwidth = MAX(0.5,1/speed);
+		
+			if (speed > 0.1 && speed < 1.5)
+			{
+				float xacc = ofSign(blobPosition.x-lastBlobPosition.x)*(pow(abs((int)(_x-lastBlobPosition.x)),0.3));
+				float yacc = ofSign(blobPosition.y-lastBlobPosition.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
+			//	cout << "xacc, yacc " << xacc << " " << yacc << endl;
+				blobs.push_back(blob(_x,_y,xacc,yacc,BLOB_SIZE+(int)(10/(speed)), currentSound, blobColor));
+
+			}
+		
+		
+	}
+	
+	if (bLearnBakground == true){
+		grayBg = grayImage;		// the = sign copys the pixels from grayImage into grayBg (operator overloading)
+	//	bLearnBakground = false;
+	}
+	
+}
+
+//--------------------------------------------------------------
+void testApp::draw(){
+	
+	transparency = MAX(transparency-5,0);
+#ifdef DEBUG
+	ofSetColor(0xffffff);
+	colorImg.draw(20,20);
+	grayImage.draw(360,20);
+	grayBg.draw(20,280);
+	grayDiff.draw(360,280);
+	
+	// then draw the contours:
+	
+	ofFill();
+	ofSetColor(0x333333);
+	ofRect(360,540,320,240);
+	ofSetColor(0xffffff);
+	
+	// we could draw the whole contour finder
+	contourFinder.draw(360,540);
+	
+	// or, instead we can draw each blob individually,
+	// this is how to get access to them:
+    for (int i = 0; i < contourFinder.nBlobs; i++){
+        contourFinder.blobs[i].draw(360,540);
+    }
+	
+	// finally, a report:
+	
+	ofSetColor(0x000000);
+	char reportStr[1024];
+	sprintf(reportStr, "bg subtraction and blob detection\npress ' ' to capture bg\nthreshold %i (press: +/-)\nnum blobs found %i, fps: %f", threshold, contourFinder.nBlobs, ofGetFrameRate());
+	ofDrawBitmapString(reportStr, 20, 400);
+	
+#endif
+	
+//	ofSetColor(30, 30, 190,80); 
+	ofSetColor(blobColor.r,blobColor.g,blobColor.b,80);
+	float variation = sin(ofGetElapsedTimeMillis()/5*PI/360);
+	ofRect(_x-30, _y-75, 30, 120);
+	ofRect(_x-75, _y-30, 120, 30);
+	
+//	ofRect(0, _y-30,ofGetWidth(),30);
+	
+	//ofBackground(200, 200, 0, transparency);
+	ofSetColor(200, 200, 0, transparency);
+	ofRect(0, 0, ofGetWidth(), ofGetHeight());
+	for (int i = 0 ; i<blobs.size() ; i++)
+	{
+		if (blobs[i].transparency <= 3)
+		{
+			blobs.erase(blobs.begin()+i);
+		//	cout << blobs.size() << endl;
+		}
+		else
+			blobs[i].update();
+	}
+	/*
+	for (int i = 0 ; i<myStroke.size();i++)
+	{
+		DTStroke stroke = myStroke[i];
+
+		for (int j = 0; j<stroke.point.size() ; j++)
+		{
+			if (j<stroke.point.size()-1)
+			{
+				
+			//	ofSetColor(stroke.color[j].r, stroke.color[j].g, stroke.color[j].b);
+					ofSetColor(110, 80, 80);
+				//ofSetLineWidth(stroke.width[j]);
+				ofLine(stroke.point[j].x, stroke.point[j].y, stroke.point[j+1].x, stroke.point[j+1].y);
+			}
+		}
+	}
+	 */
+ 
+	if (!explode)
+	{
+		ofSetColor(200, 200, 0,140);
+		ofCircle(targetPos.x, targetPos.y, 35);
+		ofSetColor(200, 200, 0,80);
+		ofCircle(targetPos.x,targetPos.y,55+20*cos(ofGetElapsedTimeMillis()/5*PI/360));
+	}
+	else
+	{
+		if (ofGetElapsedTimeMillis()>(explosionTimer+2500))
+		{
+			explode = false;
+			targetPos.x  =(int)ofRandom(ofGetWidth()/4,ofGetWidth()*3/4);
+			targetPos.y = (int)ofRandom(ofGetHeight()/4, ofGetHeight()*3/4);			
+		}
+		else //draw the explosion animation
+		{
+			float variation = (ofGetElapsedTimeMillis()-explosionTimer)/2500.;
+			cout << "time elapsed" << variation;
+			ofSetColor(200, 200, 0,140);
+			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x), targetPos.y, 15);
+			ofCircle(targetPos.x+variation*(-targetPos.x), targetPos.y, 15);
+			ofCircle(targetPos.x, targetPos.y+variation*(ofGetHeight()-targetPos.y), 15);
+			ofCircle(targetPos.x, targetPos.y+variation*(-targetPos.y), 15);
+			ofSetColor(200, 200, 0,80);
+			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
+			ofCircle(targetPos.x+variation*(-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
+			ofCircle(targetPos.x,targetPos.y+variation*(ofGetHeight()-targetPos.y),25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
+			ofCircle(targetPos.x,targetPos.y+variation*(-targetPos.y),25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
+		}
+	}
+}
+
+//--------------------------------------------------------------
+void testApp::keyPressed(int key){
+	switch (key){
+		case ' ':
+			bLearnBakground = true;
+			break;
+		case '+':
+			threshold ++;
+			if (threshold > 255) threshold = 255;
+			break;
+		case '-':
+			threshold --;
+			if (threshold < 0) threshold = 0;
+			break;
+	}
+}
+
+//--------------------------------------------------------------
+void testApp::keyReleased(int key){
+
+}
+
+//--------------------------------------------------------------
+void testApp::mouseMoved(int x, int y ){
+	prevMouse = currMouse;
+	currMouse = ofPoint(x,y);
+}
+
+//--------------------------------------------------------------
+void testApp::mouseDragged(int x, int y, int button){
+	prevMouse = currMouse;
+	currMouse = ofPoint(x,y);
+	
+	float time = (float)(ofGetElapsedTimeMillis() - timeElapsed);
+	timeElapsed = ofGetElapsedTimeMillis();
+	float dist = ofDist(currMouse.x, currMouse.y, prevMouse.x, prevMouse.y);
+	
+	float speed = dist/time;
+	
+	//cout << "speed " << speed << endl;
+	float newwidth = MAX(0.5,1/speed);
+	
+	if (ofDist(x, y, targetPos.x, targetPos.y)<80) //Hit the target!
+	{
+		//change the sound randomly
+		int i = (int)ofRandom(0,files.size());
+		currentSound = files[i];
+		//cout <<numFiles<< " " << i << " sound changed to:" << currentSound << endl;
+		//change the position of the target
+		targetPos.x  =(int)ofRandom(0,ofGetWidth());
+		targetPos.y = (int)ofRandom(0, ofGetHeight());
+		blobColor.b = (int)ofRandom(0,255);
+	}
+	if (speed > 0.1)
+	{
+		blobs.push_back(blob(x,y,(x-prevMouse.x)/10.,(y-prevMouse.y)/10.,BLOB_SIZE, currentSound,blobColor));
+	}
+	myStroke[current].addPoint(ofPoint(x,y), newwidth, ofColor());
+
+}
+
+//--------------------------------------------------------------
+void testApp::mousePressed(int x, int y, int button){
+	prevMouse = currMouse;
+	currMouse = ofPoint(x,y);
+	current++;
+	myStroke.push_back(DTStroke());
+	//beats.play();
+
+}
+
+
+//--------------------------------------------------------------
+void testApp::mouseReleased(int x, int y, int button){
+	prevMouse = currMouse;
+	currMouse = ofPoint(x,y);
+}
+
+//--------------------------------------------------------------
+void testApp::windowResized(int w, int h){
+
+}
+

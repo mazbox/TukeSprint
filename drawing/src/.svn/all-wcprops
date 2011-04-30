@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src
+END
+Blob.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/Blob.cpp
+END
+DTStroke.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/DTStroke.cpp
+END
+testApp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/testApp.cpp
+END
+Blob.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/Blob.h
+END
+DTStroke.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/DTStroke.h
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/main.cpp
+END
+testApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/95/trunk/of_preRelease_v0061_osx_FAT/apps/tuke/drawing/src/testApp.h
+END
