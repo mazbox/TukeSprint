@@ -1,8 +1,8 @@
-#include "testApp.h"
+#include "drawing.h"
 
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void drawing::init(){
 	current = -1;
 	timeElapsed = ofGetElapsedTimeMillis();
 	ofEnableAlphaBlending();
@@ -14,8 +14,8 @@ void testApp::setup(){
 	//beats.loadSound("vib-ntch.st-B3-f.AIF");
 
 	// OpenCV stuff
-	vidGrabber.setVerbose(true);
-	vidGrabber.initGrabber(320,240);
+	video->setVerbose(true);
+	video->initGrabber(320,240);
 	colorImg.allocate(320,240);
 	grayImage.allocate(320,240);
 	grayBg.allocate(320,240);
@@ -62,7 +62,7 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void drawing::update(){
 	// update the sound playing system:
 	ofSoundUpdate();
 	
@@ -70,12 +70,12 @@ void testApp::update(){
 	if (!usingMouseInput)
 	{
 		bool bNewFrame = false;	
-		vidGrabber.grabFrame();
-		bNewFrame = vidGrabber.isFrameNew();
+		video->grabFrame();
+		bNewFrame = video->isFrameNew();
 		
 		if (bNewFrame){
 
-			colorImg.setFromPixels(vidGrabber.getPixels(), 320,240);
+			colorImg.setFromPixels(video->getPixels(), 320,240);
 		 grayImage = colorImg;
 
 		}
@@ -167,7 +167,7 @@ void testApp::update(){
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void drawing::draw(){
 	
 	transparency = MAX(transparency-5,0);
 #ifdef DEBUG
@@ -260,7 +260,7 @@ void testApp::draw(){
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void drawing::keyPressed(int key){
 	switch (key){
 		case ' ':
 			bLearnBakground = true;
@@ -277,18 +277,18 @@ void testApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void drawing::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void drawing::mouseMoved(int x, int y ){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void drawing::mouseDragged(int x, int y, int button){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
 	
@@ -324,7 +324,7 @@ void testApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void drawing::mousePressed(int x, int y, int button){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
 	current++;
@@ -334,14 +334,14 @@ void testApp::mousePressed(int x, int y, int button){
 
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
+void drawing::mouseReleased(int x, int y, int button){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
 	usingMouseInput=false;
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
+void drawing::windowResized(int w, int h){
 
 }
 
