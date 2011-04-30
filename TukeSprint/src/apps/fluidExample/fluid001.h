@@ -15,8 +15,7 @@ class fluid001 : public TukeApp{
 public:
 	void init();
 	string getName() { return "Fluid 1"; } 
-	string getScreenshotFileName() { return "icons/fluid1.png"; }
-	void setup();
+	string getScreenshotFileName() { return "icons/test.png"; }
 	void update();
 	void draw();
 	void exit();

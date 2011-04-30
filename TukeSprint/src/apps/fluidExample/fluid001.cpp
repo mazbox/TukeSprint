@@ -6,6 +6,31 @@
 
 fluid001 *myApp;
 #pragma mark Custom methods
+
+//--------------------------------------------------------------
+void fluid001::init() {	 
+	myApp=this;
+	setupOCV();
+	
+	//ADD refrences to Global sound Variables
+	sample[0].loadSound("1.wav", false);
+	sample[1].loadSound("2.wav", false);
+	sample[2].loadSound("3.wav", false);
+	
+	// setup fluid stuff
+	fluidSolver.setup(100, 100);
+	
+   	fluidSolver.enableRGB(true).setFadeSpeed(0.002).setDeltaT(0.5).setVisc(0.00015).setColorDiffusion(0);
+	fluidDrawer.setup(&fluidSolver);
+	
+	//set presets for how the aplication will look - this is all that will change in the different versions
+	setPresets();
+	
+	window.aspectRatio	= 1;
+	window.width = ofGetWidth();
+	window.height = ofGetHeight();
+}
+
 //--------------------------------------------------------------
 void fadeToColor(float r, float g, float b, float speed) {
 	
@@ -20,10 +45,7 @@ void fadeToColor(float r, float g, float b, float speed) {
     glEnd();
 
 }
-//--------------------------------------------------------------
-void fluid001::init()
-{
-}
+
 //--------------------------------------------------------------
 void fluid001::addToFluid(float x, float y, float dx, float dy, bool addColor, bool addForce) {
    
@@ -82,12 +104,12 @@ void fluid001::setPresets(){
 	renderUsingVA				= true;	
 	fluidSolver.doRGB 			= true;	
 	
-	fluidCellsX 				= 0;
-	fluidSolver.viscocity 			=0;
-	fluidSolver.colorDiffusion		= 0;
-	fluidSolver.fadeSpeed 			= 0;
-	fluidSolver.solverIterations 		= 0;
-	fluidDrawer.drawMode 			= 0;
+	fluidCellsX 				= 119;
+	fluidSolver.viscocity 		= 0.00028;
+	fluidSolver.colorDiffusion	= 0.00006;
+	fluidSolver.fadeSpeed 		= 0.003;
+	fluidSolver.solverIterations= 15;
+	fluidDrawer.drawMode 		= 3;
 	
 	fluidSolver.doVorticityConfinement 	= 0;
 	fluidSolver.wrap_x 			= 0;
@@ -108,62 +130,24 @@ void fluid001::exit() {
 void fluid001::setupOCV(){
 
 	//openCV things
-	vidGrabber.setVerbose(true);
-	vidGrabber.initGrabber(VISION_WIDTH,VISION_HEIGHT);
 	colorImg.allocate(VISION_WIDTH,VISION_HEIGHT);
 	grayImage.allocate(VISION_WIDTH,VISION_HEIGHT);
 	grayLast.allocate(VISION_WIDTH,VISION_HEIGHT);
 	flow.allocate(VISION_WIDTH,VISION_HEIGHT);
 	
 }
-//--------------------------------------------------------------
-void fluid001::setup() {	 
-
-	setupOCV();
-
-	//ADD refrences to Global sound Variables
-	sample[0].loadSound("1.wav", false);
-	sample[1].loadSound("2.wav", false);
-	sample[2].loadSound("3.wav", false);
-	
-	// setup fluid stuff
-	fluidSolver.setup(100, 100);
-
-   	fluidSolver.enableRGB(true).setFadeSpeed(0.002).setDeltaT(0.5).setVisc(0.00015).setColorDiffusion(0);
-	fluidDrawer.setup(&fluidSolver);
-
-	//set presets for how the aplication will look - this is all that will change in the different versions
-	setPresets();
-	
-	window.aspectRatio	= 1;
-	
-	// set up OF stuff
-	ofBackground(0, 0, 5);
-	ofSetVerticalSync(true);
-	ofSetFrameRate(60);
-	ofEnableAlphaBlending();
-
-}
 
 //--------------------------------------------------------------
 void fluid001::updateOCV(){
 
-    bool bNewFrame = false;
-	
-	vidGrabber.grabFrame();
-	bNewFrame = vidGrabber.isFrameNew();
-	
-	if (bNewFrame){
-		
-		colorImg.setFromPixels(vidGrabber.getPixels(), VISION_WIDTH, VISION_HEIGHT);
+   		colorImg.setFromPixels(video->getPixels(), VISION_WIDTH, VISION_HEIGHT);
 		
 		colorImg.mirror(false, true);
        		grayImage = colorImg;
 		
 		flow.calc(grayLast, grayImage, 7);
-		flow.filter(1);//"FLOWFILTERVALUE?");
+		flow.filter(5);//"FLOWFILTERVALUE?");
 		grayLast = grayImage;
-	}	
 }
 //--------------------------------------------------------------
 void fluid001::opticalFlowToFluid() {
@@ -249,7 +233,7 @@ void fluid001::keyPressed  (int key){
     switch(key) {
 
 		case 'f':
-			ofToggleFullscreen();
+		//	ofToggleFullscreen();
 			break;
 
     }

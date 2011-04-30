@@ -44,7 +44,7 @@ void ParticleSystem::updateAndDraw(){
 		glEnableClientState(GL_COLOR_ARRAY);
 		glColorPointer(3, GL_FLOAT, 0, colArray);
 		
-		cout << particleType << endl;
+	//	cout << particleType << endl;
 		
 		switch(particleType) {
 				 
