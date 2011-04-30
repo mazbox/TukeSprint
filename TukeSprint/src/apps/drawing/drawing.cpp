@@ -5,17 +5,12 @@
 void drawing::init(){
 	current = -1;
 	timeElapsed = ofGetElapsedTimeMillis();
-	ofEnableAlphaBlending();
-	ofSetFrameRate(40);
-	//ofSetBackgroundAuto(false);
-	ofBackground(255, 255, 255);
+
 	
 	BLOB_SIZE = 15;
 	//beats.loadSound("vib-ntch.st-B3-f.AIF");
 
 	// OpenCV stuff
-	video->setVerbose(true);
-	video->initGrabber(320,240);
 	colorImg.allocate(320,240);
 	grayImage.allocate(320,240);
 	grayBg.allocate(320,240);
@@ -25,8 +20,6 @@ void drawing::init(){
 	bLearnBakground = true;
 	threshold = 40;
 	
-	ofSetFullscreen(true);
-	ofSetRectMode(OF_RECTMODE_CORNER);
 	
 	LOWPASS = 45; //must be the same as the size of the array smoothPos
 

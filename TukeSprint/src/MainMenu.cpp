@@ -11,11 +11,13 @@
 #include "TestTApp.h"
 #include "testApp.h"
 #include "Sampler.h"
+#include "drawing.h"
 
 void MainMenu::init() {
 
 	apps.push_back(new TestTApp());
 	apps.push_back(new Sampler());
+	apps.push_back(new drawing());
 	
 	int itemsPerRow = 3;
 	int PADDING = 10;

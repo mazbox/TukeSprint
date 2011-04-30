@@ -83,6 +83,7 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
+	if(help.isEnabled()) return;
 	if(currApp!=NULL) {
 		currApp->mouseMoved(x, y);
 	}
@@ -90,6 +91,7 @@ void testApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button){
+	if(help.isEnabled()) return;
 	if(currApp!=NULL) {
 		currApp->mouseDragged(x, y, button);
 	}
@@ -97,6 +99,7 @@ void testApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mousePressed(int x, int y, int button){
+	if(help.isEnabled()) return;
 	if(currApp!=NULL) {
 		currApp->mousePressed(x, y, button);
 	}
@@ -104,6 +107,7 @@ void testApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void testApp::mouseReleased(int x, int y, int button){
+	if(help.isEnabled()) return;
 	if(currApp!=NULL) {
 		currApp->mouseReleased(x, y, button);
 	}
@@ -117,11 +121,14 @@ void testApp::windowResized(int w, int h){
 
 void testApp::audioReceived( float * input, int bufferSize, int nChannels ) {
 	float max = 0;
+	float vol = AppSettings::micVolume;
 	for(int i = 0; i < bufferSize*nChannels; i++) {
-		if(ABS(input[i])>max) max = ABS(input[i]);
+		input[i] *= vol;
+		float inp = ABS(input[i]);
+		if(inp>max) max = inp;
 	}
 	if(max>AppSettings::micLevel) AppSettings::micLevel = max;
-	else AppSettings::micLevel *= 0.99;
+	else AppSettings::micLevel *= 0.95;
 	
 	if(currApp!=NULL) {
 		currApp->audioReceived(input, bufferSize, nChannels);

@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 //#define DEBUG
 
@@ -68,4 +67,3 @@ class drawing : public TukeApp{
 	int transparency;
 };
 
-#endif

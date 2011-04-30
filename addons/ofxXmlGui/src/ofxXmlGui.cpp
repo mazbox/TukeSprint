@@ -24,6 +24,7 @@ GuiMeter	*ofxXmlGui::addMeter(string name, float &ptr) {
 	GuiMeter *meter = (GuiMeter*)currPage->add("meter", name, name);
 	meter->value = &ptr;
 	meter->width = controlSize;
+	meter->vertical = false;
 	return meter;
 }
 
