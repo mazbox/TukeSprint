@@ -237,8 +237,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,10 +275,11 @@
 								<string>E4B69B4A0A3A1720003C02F2</string>
 								<string>E4B69E1C0A3A1BDC003C02F2</string>
 								<string>EA953BDC136C5BB00030D789</string>
+								<string>AFB9C4E8136D7FFC00E8A7C1</string>
 								<string>AFB9C20D136C6F8C00E8A7C1</string>
-								<string>EA953BE1136C5BC40030D789</string>
 								<string>E4C2422310CC54B6004149E2</string>
 								<string>BB4B014C10F69532006C3DED</string>
+								<string>AFB9C4E4136D7FE600E8A7C1</string>
 								<string>AFB9C277136C77B100E8A7C1</string>
 								<string>AFB9C288136C77B100E8A7C1</string>
 								<string>EA953C41136C5CF00030D789</string>
@@ -288,15 +287,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>14</integer>
+									<integer>11</integer>
+									<integer>7</integer>
 									<integer>6</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {283, 760}}</string>
+							<string>{{0, 44}, {283, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -324,12 +323,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>AFB9C1B6136C61BF00E8A7C1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Sampler.h</string>
+								<string>baroque.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,7 +338,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFB9C1B7136C61BF00E8A7C1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Sampler.h</string>
+										<string>baroque.h</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>AFB9C5C4136D842B00E8A7C1</string>
 										<key>history</key>
 										<array>
 											<string>AFB9C24A136C74EA00E8A7C1</string>
@@ -353,7 +358,6 @@
 											<string>AFB9C319136C81BD00E8A7C1</string>
 											<string>AFB9C326136C833F00E8A7C1</string>
 											<string>AFB9C33C136C841500E8A7C1</string>
-											<string>AFB9C452136D64C100E8A7C1</string>
 											<string>AFB9C453136D64C100E8A7C1</string>
 											<string>AFB9C456136D64C100E8A7C1</string>
 											<string>AFB9C458136D64C100E8A7C1</string>
@@ -361,7 +365,6 @@
 											<string>AFB9C45C136D64C100E8A7C1</string>
 											<string>AFB9C45D136D64C100E8A7C1</string>
 											<string>AFB9C45E136D64C100E8A7C1</string>
-											<string>AFB9C468136D65D900E8A7C1</string>
 											<string>AFB9C469136D65D900E8A7C1</string>
 											<string>AFB9C46A136D65D900E8A7C1</string>
 											<string>AFB9C46B136D65D900E8A7C1</string>
@@ -372,6 +375,16 @@
 											<string>AFB9C49D136D6FA700E8A7C1</string>
 											<string>AFB9C49E136D6FA700E8A7C1</string>
 											<string>AFB9C4AB136D796200E8A7C1</string>
+											<string>AFB9C5B1136D836100E8A7C1</string>
+											<string>AFB9C5B2136D836100E8A7C1</string>
+											<string>AFB9C5B3136D836100E8A7C1</string>
+											<string>AFB9C5B4136D836100E8A7C1</string>
+											<string>AFB9C5B5136D836100E8A7C1</string>
+											<string>AFB9C5B9136D836100E8A7C1</string>
+											<string>AFB9C5C0136D842B00E8A7C1</string>
+											<string>AFB9C5C1136D842B00E8A7C1</string>
+											<string>AFB9C5C2136D842B00E8A7C1</string>
+											<string>AFB9C5C3136D842B00E8A7C1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -411,8 +424,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1135, 173}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -466,7 +477,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1135, 163}}</string>
+										<string>{{10, 27}, {1135, 173}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 59 1440 819 0 0 1440 878 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -648,14 +661,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>AFB9C4BE136D7AFC00E8A7C1</string>
+				<string>AFB9C5C5136D842B00E8A7C1</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>AFB9C4BF136D7AFC00E8A7C1</string>
-				<string>AFB9C4C0136D7AFC00E8A7C1</string>
-				<string>AFB9C4C1136D7AFC00E8A7C1</string>
-				<string>AFB9C4C2136D7AFC00E8A7C1</string>
-				<string>AFB9C1B6136C61BF00E8A7C1</string>
+				<string>AFB9C5C6136D842B00E8A7C1</string>
+				<string>AFB9C5C7136D842B00E8A7C1</string>
+				<string>AFB9C5C8136D842B00E8A7C1</string>
+				<string>AFB9C5C9136D842B00E8A7C1</string>
+				<string>AFB9C5CA136D842B00E8A7C1</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -689,6 +702,9 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>AFB9C5CB136D842B00E8A7C1</string>
+		<string>AFB9C5CC136D842B00E8A7C1</string>
+		<string>AFB9C5CD136D842B00E8A7C1</string>
 		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0062_osxSL_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

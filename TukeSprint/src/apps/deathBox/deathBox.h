@@ -88,7 +88,7 @@ public:
 	
 	deathBox();
 	void init();
-	string getName() { return "Test T App!"; } 
+	string getName() { return "THE DEATH BOX"; } 
 	string getScreenshotFileName() { return "icons/test.png"; }
 
 	void update();
