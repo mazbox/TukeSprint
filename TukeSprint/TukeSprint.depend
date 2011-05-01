@@ -1099,7 +1099,7 @@
 
 1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\parameterinfo.h
 
-1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.cpp
+1304252501 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.cpp
 	"MainMenu.h"
 	"MenuButton.h"
 	"TestTApp.h"
@@ -1109,6 +1109,7 @@
 	"fluid001.h"
 	"ImageObject.h"
 	"deathBox.h"
+	"baroque.h"
 
 1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\testtapp.h
 	"TukeApp.h"
@@ -1146,7 +1147,7 @@
 
 1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\particle.h
 
-1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.h
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.h
 	"TukeApp.h"
 	"ofxOpenCv.h"
 	"Blob.h"
@@ -1191,7 +1192,7 @@
 1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\imageobject.h
 	"InteractiveObject.h"
 
-1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\deathbox.h
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\deathbox.h
 	"TukeApp.h"
 	"ofxVectorMath.h"
 	"ofxBox2d.h"
@@ -2315,7 +2316,7 @@
 1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\blob.cpp
 	"Blob.h"
 
-1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.cpp
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.cpp
 	"drawing.h"
 
 1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\particlememo.cpp
@@ -2330,7 +2331,7 @@
 	"fluid001.h"
 	"ParticleSystem.h"
 
-1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.cpp
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.cpp
 	"fluid001.h"
 	"ParticleMemo.h"
 	"msaColor.h"
@@ -2364,4 +2365,59 @@
 
 1304249781 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxcvopticalflowlk\ofxcvopticalflowlk.cpp
 	"ofxCvOpticalFlowLK.h"
+
+1289826118 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxdirlist\src\ofxdirlist.cpp
+	"ofxDirList.h"
+	<algorithm>
+	<string>
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\src\ofxxmlsettings.cpp
+	"ofxXmlSettings.h"
+	<vector>
+	<string>
+	<iostream>
+
+1304252501 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.h
+	"TukeApp.h"
+	"ofxOpenCv.h"
+	"ofxCvHaarFinder.h"
+	"ofxXmlSettings.h"
+	"ofImageAdv.h"
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.h
+	"ofMain.h"
+	"ofxCvMain.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvmain.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofimageadv.h
+	"ofImage.h"
+
+1304252501 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.cpp
+	"baroque.h"
+
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.cpp
+	"ofxCvHaarFinder.h"
 
