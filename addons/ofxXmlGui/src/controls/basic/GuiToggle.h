@@ -91,7 +91,7 @@ public:
 		
 		
 		ofSetColor(255, 255, 255);
-		resources->getDefaultFont()->drawString(name, x+3, y+14);
+		//resources->getDefaultFont()->drawString(name, x+3, y+14);
 	}
 	bool touchDown(int _x, int _y, int button) {
 		bval(value) ^= true;

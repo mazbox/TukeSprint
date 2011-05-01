@@ -5,9 +5,11 @@
  * Created by Marek Bereza on 30/04/2011.
  *
  */
+#include "GuiControl.h"
 
 class ColorScheme {
 public:
+	GuiControl *control;
 	bool enabled;
 	string name;
 	string thumbnailUrl;

@@ -17,12 +17,13 @@ public:
 	ofTrueTypeFont bigFont;
 	
 	void setup(ofVideoGrabber &video) {
+		
 		bigFont.loadFont("resources/Arial Bold.ttf", 32);
 		font.loadFont("resources/Arial Bold.ttf", 22);
 		soundId = 0;
 		imageId = 0;
 		imagePreview.loadImage("resources/no-image.png");
-		gui.setup(10, 10, 200);
+		gui.setup(0,0, 200);
 
 		gui.addTitle("Settings", bigFont, 0)->position(45, 85);
 		
@@ -47,15 +48,16 @@ public:
 		colorSchemes.push_back(new ColorScheme("scheme6", "resources/colourSchemes/Palette7.png", 0x000000, 0x00ff33, 0xff00ff));
 
 		
-		setColorScheme(0);
+		
 		
 		for(int i = 0; i < colorSchemes.size(); i++) {
-			float xx = 272 + (i%2)*100;
+			float xx = 272 + (i%2)*110;
 			float yy = 200 + (i/2)*100;
-			gui.addToggle(colorSchemes[i]->name, colorSchemes[i]->thumbnailUrl, colorSchemes[i]->enabled)->position(xx, yy);
+			GuiControl *c = gui.addToggle(colorSchemes[i]->name, colorSchemes[i]->thumbnailUrl, colorSchemes[i]->enabled)->position(xx, yy);
+			colorSchemes[i]->control = c;
 		}
 		
-		
+		setColorScheme(AppSettings::colorScheme);
 		/*
 		
 		
@@ -118,7 +120,29 @@ public:
 		}
 	}
 	
+#ifndef hexValR
+#define hexValR(A)  ((A >> 16) & 0xff)
+#define hexValG(A) ((A >> 8) & 0xff)
+#define hexValB(A) ((A >> 0) & 0xff)
+#endif
+	
+	
+	ofColor ofColorFromHex(int hex) {
+		ofColor c;
+		c.r = hexValR(hex);
+		c.g = hexValG(hex);
+		c.b = hexValB(hex);
+		return c;
+	}
+
 	void setColorScheme(int scheme) {
+		
+		AppSettings::colorScheme = scheme;
+		
+		AppSettings::color1 = ofColorFromHex(colorSchemes[scheme]->color1);
+		AppSettings::color2 = ofColorFromHex(colorSchemes[scheme]->color2);
+		AppSettings::color3 = ofColorFromHex(colorSchemes[scheme]->color3);
+		
 		for(int i = 0; i < colorSchemes.size(); i++) {
 			if(i==scheme) colorSchemes[i]->enabled = true;
 			else colorSchemes[i]->enabled = false;
@@ -135,10 +159,20 @@ public:
 	void draw() {
 		
 		// draw background
-		ofSetColor(255, 255, 255, 220);
+		ofSetColor(255, 255, 255, 240);
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());
 		
-		
+		// draw the highlight
+		ofRectangle rect(colorSchemes[AppSettings::colorScheme]->control->x,
+		colorSchemes[AppSettings::colorScheme]->control->y,
+		colorSchemes[AppSettings::colorScheme]->control->width,
+		colorSchemes[AppSettings::colorScheme]->control->height);
+		rect.x -= 5;
+		rect.y -= 5;
+		rect.width += 10;
+		rect.height += 10;
+		ofSetColor(255, 0, 0);
+		ofRect(rect.x, rect.y, rect.width, rect.height);
 		
 	}
 	bool isEnabled() {

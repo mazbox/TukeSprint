@@ -188,6 +188,7 @@ GuiToggle *ofxXmlGui::addToggle(string name, string imageUrl, bool &ptr) {
 	t->width = controlSize;
 	t->toggleOnUrl = imageUrl;
 	t->toggleOffUrl = imageUrl;
+	t->toggleDownUrl = imageUrl;
 	t->load();
 	return t;
 }
