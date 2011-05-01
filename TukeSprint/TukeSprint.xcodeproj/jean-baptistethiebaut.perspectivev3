@@ -321,8 +321,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -340,7 +338,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB9C755136DD30C00E8A7C1</string>
+										<string>AFB9C75A136DD56900E8A7C1</string>
 										<key>history</key>
 										<array>
 											<string>AFB9C2B9136C7DFF00E8A7C1</string>
@@ -705,7 +703,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFB9C756136DD30C00E8A7C1</string>
 		<string>AFB9C73D136DD15B00E8A7C1</string>
 		<string>AFB9C73E136DD15B00E8A7C1</string>
 		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0062_osxSL_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>

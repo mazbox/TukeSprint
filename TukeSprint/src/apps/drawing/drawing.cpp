@@ -290,7 +290,7 @@ void drawing::mouseDragged(int x, int y, int button){
 		int i = (int)ofRandom(0,files.size());
 		currentSound = files[i];
 		sample.loadSound(currentSound, false);
-
+		sample.play();
 		for (int j = 0;j<30;j++)
 			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-4,4),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
 

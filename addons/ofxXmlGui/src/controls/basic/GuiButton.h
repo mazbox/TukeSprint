@@ -37,7 +37,7 @@ public:
 	
 	
 	void draw() {
-		
+		ofEnableAlphaBlending();
 		if(down) {
 			if(downImg!=NULL) {
 				ofSetHexColor(0xFFFFFF);
