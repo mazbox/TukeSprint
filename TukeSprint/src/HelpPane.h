@@ -15,30 +15,32 @@ class HelpPane: public GuiListener {
 public:
 	ofTrueTypeFont font;
 	ofTrueTypeFont bigFont;
-	
+	ofImage logo;
 	void setup(ofVideoGrabber &video) {
-		
+		logo.loadImage("resources/sam.png");
+		logo.setAnchorPercent(0, 1);
 		bigFont.loadFont("resources/Arial Bold.ttf", 32);
 		font.loadFont("resources/Arial Bold.ttf", 22);
 		soundId = 0;
 		imageId = 0;
 		imagePreview.loadImage("resources/no-image.png");
 		gui.setup(0,0, 200);
-
-		gui.addTitle("Settings", bigFont, 0)->position(45, 85);
+		int col1 = 45;
+		gui.addTitle("Settings", bigFont, 0)->position(col1, 85);
+	
+		gui.addTitle("Video", font, 0)->position(col1, 160);
+		gui.addDrawable("camera", video)->position(col1, 195);
 		
-		gui.addTitle("Video", font, 0)->position(45, 160);
-		gui.addDrawable("camera", video)->position(45, 195);
+		gui.addTitle("Volume", font, 0)->position(col1, 370);
+		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(col1, 390);
 		
-		gui.addTitle("Volume", font, 0)->position(45, 370);
-		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(45, 390);
+		gui.addTitle("Microphone", font, 0)->position(col1, 480);
+		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1)->position(col1, 506);
+		gui.addMeter("Mic level", AppSettings::micLevel)->position(col1, 537);
 		
-		gui.addTitle("Microphone", font, 0)->position(45, 480);
-		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1)->position(45, 506);
-		gui.addMeter("Mic level", AppSettings::micLevel)->position(45, 537);
+		int col2 = 272;
 		
-		
-		gui.addTitle("Colour", font, 0)->position(272, 160);
+		gui.addTitle("Colour", font, 0)->position(col2, 160);
 		colorSchemes.push_back(new ColorScheme("scheme0", "resources/colourSchemes/Palette1.png", 0x6a0100, 0xc09d4d, 0xfbe7c0));
 		colorSchemes.push_back(new ColorScheme("scheme1", "resources/colourSchemes/Palette2.png", 0xe90000, 0x11d552, 0xaaffc3));
 		colorSchemes.push_back(new ColorScheme("scheme2", "resources/colourSchemes/Palette3.png", 0x34d1c4, 0xb3d9b0, 0x4a453c));
@@ -51,31 +53,32 @@ public:
 		
 		
 		for(int i = 0; i < colorSchemes.size(); i++) {
-			float xx = 272 + (i%2)*110;
+			float xx = col2 + (i%2)*110;
 			float yy = 200 + (i/2)*100;
 			GuiControl *c = gui.addToggle(colorSchemes[i]->name, colorSchemes[i]->thumbnailUrl, colorSchemes[i]->enabled)->position(xx, yy);
 			colorSchemes[i]->control = c;
 		}
 		
 		setColorScheme(AppSettings::colorScheme);
-		/*
+		
 		
 		
 		listFilesIntoVector("./../images", imageFiles);
 		listFilesIntoVector("./../sounds", soundFiles);
-		
-		gui.addTitle("Custom Picture", font, 0);
-		gui.addImage("img", imagePreview);
-		gui.addList("image", imageId, imageFiles);
+		int col3 = 580;
+		int col4 = col3 + 100;
+		gui.addTitle("Custom Picture", font, 0)->position(col3, 160);
+		gui.addImage("img", imagePreview)->position(col3, 180);
+		gui.addList("image", imageId, imageFiles)->position(col4, 180);
 
 		
-		gui.addTitle("Custom Sound", font, 0);
-		gui.addButton("play sound");
-		gui.addList("sound", soundId, soundFiles);
+		gui.addTitle("Custom Sound", font, 0)->position(col3, 300);
+		gui.addButton("play sound")->position(col3, 330);
+		gui.addList("sound", soundId, soundFiles)->position(col4, 330);
 
 		
-		gui.addButton("back");
-		*/
+		gui.addButton("back")->position(700, 720);
+		
 		gui.addListener(this);
 	}
 	
@@ -159,9 +162,9 @@ public:
 	void draw() {
 		
 		// draw background
-		ofSetColor(255, 255, 255, 240);
+		ofSetColor(255, 255, 255);
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());
-		
+		logo.draw(0, ofGetHeight());
 		// draw the highlight
 		ofRectangle rect(colorSchemes[AppSettings::colorScheme]->control->x,
 		colorSchemes[AppSettings::colorScheme]->control->y,
