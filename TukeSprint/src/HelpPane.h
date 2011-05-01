@@ -21,7 +21,7 @@ public:
 		logo.loadImage("resources/sam.png");
 		logo.setAnchorPercent(0, 1);
 		bigFont.loadFont("resources/Arial Bold.ttf", 32);
-		font.loadFont("resources/Arial Bold.ttf", 22);
+		font.loadFont("resources/Arial.ttf", 19);
 		soundId = 0;
 		imageId = 0;
 		imagePreview.loadImage("resources/no-image.png");
@@ -76,7 +76,7 @@ public:
 
 		
 		gui.addTitle("Custom Sound", font, 0)->position(col3, 450);
-		gui.addButton("play sound")->position(col3, 480);
+		gui.addButton("play sound", "resources/play.png", "resources/playDown.png")->position(col3, 480);
 		gui.addList("sound", soundId, soundFiles)->position(col4, 480)->size(284, 167);
 
 		
@@ -164,6 +164,7 @@ public:
 	
 	void draw() {
 		
+		ofFill();
 		// draw background
 		ofSetColor(255, 255, 255);
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());

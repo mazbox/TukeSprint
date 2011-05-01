@@ -28,8 +28,8 @@ public:
 
 	string options;
 	void setup() {
-		bgColor = 0x333333;
-		fgColor = 0xFFFFFF;
+		bgColor = 0xFFFFFF;
+		fgColor = 0;
 		dragging = false;
 		scrolling = SCROLL_NONE;
 		itemHeight = scrollerWidth = 22;
@@ -91,13 +91,21 @@ public:
 		maskOn(abs.x, abs.y, width, height);
 		
 		for(int i =0; i < items.size(); i++) {
-			ofSetHexColor(fgColor);
 			
+			ofFill();
+			if(i==ival(value)) {
+				ofSetHexColor(0x0066DD);
+			} else {
+				ofSetHexColor(bgColor);
+			}
+			ofRect(x, scrollOffset + y + i*itemHeight, width-scrollerWidth, itemHeight);
+			ofNoFill();
+			ofSetHexColor(fgColor);
 			
 			ofRect(x, scrollOffset + y + i*itemHeight, width-scrollerWidth, itemHeight);
 			
-			if(i==ival(value)) ofSetHexColor(0x00FF00);
-			resources->getDefaultFont()->drawString(items[i], x+5, scrollOffset + y + (i+1)*itemHeight-4);
+			if(i==ival(value)) ofSetHexColor(0xFFFFFF);
+			resources->getDefaultFont()->drawString(items[i], x+5, scrollOffset + y + (i+1)*itemHeight-5);
 			
 			// only draw as much as we need
 			//if((i+1)*itemHeight>height) break;

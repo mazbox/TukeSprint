@@ -100,6 +100,7 @@ void MenuButton::setListener(MenuButtonListener *listener) {
 void MenuButton::draw() {
 	x = (int)x;
 	y = (int)y;
+	ofFill();
 	if(over) {
 		int BORDER = 8;
 		ofSetColor(255, 0, 0);
