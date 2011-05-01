@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="debug" />
+	<File name="src\MainMenu.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="748" topLine="12" />
+	</File>
+	<File name="src\TukeApp.h" open="1" top="0" tabpos="2">
+		<Cursor position="125" topLine="6" />
+	</File>
+	<File name="src\apps\deathBox\deathBox.h" open="0" top="0" tabpos="0">
+		<Cursor position="66" topLine="0" />
+	</File>
+	<File name="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dUtils.h" open="0" top="0" tabpos="0">
+		<Cursor position="35" topLine="0" />
+	</File>
+	<File name="src\apps\deathBox\src\testApp.h" open="0" top="0" tabpos="0">
+		<Cursor position="2289" topLine="102" />
+	</File>
+	<File name="src\apps\deathBox\testApp.h" open="0" top="0" tabpos="0">
+		<Cursor position="2291" topLine="102" />
+	</File>
+	<File name="src\apps\fluidExample\fluid001.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="3445" topLine="124" />
+	</File>
+	<File name="src\apps\fluidExample\fluid001.h" open="1" top="0" tabpos="1">
+		<Cursor position="837" topLine="30" />
+	</File>
+	<File name="src\apps\fluidExample\src\testApp.h" open="0" top="0" tabpos="0">
+		<Cursor position="830" topLine="38" />
+	</File>
+	<File name="src\apps\sampler\Sample.h" open="0" top="0" tabpos="0">
+		<Cursor position="845" topLine="19" />
+	</File>
+	<File name="src\apps\sampler\Sampler.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="4714" topLine="186" />
+	</File>
+	<File name="src\apps\sampler\Vision.h" open="0" top="0" tabpos="0">
+		<Cursor position="279" topLine="13" />
+	</File>
+	<File name="src\apps\sampler\WavFile.h" open="0" top="0" tabpos="0">
+		<Cursor position="4706" topLine="173" />
+	</File>
+	<File name="src\testApp.h" open="0" top="0" tabpos="0">
+		<Cursor position="118" topLine="0" />
+	</File>
+	<File name="..\addons\ofxXmlGui\src\base\GuiControl.h" open="0" top="0" tabpos="0">
+		<Cursor position="500" topLine="22" />
+	</File>
+	<File name="..\addons\ofxXmlGui\src\controls\basic\GuiMeter.h" open="0" top="0" tabpos="0">
+		<Cursor position="86" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

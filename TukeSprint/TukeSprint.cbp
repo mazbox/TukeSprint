@@ -1,133 +1,1006 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
-	<FileVersion major="1" minor="6"/>
+	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="opencvExample"/>
-		<Option pch_mode="2"/>
-		<Option compiler="gcc"/>
-		<Option virtualFolders="addons\;src\;"/>
+		<Option title="TukeSprint" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="addons\;src\;addons\ofxOpenCv\src\;apps\;apps\deathBox\;addons\ofxBox2dDeath\;addons\ofxCvHaarFinder\;apps\baroque\;apps\drawing\;apps\sampler\;apps\fluidExample\;addons\ofxCvOpticalFlowLK\;addons\ofxMSAFluid\;addons\ofxXmlGui\;addons\ofxDirList\;addons\ofxXmlSettings\;" />
 		<Build>
 			<Target title="release">
-				<Option output="bin\$(PROJECT_NAME)" prefix_auto="1" extension_auto="1"/>
-				<Option working_dir="bin"/>
-				<Option object_output="obj\release"/>
-				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworks.lib;"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Option projectLinkerOptionsRelation="2"/>
+				<Option output="bin\$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\release" />
+				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworks.lib;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-O2"/>
+					<Add option="-O2" />
 				</Compiler>
 				<Linker>
-					<Add option="-s"/>
-					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworks.lib"/>
+					<Add option="-s" />
+					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworks.lib" />
 				</Linker>
 			</Target>
 			<Target title="debug">
-				<Option output="bin\$(PROJECT_NAME)_DEBUG" prefix_auto="1" extension_auto="1"/>
-				<Option working_dir="bin"/>
-				<Option object_output="obj\debug\"/>
-				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworksDebug.lib;"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Option projectLinkerOptionsRelation="2"/>
+				<Option output="bin\$(PROJECT_NAME)_DEBUG" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin" />
+				<Option object_output="obj\debug\" />
+				<Option external_deps="..\..\..\libs\openFrameworksCompiled\lib\win_cb\openFrameworksDebug.lib;" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-g"/>
+					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworksDebug.lib"/>
+					<Add option="../../../libs/openFrameworksCompiled/lib/win_cb/openFrameworksDebug.lib" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-Wno-multichar"/>
-			<Add directory="../../../libs/glu/include"/>
-			<Add directory="../../../libs/freetype/include"/>
-			<Add directory="../../../libs/freetype/include/freetype2"/>
-			<Add directory="../../../libs/FreeImage/include"/>
-			<Add directory="../../../libs/quicktime/include"/>
-			<Add directory="../../../libs/rtAudio/include"/>
-			<Add directory="../../../libs/fmodex/include"/>
-			<Add directory="../../../libs/videoInput/include"/>
-			<Add directory="../../../libs/glee/include"/>
-			<Add directory="../../../libs/glut/include"/>
-			<Add directory="../../../libs/openFrameworks"/>
-			<Add directory="../../../libs/openFrameworks/app"/>
-			<Add directory="../../../libs/openFrameworks/events"/>
-			<Add directory="../../../libs/openFrameworks/graphics"/>
-			<Add directory="../../../libs/openFrameworks/utils"/>
-			<Add directory="../../../libs/openFrameworks/sound"/>
-			<Add directory="../../../libs/openFrameworks/video"/>
-			<Add directory="../../../libs/openFrameworks/communication"/>
-			<Add directory="../../../libs/poco/include"/>
-		    <Add directory="../../../addons/"/>
-		    <Add directory="../../../addons/ofx3DModelLoader/src/3DS/"/>
-		    <Add directory="../../../addons/ofx3DModelLoader/src/"/>
-		    <Add directory="../../../addons/ofxNetwork/src"/>
-		    <Add directory="../../../addons/ofxOsc/src"/>
-		    <Add directory="../../../addons/ofxOsc/libs/oscpack/include/ip"/>
-		    <Add directory="../../../addons/ofxOsc/libs/oscpack/include/osc"/>
-		    <Add directory="../../../addons/ofxVectorMath/src"/>
-		    <Add directory="../../../addons/ofxVectorGraphics/src"/>
-		    <Add directory="../../../addons/ofxVectorGraphics/libs"/>
-		    <Add directory="../../../addons/ofxOpenCv/src"/>
-		    <Add directory="../../../addons/ofxOpenCv/libs/opencv/include"/>
-		    <Add directory="../../../addons/ofxThread/src"/>
-		    <Add directory="../../../addons/ofxDirList/src"/>
-		    <Add directory="../../../addons/ofxXmlSettings/src"/>
-		    <Add directory="../../../addons/ofxXmlSettings/libs"/>
+			<Add option="-Wno-multichar" />
+			<Add directory="..\..\..\libs\glu\include" />
+			<Add directory="..\..\..\libs\freetype\include" />
+			<Add directory="..\..\..\libs\freetype\include\freetype2" />
+			<Add directory="..\..\..\libs\FreeImage\include" />
+			<Add directory="..\..\..\libs\quicktime\include" />
+			<Add directory="..\..\..\libs\rtAudio\include" />
+			<Add directory="..\..\..\libs\fmodex\include" />
+			<Add directory="..\..\..\libs\videoInput\include" />
+			<Add directory="..\..\..\libs\glee\include" />
+			<Add directory="..\..\..\libs\glut\include" />
+			<Add directory="..\..\..\libs\openFrameworks" />
+			<Add directory="..\..\..\libs\openFrameworks\app" />
+			<Add directory="..\..\..\libs\openFrameworks\events" />
+			<Add directory="..\..\..\libs\openFrameworks\graphics" />
+			<Add directory="..\..\..\libs\openFrameworks\utils" />
+			<Add directory="..\..\..\libs\openFrameworks\sound" />
+			<Add directory="..\..\..\libs\openFrameworks\video" />
+			<Add directory="..\..\..\libs\openFrameworks\communication" />
+			<Add directory="..\..\..\libs\poco\include" />
+			<Add directory="..\..\..\addons\" />
+			<Add directory="..\..\..\addons\ofx3DModelLoader\src\3DS\" />
+			<Add directory="..\..\..\addons\ofx3DModelLoader\src\" />
+			<Add directory="..\..\..\addons\ofxNetwork\src" />
+			<Add directory="..\..\..\addons\ofxOsc\src" />
+			<Add directory="..\..\..\addons\ofxOsc\libs\oscpack\include\ip" />
+			<Add directory="..\..\..\addons\ofxOsc\libs\oscpack\include\osc" />
+			<Add directory="..\..\..\addons\ofxVectorMath\src" />
+			<Add directory="..\..\..\addons\ofxVectorGraphics\src" />
+			<Add directory="..\..\..\addons\ofxVectorGraphics\libs" />
+			<Add directory="..\..\..\addons\ofxOpenCv\src" />
+			<Add directory="..\..\..\addons\ofxOpenCv\libs\opencv\include" />
+			<Add directory="..\..\..\addons\ofxThread\src" />
+			<Add directory="..\..\..\addons\ofxDirList\src" />
+			<Add directory="..\..\..\addons\ofxXmlSettings\src" />
+			<Add directory="..\..\..\addons\ofxXmlSettings\libs" />
+			<Add directory="..\addons\ofxXmlGui\src" />
+			<Add directory="..\addons\ofxXmlGui\src\base" />
+			<Add directory="..\addons\ofxXmlGui\src\builder" />
+			<Add directory="..\addons\ofxXmlGui\src\container" />
+			<Add directory="..\addons\ofxXmlGui\src\controls" />
+			<Add directory="..\addons\ofxXmlGui\src\controls\basic" />
+			<Add directory="..\addons\ofxXmlGui\src\controls\image" />
+			<Add directory="..\addons\ofxXmlGui\src\controls\nice" />
+			<Add directory="..\addons\ofxXmlGui\src\ext" />
+			<Add directory="..\addons\ofxXmlGui\src\util" />
+			<Add directory="src\apps\deathBox\src" />
+			<Add directory="src\apps\drawing" />
+			<Add directory="src\apps\fluidExample\src" />
+			<Add directory="src\apps\sampler" />
+			<Add directory="src" />
+			<Add directory="src\apps\fluidExample" />
+			<Add directory="..\addons\ofxMSAFluid" />
+			<Add directory="..\addons\ofxMSAFluid\src" />
+			<Add directory="src\apps\deathBox" />
+			<Add directory="src\apps\deathBox\ofxBox2dDeath" />
+			<Add directory="src\apps\deathBox\ofxBox2dDeath\scr" />
+			<Add directory="..\addons\ofxBox2d" />
+			<Add directory="..\addons\ofxBox2d\lib" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Include" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Collision" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Collision\Shapes" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Common" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Dynamics" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Dynamics\Contacts" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Dynamics\Controllers" />
+			<Add directory="..\addons\ofxBox2d\lib\Box2D\Source\Dynamics\Joints" />
+			<Add directory="..\addons\ofxCvOpticalFlowLK" />
+			<Add directory="src\apps\baroque" />
+			<Add directory="src\apps\baroque\ofxCvHaarFinder" />
 		</Compiler>
 		<Linker>
-			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib"/>
-			<Add option="../../../libs/rtAudio/lib/win_cb/RtAudio.a"/>
-			<Add option="../../../libs/quicktime/lib/win_cb/qtmlClient.lib"/>
-			<Add option="../../../libs/freetype/lib/win_cb/libfreetype.a"/>
-			<Add option="../../../libs/glut/lib/win_cb/libglut.a"/>
-			<Add option="../../../libs/videoInput/lib/win_cb/videoInputLib.a"/>
-			<Add option="../../../libs/fmodex/lib/win_cb/libfmodex.a"/>
-			<Add option="../../../libs/glee/lib/win_cb/GLee.lib"/>
-			<Add option="../../../libs/glu/lib/win_cb/glu32.lib"/>
-			<Add option="../../../libs/poco/lib/win_cb/libPocoNetmt.a"/>
-			<Add option="../../../libs/poco/lib/win_cb/libPocoUtilmt.a"/>
-			<Add option="../../../libs/poco/lib/win_cb/libPocoXMLmt.a"/>
-			<Add option="../../../libs/poco/lib/win_cb/libPocoFoundationmt.a"/>
-			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcv.a"/>
-			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcxcore.a"/>
-			<Add option="../../../addons/ofxOsc/libs/oscpack/lib/win_cb/oscpack.a"/>
-			<Add option="-lopengl32"/>
-			<Add option="-lglu32"/>
-			<Add option="-ldsound"/>
-			<Add option="-lwinmm"/>
-			<Add option="-ldxguid"/>
-			<Add option="-lstrmbase"/>
-			<Add option="-lstrmiids"/>
-			<Add option="-lz"/>
-			<Add option="-luuid"/>
-			<Add option="-lole32"/>
-			<Add option="-loleaut32"/>
-			<Add option="-lsetupapi"/>
-			<Add option="-lwsock32"/>
-			<Add option="-lws2_32"/>
-			<Add option="-lIphlpapi"/>
+			<Add option="../../../libs/FreeImage/lib/win_cb/FreeImage.lib" />
+			<Add option="../../../libs/rtAudio/lib/win_cb/RtAudio.a" />
+			<Add option="../../../libs/quicktime/lib/win_cb/qtmlClient.lib" />
+			<Add option="../../../libs/freetype/lib/win_cb/libfreetype.a" />
+			<Add option="../../../libs/glut/lib/win_cb/libglut.a" />
+			<Add option="../../../libs/videoInput/lib/win_cb/videoInputLib.a" />
+			<Add option="../../../libs/fmodex/lib/win_cb/libfmodex.a" />
+			<Add option="../../../libs/glee/lib/win_cb/GLee.lib" />
+			<Add option="../../../libs/glu/lib/win_cb/glu32.lib" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoNetmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoUtilmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoXMLmt.a" />
+			<Add option="../../../libs/poco/lib/win_cb/libPocoFoundationmt.a" />
+			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcv.a" />
+			<Add option="../../../addons/ofxOpenCv/libs/opencv/lib/win_cb/libcxcore.a" />
+			<Add option="../../../addons/ofxOsc/libs/oscpack/lib/win_cb/oscpack.a" />
+			<Add option="-lopengl32" />
+			<Add option="-lglu32" />
+			<Add option="-ldsound" />
+			<Add option="-lwinmm" />
+			<Add option="-ldxguid" />
+			<Add option="-lstrmbase" />
+			<Add option="-lstrmiids" />
+			<Add option="-lz" />
+			<Add option="-luuid" />
+			<Add option="-lole32" />
+			<Add option="-loleaut32" />
+			<Add option="-lsetupapi" />
+			<Add option="-lwsock32" />
+			<Add option="-lws2_32" />
+			<Add option="-lIphlpapi" />
 		</Linker>
 		<ExtraCommands>
-			<Add after='xcopy /e /i /y "$(PROJECT_DIR)..\..\..\export\win_cb\*.dll"  "$(PROJECT_DIR)bin"'/>
-			<Add after='cmd /c if not exist "$(PROJECT_DIR)bin/data" mkdir "$(PROJECT_DIR)bin/data"'/>
-			<Mode after="always"/>
+			<Add after='xcopy /e /i /y &quot;$(PROJECT_DIR)..\..\..\export\win_cb\*.dll&quot;  &quot;$(PROJECT_DIR)bin&quot;' />
+			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
+			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="src/main.cpp">
-			<Option virtualFolder="src/"/>
+		<Unit filename="..\..\..\addons\ofxDirList\src\ofxDirList.cpp">
+			<Option virtualFolder="addons\ofxDirList\" />
 		</Unit>
-		<Unit filename="src/testApp.cpp">
-			<Option virtualFolder="src/"/>
+		<Unit filename="..\..\..\addons\ofxDirList\src\ofxDirList.h">
+			<Option virtualFolder="addons\ofxDirList\" />
 		</Unit>
-		<Unit filename="src/testApp.h">
-			<Option virtualFolder="src/"/>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvBlob.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvColorImage.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvConstants.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvContourFinder.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvFloatImage.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvGrayscaleImage.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvImage.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvImage.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvMain.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.cpp">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxCvShortImage.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxOpenCv\src\ofxOpenCv.h">
+			<Option virtualFolder="addons\ofxOpenCv\src" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+			<Option virtualFolder="addons\ofxXmlSettings\" />
+		</Unit>
+		<Unit filename="src\AppSettings.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\AppSettings.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\ColorScheme.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\HelpPane.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\ImageCache.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\ImageCache.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\ImageObject.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\InteractiveObject.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\MainMenu.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\MainMenu.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\MenuButton.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\MenuButton.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\Mutex.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\TestTApp.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\TukeApp.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\baroque.cpp">
+			<Option virtualFolder="apps\baroque\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\baroque.h">
+			<Option virtualFolder="apps\baroque\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\ofImageAdv.h">
+			<Option virtualFolder="apps\baroque\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\ofxCvHaarFinder\ofxCvHaarFinder.cpp">
+			<Option virtualFolder="addons\ofxCvHaarFinder\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\ofxCvHaarFinder\ofxCvHaarFinder.h">
+			<Option virtualFolder="addons\ofxCvHaarFinder\" />
+		</Unit>
+		<Unit filename="src\apps\baroque\testApp.h">
+			<Option virtualFolder="apps\baroque\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\Filter.h">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\deathBox.cpp">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\deathBox.h">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Include\Box2D.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2CircleShape.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2CircleShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2EdgeShape.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2EdgeShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2PolygonShape.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2PolygonShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2Shape.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2Shape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2BroadPhase.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2BroadPhase.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2CollideCircle.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2CollidePoly.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2Collision.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2Collision.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2Distance.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2PairManager.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2PairManager.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2TimeOfImpact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\Fixed.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2BlockAllocator.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2BlockAllocator.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Math.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Math.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Settings.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Settings.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2StackAllocator.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2StackAllocator.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Common\jtypes.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2CircleContact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2CircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2Contact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2Contact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2ContactSolver.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2ContactSolver.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2EdgeAndCircleContact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2EdgeAndCircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2NullContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndCircleContact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndCircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndEdgeContact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndEdgeContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyContact.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2BuoyancyController.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2BuoyancyController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantAccelController.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantAccelController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantForceController.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantForceController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2Controller.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2Controller.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2GravityController.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2GravityController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2TensorDampingController.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2TensorDampingController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2DistanceJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2DistanceJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2GearJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2GearJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2Joint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2Joint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2LineJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2LineJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2MouseJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2MouseJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PrismaticJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PrismaticJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PulleyJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PulleyJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2RevoluteJoint.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2RevoluteJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Body.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Body.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2ContactManager.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2ContactManager.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Island.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Island.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2World.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2World.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2WorldCallbacks.cpp">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2WorldCallbacks.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2d.cpp">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2d.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dBaseShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dCircle.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dContactListener.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dLine.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dPolygon.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dRect.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dRender.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dSoftBody.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\ofxBox2dDeath\scr\ofxBox2dUtils.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\Filter.h">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Include\Box2D.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2CircleShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2EdgeShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2PolygonShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\Shapes\b2Shape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2BroadPhase.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2Collision.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Collision\b2PairManager.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\Fixed.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2BlockAllocator.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Math.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2Settings.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\b2StackAllocator.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Common\jtypes.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2CircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2Contact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2ContactSolver.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2EdgeAndCircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2NullContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndCircleContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyAndEdgeContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Contacts\b2PolyContact.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2BuoyancyController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantAccelController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2ConstantForceController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2Controller.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2GravityController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Controllers\b2TensorDampingController.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2DistanceJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2GearJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2Joint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2LineJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2MouseJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PrismaticJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2PulleyJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\Joints\b2RevoluteJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Body.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2ContactManager.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2Island.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2World.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\lib\Box2D\Source\Dynamics\b2WorldCallbacks.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2d.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dBaseShape.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dCircle.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dContactListener.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dJoint.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dLine.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dPolygon.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dRect.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dRender.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dSoftBody.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\ofxBox2dDeath\scr\ofxBox2dUtils.h">
+			<Option virtualFolder="addons\ofxBox2dDeath\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\src\testApp.h">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\deathBox\testApp.h">
+			<Option virtualFolder="apps\deathBox\" />
+		</Unit>
+		<Unit filename="src\apps\drawing\Blob.cpp">
+			<Option virtualFolder="apps\drawing\" />
+		</Unit>
+		<Unit filename="src\apps\drawing\Blob.h">
+			<Option virtualFolder="apps\drawing\" />
+		</Unit>
+		<Unit filename="src\apps\drawing\drawing.cpp">
+			<Option virtualFolder="apps\drawing\" />
+		</Unit>
+		<Unit filename="src\apps\drawing\drawing.h">
+			<Option virtualFolder="apps\drawing\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\ParticleMemo.cpp">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\ParticleMemo.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\ParticleSystem.cpp">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\ParticleSystem.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\fluid001.cpp">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\fluid001.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\msaColor.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\src\Particle.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\src\ParticleSystem.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\src\msaColor.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\src\ofxCvOpticalFlowLK.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\fluidExample\src\testApp.h">
+			<Option virtualFolder="apps\fluidExample\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Particle.h">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Sample.cpp">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Sample.h">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Sampler.cpp">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Sampler.h">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\Vision.h">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\apps\sampler\WavFile.h">
+			<Option virtualFolder="apps\sampler\" />
+		</Unit>
+		<Unit filename="src\main.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\testApp.cpp">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="src\testApp.h">
+			<Option virtualFolder="src\" />
+		</Unit>
+		<Unit filename="..\addons\ofxCvOpticalFlowLK\ofxCvOpticalFlowLK.cpp">
+			<Option virtualFolder="addons\ofxCvOpticalFlowLK\" />
+		</Unit>
+		<Unit filename="..\addons\ofxCvOpticalFlowLK\ofxCvOpticalFlowLK.h">
+			<Option virtualFolder="addons\ofxCvOpticalFlowLK\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluid.h">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluidDrawer.cpp">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluidDrawer.h">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluidParticleUpdater.h">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluidSolver.cpp">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxMSAFluid\src\ofxMSAFluidSolver.h">
+			<Option virtualFolder="addons\ofxMSAFluid\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiContainer.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiContainer.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiControl.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiControl.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiListener.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiResources.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiResources.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\GuiTypes.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\base\ParameterInfo.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\builder\GuiBuilderHierarchy.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\builder\GuiBuilderInspector.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\builder\GuiBuilderMenu.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\builder\GuiBuilderMenu.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\container\GuiMenu.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\container\GuiMenu.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiButton.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiColorPicker.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiContour.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiDoubleField.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiDrawable.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiFPSCounter.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiFloatField.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiGrid.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiIntField.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiIntSlider.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiKeyboard.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiKnob.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiList.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiMeter.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiPanner.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiSegmentedControl.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiSlider.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiSlider2D.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiText.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiTextField.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiTitle.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiToggle.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiVU.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\basic\GuiZoomSlider.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\image\GuiImage.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\image\GuiImageButton.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\image\GuiImageToggle.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\controls\nice\GuiNiceButton.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\ext\PdGui.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\ofxXmlGui.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\ofxXmlGui.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\util\ColorUtils.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\util\ColorUtils.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\util\GridSequence.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\util\StringUtils.cpp">
+			<Option virtualFolder="addons\ofxXmlGui\" />
+		</Unit>
+		<Unit filename="..\addons\ofxXmlGui\src\util\StringUtils.h">
+			<Option virtualFolder="addons\ofxXmlGui\" />
 		</Unit>
 		<Extensions>
-			<code_completion/>
-			<debugger/>
-			<envvars/>
+			<code_completion />
+			<debugger />
+			<envvars />
 		</Extensions>
-	<Unit filename="../../../addons/ofxOpenCv/src/ofxCvBlob.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvColorImage.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvConstants.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvContourFinder.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvContourFinder.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvFloatImage.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvFloatImage.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvGrayscaleImage.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvImage.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvImage.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvMain.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvShortImage.cpp"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxCvShortImage.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit><Unit filename="../../../addons/ofxOpenCv/src/ofxOpenCv.h"><Option virtualFolder="addons/ofxOpenCv/src"/></Unit></Project>
+	</Project>
 </CodeBlocks_project_file>
