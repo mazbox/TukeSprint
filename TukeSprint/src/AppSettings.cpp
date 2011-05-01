@@ -18,3 +18,9 @@ float AppSettings::outputVolume = 1;
 bool AppSettings::mirrorCamera = true;
 bool AppSettings::cameraAvailable = true;
 ofImage *AppSettings::image = NULL;
+string AppSettings::soundFile = "";
+
+vector<AppSettingsListener*> AppSettings::listeners;
+void AppSettings::addListener(AppSettingsListener *listener) {
+	listeners.push_back(listener);
+}

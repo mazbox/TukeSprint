@@ -1,5 +1,6 @@
 #include "baroque.h"
 
+#include "AppSettings.h"
 
 //--------------------------------------------------------------
 void baroque::init(){
@@ -234,7 +235,7 @@ void baroque::update(){
 	deltaFromLastFrame = currentTime - lastFrameTime;	
     
 	colorImg.setFromPixels(video->getPixels(), CAM_WIDTH,CAM_HEIGHT);
-
+	colorImg.mirror(false, AppSettings::mirrorCamera);
 	grayImage = colorImg;
 	if (bLearnBakground == true){
 		grayBg = grayImage;		

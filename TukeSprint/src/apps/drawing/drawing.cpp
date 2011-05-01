@@ -85,6 +85,7 @@ void drawing::update(){
 	{
 		
 		colorImg.setFromPixels(video->getPixels(), 320,240);
+		colorImg.mirror(false, AppSettings::mirrorCamera);
 		 grayImage = colorImg;
 
 		
@@ -124,8 +125,20 @@ void drawing::update(){
 			_y = tmp_y/LOWPASS;
 		}
 	}
-
-	if (!explode && ofDistSquared(_x, _y, targetPos.x, targetPos.y)<=pulsatingCircle) //Hit the target!
+	
+	float hitCircleX,hitCircleY;
+	if (AppSettings::image)
+	{
+		hitCircleX = AppSettings::image->getWidth()/2+pulsatingCircle;
+		hitCircleY = AppSettings::image->getHeight()/2+pulsatingCircle;
+	}
+	else 
+	{
+		hitCircleX = pulsatingCircle + 35;
+		hitCircleY = pulsatingCircle + 35;
+	}
+	float dist = ofDist(_x, _y, targetPos.x, targetPos.y);
+	if (!explode && (dist<=hitCircleX || dist<=hitCircleY)) //Hit the target!
 	{
 		explode = true;
 		explosionTimer = ofGetElapsedTimeMillis();
@@ -136,38 +149,11 @@ void drawing::update(){
 		currentSound = files[i];
 		sample.loadSound(currentSound, false);
 		sample.play();
-		for (int j = 0;j<30;j++)
-			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-4,4),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
+		for (int j = 0;j<35;j++)
+			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-6,6),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
 
-//		if(sample.getIsPlaying()==true){
-//			sample.
-//		}
-		
-		//cout <<numFiles<< " " << i << " sound changed to:" << currentSound << endl;
-		//change the position of the target
 		blobColor.b = (int)ofRandom(40,205);
 	}
-	if (!usingMouseInput)
-	{
-		float time = (float)(ofGetElapsedTimeMillis() - timeElapsed);
-		timeElapsed = ofGetElapsedTimeMillis();
-		
-		ofPoint lastPos = smoothPos[(indexSmoothPos+LOWPASS+1)%LOWPASS];
-		float dist  = ofDist(_x, _y, lastPos.x,lastPos.y);
-		
-		float speed = powf(dist/time,0.3);
-		float newwidth = MAX(0.5,1/speed);
-
-		if (speed > 0.1 && speed < 1.5)
-		{
-			float xacc = ofSign(blobPosition.x-lastBlobPosition.x)*(pow(abs((int)(_x-lastBlobPosition.x)),0.3));
-			float yacc = ofSign(blobPosition.y-lastBlobPosition.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
-		//	cout << "xacc, yacc " << xacc << " " << yacc << endl;
-		//	blobs.push_back(blob(_x,_y,xacc,yacc,BLOB_SIZE+(int)(10/(speed)), currentSound, blobColor));
-		}
-	
-	}
-	
 	
 	if (bLearnBakground == true){
 		grayBg = grayImage;		// the = sign copys the pixels from grayImage into grayBg (operator overloading)
@@ -187,7 +173,7 @@ void drawing::draw(){
 	//draw the image
 	if (AppSettings::image)
 		AppSettings::image->draw(_x,_y);
-	else
+	else //or draw the cross
 	{
 		ofRect(_x-30, _y-75, 30, 120);
 		ofRect(_x-75, _y-30, 120, 30);
@@ -277,23 +263,27 @@ void drawing::mouseDragged(int x, int y, int button){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
 	
-	float time = (float)(ofGetElapsedTimeMillis() - timeElapsed);
-	timeElapsed = ofGetElapsedTimeMillis();
-	float dist = ofDist(currMouse.x, currMouse.y, prevMouse.x, prevMouse.y);
-	
-	float speed = dist/time;
-	
-	//cout << "speed " << speed << endl;
-	float newwidth = MAX(0.5,1/speed);
-	
 	indexSmoothPos = (indexSmoothPos+1)%LOWPASS;
 	smoothPos[indexSmoothPos].x = x;
 	smoothPos[indexSmoothPos].y = y;
 	_x=x;
 	_y=y;
 	
-	
-	if (ofDistSquared(x, y, targetPos.x, targetPos.y)<pulsatingCircle) //Hit the target!
+	float hitCircleX,hitCircleY;
+	if (AppSettings::image)
+	{
+		hitCircleX = AppSettings::image->getWidth()+pulsatingCircle;
+		hitCircleY = AppSettings::image->getHeight()+pulsatingCircle;
+	}
+	else 
+	{
+		hitCircleX = pulsatingCircle + 35;
+		hitCircleY = pulsatingCircle + 35;
+	}		
+
+	float dist = ofDist(_x, _y, targetPos.x, targetPos.y);
+
+	if (dist<hitCircleX || dist<hitCircleY) //Hit the target!
 	{
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
@@ -304,7 +294,7 @@ void drawing::mouseDragged(int x, int y, int button){
 			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-4,4),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
 
 		//change the position of the target
-		targetPos.x  =(int)ofRandom(0,ofGetWidth());
+		targetPos.x  =(int)ofRandom(0, ofGetWidth());
 		targetPos.y = (int)ofRandom(0, ofGetHeight());
 		explode=true;
 		
