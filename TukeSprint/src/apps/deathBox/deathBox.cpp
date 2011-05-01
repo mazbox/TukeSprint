@@ -139,6 +139,9 @@ void deathBox::update() {
 	threshold = AppSettings::micLevel;
 	
 	
+	cout << inputLevel << endl;
+	
+	
 	for (int i=0; i<customParticles.size(); i++){
 		
 		if(inputLevel>threshold){
@@ -200,7 +203,7 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 	
 	float max = 0;
 	float maxFiltered = 0;
-
+	
 	// samples are "interleaved"
 	for (int i = 0; i < bufferSize; i++){
 		
@@ -215,6 +218,7 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 		float filteredOutput = filter.filter((input[i*2]+input[i*2+1])*0.5);
 		if(filteredInputLevel<filteredOutput) filteredInputLevel = filteredOutput;
 		else filteredInputLevel *= 0.9995;
+		
 	}
 	bufferCounter++;
 	
@@ -277,6 +281,7 @@ void deathBox::generateParticles(int height,int x,int y){
 	CustomParticle *p = new CustomParticle();
 	//p.setPhysics(0.4, 0.53, 0.31);
 	p->setPhysics(10.9, 0.53, 0);
+	
 	
 	p->setRadius();
 	//p.setup(box2d.getWorld(), ofRandom(0,ofGetWidth()),2*(ofGetHeight()/3), r);
