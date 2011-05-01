@@ -20,7 +20,7 @@ ofColor *Particle::color;
 //--------------------------------------------------------------
 void Sampler::init(){
 
-
+	AppSettings::addListener(this);
 	movementThreshold = 0.02;
 	Particle::color = &AppSettings::color3;
 
@@ -345,3 +345,7 @@ int Sampler::valueToNote(float value) {
 
 }
 
+
+void Sampler::soundChanged() {
+	
+}

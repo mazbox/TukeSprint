@@ -85,6 +85,7 @@ void drawing::update(){
 	{
 		
 		colorImg.setFromPixels(video->getPixels(), 320,240);
+		colorImg.mirror(false, AppSettings::mirrorCamera);
 		 grayImage = colorImg;
 
 		

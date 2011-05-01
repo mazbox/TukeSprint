@@ -115,6 +115,9 @@ public:
 		for(int i = 0; i < colorSchemes.size(); i++) {
 			if(colorSchemes[i]->name==control->name) {
 				setColorScheme(i);
+				for(int j = 0; j < AppSettings::listeners.size(); j++) {
+					AppSettings::listeners[j]->colorChanged();
+				}
 				return;
 			}
 		}
@@ -123,15 +126,25 @@ public:
 			disable();
 		} else if(control->name=="image") {
 			if(imageId==0) {
+				AppSettings::image = NULL;
 				imagePreview.loadImage("resources/no-image.png");
 			} else {
+				AppSettings::image = &imagePreview;
 				imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+			}
+			for(int i = 0; i < AppSettings::listeners.size(); i++) {
+				AppSettings::listeners[i]->imageChanged();
 			}
 		} else if(control->name=="sound") {
 			if(soundId==0) {
-				
+				AppSettings::soundFile = "";
 			} else {
 				soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+				AppSettings::soundFile = string("./../sounds/")+soundFiles[soundId];
+			}
+			
+			for(int i = 0; i < AppSettings::listeners.size(); i++) {
+				AppSettings::listeners[i]->soundChanged();
 			}
 		} else if(control->name=="play sound") {
 			soundPreview.play();
