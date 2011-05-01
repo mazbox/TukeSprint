@@ -111,10 +111,19 @@ void fluid001::addToFluid(float x, float y, float dx, float dy, bool addColor, b
 		//APPSETTINGS - color picker from global variables
 		if(addColor) {
 			msaColor drawColor;
-
-			fluidSolver.r[index]  += AppSettings::color1.r;
-			fluidSolver.g[index]  += AppSettings::color1.g;
-			fluidSolver.b[index]  += AppSettings::color1.b;
+			if(ofRandom(0, 1)>0.6) {
+				fluidSolver.r[index]  += AppSettings::color1.r;
+				fluidSolver.g[index]  += AppSettings::color1.g;
+				fluidSolver.b[index]  += AppSettings::color1.b;
+			} else if(ofRandom(0, 1)>0.5) {
+				fluidSolver.r[index]  += AppSettings::color2.r;
+				fluidSolver.g[index]  += AppSettings::color2.g;
+				fluidSolver.b[index]  += AppSettings::color2.b;
+			} else {
+				fluidSolver.r[index]  += AppSettings::color3.r;
+				fluidSolver.g[index]  += AppSettings::color3.g;
+				fluidSolver.b[index]  += AppSettings::color3.b;
+			}
 
 
 			if(drawParticles) particleSystem.addParticles(x * window.width, y * window.height, 10);
@@ -217,6 +226,8 @@ void fluid001::update(){
 //--------------------------------------------------------------
 void fluid001::draw(){
 	ofSetBackgroundAuto(drawFluid);
+	
+	ofSetColor(255, 255, 255);
 
 	if(drawFluid) {
 		fluidDrawer.draw(0, 0, window.width, window.height);
