@@ -13,7 +13,7 @@ class drawing : public TukeApp{
 		void update();
 		void draw();
 		void init();
-	void start();
+		void start();
 		string getName() { return "Catch the Sun"; } 
 		string getScreenshotFileName() { return "icons/drawing.png"; }
 
