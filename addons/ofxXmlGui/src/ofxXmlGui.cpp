@@ -7,6 +7,7 @@
  */
 
 #include "ofxXmlGui.h"
+//#define OFXXMLGUI_USE_LABELS
 
 GuiContainer *ofxXmlGui::addGui(GuiContainer *c) {
 	GuiListener **l = c->listeners;
@@ -36,6 +37,14 @@ GuiMeter	*ofxXmlGui::addMeter(string name, float &ptr) {
 	meter->width = controlSize;
 	meter->vertical = false;
 	return meter;
+}
+
+GuiTitle *ofxXmlGui::addTitle(string label, ofTrueTypeFont &font, int color) {
+	GuiTitle *title = (GuiTitle*)currPage->add("title", label, label);
+	title->width = controlSize;
+	title->font = &font;
+	title->color = color;
+	return title;
 }
 
 GuiContainer *ofxXmlGui::addPage(string title) {
@@ -121,7 +130,11 @@ GuiSlider *ofxXmlGui::addSlider(string name, float &ptr, float minValue, float m
 	slider->max = maxValue;
 	slider->value = &ptr;
 	slider->width = controlSize;
+#ifdef OFXXMLGUI_USE_LABELS
 	slider->showValue = true;
+#else 
+	slider->showValue = false;
+#endif
 	return slider;
 }
 
@@ -131,7 +144,11 @@ GuiIntSlider *ofxXmlGui::addSlider(string name, int &ptr, int minValue, int maxV
 	slider->max = maxValue;
 	slider->value = &ptr;
 	slider->width = controlSize;
+#ifdef OFXXMLGUI_USE_LABELS
 	slider->showValue = true;
+#else 
+	slider->showValue = false;
+#endif
 	return slider;
 }
 
@@ -142,7 +159,11 @@ GuiSlider2D *ofxXmlGui::addSlider2D(string name, ofPoint &ptr, float minX, float
 	slider2d->minY = minY;
 	slider2d->maxY = maxY;
 	slider2d->width = controlSize;
+#ifdef OFXXMLGUI_USE_LABELS
 	slider2d->showValue = true;
+#else 
+	slider2d->showValue = false;
+#endif
 	slider2d->value = &ptr[0];
 	return slider2d;
 }
@@ -161,6 +182,15 @@ GuiToggle *ofxXmlGui::addToggle(string name, bool &ptr) {
 	return slider;
 }
 
+GuiToggle *ofxXmlGui::addToggle(string name, string imageUrl, bool &ptr) {
+	GuiToggle *t = (GuiToggle*)currPage->add("toggle", name, name);		
+	t->value = &ptr;
+	t->width = controlSize;
+	t->toggleOnUrl = imageUrl;
+	t->toggleOffUrl = imageUrl;
+	t->load();
+	return t;
+}
 string optionsToString(vector<string> &options) {
 	string optionsString = "";
 	for(int i = 0; i < options.size(); i++) {
@@ -243,7 +273,11 @@ GuiSlider *ofxXmlGui::addPanner(string name, float &ptr, float minValue, float m
 	slider->max = maxValue;
 	slider->value = &ptr;
 	slider->width = controlSize;
+#ifdef OFXXMLGUI_USE_LABELS
 	slider->showValue = true;
+#else 
+	slider->showValue = false;
+#endif
 	return slider;
 }	
 

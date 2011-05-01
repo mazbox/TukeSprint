@@ -13,13 +13,16 @@ public:
 	void setup() {
 		height = 24;
 		width = 110;
+		font = resources->getDefaultFont();
+		color = 0xFFFFFF;
 	}
 	
-	
+	int color;
 	
 	void draw() {
-		ofSetHexColor(0xFFFFFF);
-		resources->getDefaultFont()->drawString(name, x+3, y+14);
-		ofLine(x, y+height-5, x+width, y+height-5);
+		ofSetHexColor(color);
+		font->drawString(name, x+3, y+14);
+		//ofLine(x, y+height-5, x+width, y+height-5);
 	}
+	ofTrueTypeFont *font;
 };
