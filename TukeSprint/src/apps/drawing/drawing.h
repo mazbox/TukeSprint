@@ -6,14 +6,17 @@
 #include "ofxOpenCv.h"
 #include "Blob.h"
 #include "ofxDirList.h"
+#include "AppSettings.h"
 
-class drawing : public TukeApp{
+class drawing : public TukeApp, public AppSettingsListener{
 
 	public:
 		void update();
 		void draw();
 		void init();
 		void start();
+		void colorChanged() { blobColor=AppSettings::color1; crossColor=AppSettings::color2; backgroundColor=AppSettings::color3;};
+		void imageChanged() {selImage=AppSettings::image;};
 		string getName() { return "Catch the Sun"; } 
 		string getScreenshotFileName() { return "resources/icons/drawing.png"; }
 
@@ -68,6 +71,7 @@ class drawing : public TukeApp{
 	ofColor blobColor;
 	ofColor crossColor;
 	ofColor backgroundColor;
+	ofImage *selImage;
 	
 	int numFiles;
 	int transparency;

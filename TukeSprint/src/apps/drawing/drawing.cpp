@@ -1,8 +1,9 @@
 #include "drawing.h"
-#include "AppSettings.h"
 
 //--------------------------------------------------------------
 void drawing::init(){
+	selImage=NULL;
+	AppSettings::addListener(this);
 	current = -1;
 	timeElapsed = ofGetElapsedTimeMillis();
 
@@ -69,10 +70,7 @@ void drawing::start()
 	}
 
 	pulsatingCircle=35;
-	
-	//blobColor = AppSettings::color1;
-//	crossColor = AppSettings::color2;
-//	backgroundColor =AppSettings::color3;
+	colorChanged();
 
 }
 //--------------------------------------------------------------
@@ -85,7 +83,7 @@ void drawing::update(){
 	{
 		
 		colorImg.setFromPixels(video->getPixels(), 320,240);
-		colorImg.mirror(false, AppSettings::mirrorCamera);
+		colorImg.mirror(false, !(AppSettings::mirrorCamera));
 		 grayImage = colorImg;
 
 		
@@ -127,10 +125,10 @@ void drawing::update(){
 	}
 	
 	float hitCircleX,hitCircleY;
-	if (AppSettings::image)
+	if (selImage)
 	{
-		hitCircleX = AppSettings::image->getWidth()/2+pulsatingCircle;
-		hitCircleY = AppSettings::image->getHeight()/2+pulsatingCircle;
+		hitCircleX = 35+pulsatingCircle;
+		hitCircleY = 35*selImage->getHeight()/selImage->getWidth()+pulsatingCircle;
 	}
 	else 
 	{
@@ -166,19 +164,22 @@ void drawing::update(){
 void drawing::draw(){
 	
 	transparency = MAX(transparency-5,0);
-	ofBackground(AppSettings::color3.r, AppSettings::color3.g, AppSettings::color3.b);
+	ofBackground(backgroundColor.r, backgroundColor.g, backgroundColor.b);
 //	ofSetColor(blobColor.r,blobColor.g,blobColor.b,80);
-	ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b,80);
+	ofSetColor(blobColor.r, blobColor.g, blobColor.b,80);
 	float variation = sin(ofGetElapsedTimeMillis()/5*PI/360);
 	//draw the image
-	if (AppSettings::image)
-		AppSettings::image->draw(_x,_y);
-	else //or draw the cross
+	if (selImage) {
+		ofSetColor(255,255,255,255);
+		selImage->setAnchorPercent(0.5, 0.5);
+		selImage->draw(_x,_y,70,(selImage->getHeight()*70)/selImage->getWidth());
+		selImage->setAnchorPercent(0, 0);
+	} else //or draw the cross
 	{
 		ofRect(_x-30, _y-75, 30, 120);
 		ofRect(_x-75, _y-30, 120, 30);
 	}
-	ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
+	ofSetColor(crossColor.r, crossColor.g, crossColor.b,80);
 //	ofSetColor(200, 200, 0, transparency);
 	ofRect(0, 0, ofGetWidth(), ofGetHeight());
 	for (int i = 0 ; i<blobs.size() ; i++)
@@ -196,10 +197,10 @@ void drawing::draw(){
 	if (!explode)
 	{
 		//ofSetColor(200, 200, 0,140);
-		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,140);
+		ofSetColor(crossColor.r, crossColor.g, crossColor.b,140);
 		ofCircle(targetPos.x, targetPos.y, 35);
 		//ofSetColor(200, 200, 0,80);
-		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
+		ofSetColor(crossColor.r, crossColor.g, crossColor.b,80);
 		pulsatingCircle=55+20*cos(ofGetElapsedTimeMillis()/5*PI/360);
 		ofCircle(targetPos.x,targetPos.y,pulsatingCircle);
 	}
@@ -215,13 +216,13 @@ void drawing::draw(){
 		{
 			float variation = (ofGetElapsedTimeMillis()-explosionTimer)/2500.;
 			//ofSetColor(200, 200, 0,140);
-			ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,140);
+			ofSetColor(crossColor.r, crossColor.g, crossColor.b,140);
 			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x), targetPos.y, 15);
 			ofCircle(targetPos.x+variation*(-targetPos.x), targetPos.y, 15);
 			ofCircle(targetPos.x, targetPos.y+variation*(ofGetHeight()-targetPos.y), 15);
 			ofCircle(targetPos.x, targetPos.y+variation*(-targetPos.y), 15);
 			//ofSetColor(200, 200, 0,80);
-			ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
+			ofSetColor(crossColor.r, crossColor.g, crossColor.b,80);
 			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
 			ofCircle(targetPos.x+variation*(-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
 			ofCircle(targetPos.x,targetPos.y+variation*(ofGetHeight()-targetPos.y),25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
@@ -270,10 +271,10 @@ void drawing::mouseDragged(int x, int y, int button){
 	_y=y;
 	
 	float hitCircleX,hitCircleY;
-	if (AppSettings::image)
+	if (selImage)
 	{
-		hitCircleX = AppSettings::image->getWidth()+pulsatingCircle;
-		hitCircleY = AppSettings::image->getHeight()+pulsatingCircle;
+		hitCircleX = 35+pulsatingCircle;
+		hitCircleY = 35*selImage->getHeight()/selImage->getWidth()+pulsatingCircle;
 	}
 	else 
 	{
