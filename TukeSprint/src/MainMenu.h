@@ -8,9 +8,9 @@
 #pragma once
 #include "ofMain.h"
 #include "TukeApp.h"
-#include "SimpleButton.h"
+#include "MenuButton.h"
 
-class MainMenu: public TukeApp, public SimpleButtonListener {
+class MainMenu: public TukeApp, public MenuButtonListener {
 public:
 	void init();
 	
@@ -29,4 +29,9 @@ public:
 	
 	string getName() { return ""; }
 	string getScreenshotFileName() { return ""; }
+	
+	InteractiveObject *rolledOverItem;
+	float boxAlpha;
+	bool rollingOverItem;
+	void drawBoxAroundItem(InteractiveObject *item);
 };

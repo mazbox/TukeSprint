@@ -51,7 +51,7 @@ void testApp::setup() {
 	filteredInputLevel = 0;
 	
 	ofSetVerticalSync(true);
-	ofBackground(20, 20, 20);
+	ofBackground(255, 255, 255);
 	ofSetLogLevel(OF_LOG_NOTICE);
 	
 	ofToggleFullscreen();

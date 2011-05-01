@@ -69,6 +69,7 @@
 		EA953C37136C5C7B0030D789 /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA953C2E136C5C7B0030D789 /* ofxCvShortImage.cpp */; };
 		EA953C44136C5CF00030D789 /* ofxCvOpticalFlowLK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA953C42136C5CF00030D789 /* ofxCvOpticalFlowLK.cpp */; };
 		EA953C72136C5ED40030D789 /* AppSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA953C71136C5ED40030D789 /* AppSettings.cpp */; };
+		EA953FB1136D66B50030D789 /* MenuButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA953FB0136D66B50030D789 /* MenuButton.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,7 +181,7 @@
 		EA20C357136C46D60038E922 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
 		EA20C358136C46D60038E922 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
 		EA20C35A136C47520038E922 /* InteractiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveObject.h; sourceTree = "<group>"; };
-		EA20C35B136C47520038E922 /* SimpleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleButton.h; sourceTree = "<group>"; };
+		EA20C35B136C47520038E922 /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
 		EA953A9C136C488A0030D789 /* TestTApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTApp.h; sourceTree = "<group>"; };
 		EA953AB5136C49E10030D789 /* ImageCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageCache.cpp; sourceTree = "<group>"; };
 		EA953AB6136C49E10030D789 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
@@ -294,6 +295,8 @@
 		EA953C71136C5ED40030D789 /* AppSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppSettings.cpp; sourceTree = "<group>"; };
 		EA953C9F136C603F0030D789 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		EA953D18136C65440030D789 /* HelpPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPane.h; sourceTree = "<group>"; };
+		EA953FB0136D66B50030D789 /* MenuButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuButton.cpp; sourceTree = "<group>"; };
+		EA953FF0136D69920030D789 /* ImageObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageObject.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -599,11 +602,13 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				EA953FF0136D69920030D789 /* ImageObject.h */,
+				EA953FB0136D66B50030D789 /* MenuButton.cpp */,
 				EA953BDC136C5BB00030D789 /* apps */,
 				EA953AB5136C49E10030D789 /* ImageCache.cpp */,
 				EA953AB6136C49E10030D789 /* ImageCache.h */,
 				EA20C35A136C47520038E922 /* InteractiveObject.h */,
-				EA20C35B136C47520038E922 /* SimpleButton.h */,
+				EA20C35B136C47520038E922 /* MenuButton.h */,
 				EA20C357136C46D60038E922 /* MainMenu.h */,
 				EA20C358136C46D60038E922 /* MainMenu.cpp */,
 				EA953A9C136C488A0030D789 /* TestTApp.h */,
@@ -1156,6 +1161,7 @@
 				AFB9C26E136C75CA00E8A7C1 /* fluid001.cpp in Sources */,
 				AFB9C293136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp in Sources */,
 				AFB9C294136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp in Sources */,
+				EA953FB1136D66B50030D789 /* MenuButton.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@ testApp *testApp::instance = NULL;
 void testApp::setup(){
 	instance = this;
 	
+	ofSetFrameRate(30);
 	video.initGrabber(320, 240);
 	
 	mainMenu.init();
