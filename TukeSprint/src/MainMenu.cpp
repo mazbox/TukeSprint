@@ -16,7 +16,7 @@
 
 #include "ImageObject.h"
 #include "deathBox.h"
-
+#include "baroque.h"
 
 void MainMenu::init() {
 
@@ -29,6 +29,7 @@ void MainMenu::init() {
 
 
 	apps.push_back(new deathBox());
+	apps.push_back(new baroque());
 
 	
 	int itemsPerRow = 3;

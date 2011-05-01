@@ -10,16 +10,16 @@
 #include <string>
 
 
-#ifndef SAMPLE
-#define SAMPLE
+#ifndef SAMPLE_H
+#define SAMPLE_H
 
-//#define SHALLOWCOPY 
+//#define SHALLOWCOPY
 
 using namespace std;
 class Sample {
-	
+
 public:
-	
+
 	Sample();
 	void loadFromFile(string path);
 	void load(float* data, int length);
@@ -27,7 +27,7 @@ public:
 		//delete [] data;
 	};
 	void dealloc() {
-#ifndef SHALLOWCOPY 
+#ifndef SHALLOWCOPY
 		delete [] data;
 #endif
 	}
@@ -39,15 +39,15 @@ public:
 	void stop();
 	void normalize(float amount = 1.f);
 	bool playing;
-	
+
 	int length;
 	float *data;
 	float volume;
 
 private:
 	float pos;
-	
-	
+
+
 };
-#endif
+#endif //SAMPLE_H
 

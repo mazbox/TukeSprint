@@ -3,7 +3,7 @@
 
 
 #include "ofMain.h"
-#include <deque.h>
+#include <deque>
 #include "MainMenu.h"
 #include "TukeApp.h"
 #include "HelpPane.h"
@@ -25,12 +25,12 @@ public:
 
 	void audioReceived( float * input, int bufferSize, int nChannels );
 	void audioRequested( float * output, int bufferSize, int nChannels );
-	
+
 	static testApp *getInstance() { return instance; }
-	
+
 	void launchTukeApp(TukeApp *app);
-	
-	
+
+
 private:
 	HelpPane help;
 	ofVideoGrabber video;
@@ -39,13 +39,13 @@ private:
 	deque<int> keyQueue;
 	// looks for if you keyed 'menu' or 'help'
 	void checkKeyPresses();
-	
+
 	void showMainMenu();
-	
+
 	void showHelp();
-	
+
 	MainMenu mainMenu;
-	
+
 	TukeApp *currApp;
 };
 

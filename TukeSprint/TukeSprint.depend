@@ -1,0 +1,2423 @@
+# depslib dependency file v1.0
+1289993340 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvcontourfinder.cpp
+	"ofxCvContourFinder.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvcontourfinder.h
+	"ofxCvConstants.h"
+	"ofxCvBlob.h"
+	"ofxCvGrayscaleImage.h"
+	<algorithm>
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvconstants.h
+	"cv.h"
+	<vector>
+	"ofMain.h"
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cv.h
+	<chdl.h>
+	"cxcore.h"
+	"cvtypes.h"
+	"cv.hpp"
+	"cvcompat.h"
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxcore.h
+	"ipl.h"
+	"ipl/ipl.h"
+	"cxtypes.h"
+	"cxerror.h"
+	"cvver.h"
+	"cxcore.hpp"
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxtypes.h
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	<emmintrin.h>
+	<fastmath.h>
+	<mathimf.h>
+	<math.h>
+	<ipl.h>
+	<ipl/ipl.h>
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxerror.h
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvver.h
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxcore.hpp
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvtypes.h
+	<assert.h>
+	<stdlib.h>
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cv.hpp
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvcompat.h
+	<string.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\ofmain.h
+	"ofConstants.h"
+	"ofMath.h"
+	"ofUtils.h"
+	"ofTypes.h"
+	"ofSerial.h"
+	"ofArduino.h"
+	"ofTexture.h"
+	"ofTrueTypeFont.h"
+	"ofGraphics.h"
+	"ofImage.h"
+	"ofBaseApp.h"
+	"ofAppRunner.h"
+	"ofSoundStream.h"
+	"ofSoundPlayer.h"
+	"ofVideoGrabber.h"
+	"ofVideoPlayer.h"
+	"ofEvents.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\utils\ofconstants.h
+	<TargetConditionals.h>
+	<windows.h>
+	"GLee.h"
+	"glu.h"
+	<unistd.h>
+	"GLee.h"
+	<OpenGL/glu.h>
+	<ApplicationServices/ApplicationServices.h>
+	<unistd.h>
+	"GLee.h"
+	<GL/glu.h>
+	<cstdlib>
+	<cstdio>
+	<cstdarg>
+	<cmath>
+	<ctime>
+	<cstdlib>
+	<string>
+	<iostream>
+	<vector>
+	<cstring>
+	<sstream>
+	<iomanip>
+	<fstream>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\glee\include\glee.h
+	<windows.h>
+	<GL/gl.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glx.h>
+	<stddef.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\glu\include\glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\utils\ofmath.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1289993344 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\utils\oftypes.h
+	"ofConstants.h"
+	"ofUtils.h"
+
+1289993344 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\utils\ofutils.h
+	"ofConstants.h"
+	<shellapi.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\communication\ofserial.h
+	"ofConstants.h"
+	<termios.h>
+	<sys/ioctl.h>
+	<getopt.h>
+	<dirent.h>
+	<winbase.h>
+	<tchar.h>
+	<iostream>
+	<string.h>
+	<setupapi.h>
+	<regstr.h>
+	<winioctl.h>
+	<initguid.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+	<errno.h>
+	<ctype.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\communication\ofarduino.h
+	<list>
+	<vector>
+	<string>
+	<iostream>
+	"ofEvents.h"
+	"ofSerial.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\events\ofevents.h
+	"ofConstants.h"
+	"ofUtils.h"
+	"ofEventUtils.h"
+	"ofxEventUtils.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\events\ofeventutils.h
+	"ofConstants.h"
+	"Poco/FIFOEvent.h"
+	"Poco/Delegate.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\fifoevent.h
+	"Poco/AbstractEvent.h"
+	"Poco/FIFOStrategy.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/CompareFunctions.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\abstractevent.h
+	"Poco/Foundation.h"
+	"Poco/SingletonHolder.h"
+	"Poco/SharedPtr.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveMethod.h"
+	"Poco/Mutex.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\foundation.h
+	"Poco/Config.h"
+	"Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VMS.h"
+	"Poco/Platform_POSIX.h"
+	"Poco/Bugcheck.h"
+	"Poco/Types.h"
+	<string>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\config.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\platform.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\platform_win32.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\platform_vms.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\platform_posix.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\bugcheck.h
+	"Poco/Foundation.h"
+	<string>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\types.h
+	"Poco/Foundation.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\singletonholder.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\mutex.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/ScopedLock.h"
+	"Poco/Mutex_WIN32.h"
+	"Poco/Mutex_POSIX.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\exception.h
+	"Poco/Foundation.h"
+	<stdexcept>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\scopedlock.h
+	"Poco/Foundation.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\mutex_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\unwindows.h
+	<windows.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\mutex_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\sharedptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Mutex.h"
+	<algorithm>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\activeresult.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\event.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Event_WIN32.h"
+	"Poco/Event_POSIX.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\event_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\event_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\refcountedobject.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\activemethod.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveRunnable.h"
+	"Poco/ActiveStarter.h"
+	"Poco/AutoPtr.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\activerunnable.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/Runnable.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	"Poco/Exception.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\runnable.h
+	"Poco/Foundation.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\autoptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\activestarter.h
+	"Poco/Foundation.h"
+	"Poco/ThreadPool.h"
+	"Poco/ActiveRunnable.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\threadpool.h
+	"Poco/Foundation.h"
+	"Poco/Thread.h"
+	"Poco/Mutex.h"
+	<vector>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\thread.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Thread_WIN32.h"
+	"Poco/Thread_POSIX.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\thread_win32.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/UnWindows.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\thread_posix.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/SignalHandler.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	<pthread.h>
+	<sys/select.h>
+	<errno.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\signalhandler.h
+	"Poco/Foundation.h"
+	<vector>
+	<setjmp.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\fifostrategy.h
+	"Poco/NotificationStrategy.h"
+	<map>
+	<list>
+	<memory>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\notificationstrategy.h
+	"Poco/Foundation.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\abstractdelegate.h
+	"Poco/Foundation.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\comparefunctions.h
+	"Poco/Foundation.h"
+	<functional>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\delegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/FunctionDelegate.h"
+	"Poco/Expire.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\functiondelegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\expire.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/Timestamp.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\poco\include\poco\timestamp.h
+	"Poco/Foundation.h"
+	<ctime>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\graphics\oftexture.h
+	"ofConstants.h"
+	"ofGraphics.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\graphics\ofgraphics.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\graphics\oftruetypefont.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	"ofUtils.h"
+	"ofTypes.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\graphics\ofimage.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofAppRunner.h"
+	"FreeImage.h"
+	"ofUtils.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\app\ofapprunner.h
+	"ofMain.h"
+	"ofBaseApp.h"
+	"ofAppBaseWindow.h"
+	"ofAppGlutWindow.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\app\ofbaseapp.h
+	"ofTypes.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\app\ofappbasewindow.h
+	"ofTypes.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\app\ofappglutwindow.h
+	"ofConstants.h"
+	"ofAppBaseWindow.h"
+	"glut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\glut\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\freeimage\include\freeimage.h
+	<wchar.h>
+	<inttypes.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\sound\ofsoundstream.h
+	"ofConstants.h"
+	"ofBaseApp.h"
+	"ofEvents.h"
+	"ofMath.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\sound\ofsoundplayer.h
+	"ofConstants.h"
+	"fmod.h"
+	"fmod_errors.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\fmodex\include\fmod.h
+	"fmod_codec.h"
+	"fmod_dsp.h"
+	"fmod_memoryinfo.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\fmodex\include\fmod_codec.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\fmodex\include\fmod_dsp.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\fmodex\include\fmod_memoryinfo.h
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\fmodex\include\fmod_errors.h
+	"fmod.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\video\ofvideograbber.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofTypes.h"
+	"ofQtUtils.h"
+	"videoInput.h"
+	"ofUCUtils.h"
+	"ofGstUtils.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\video\ofqtutils.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	<QuickTime/QuickTime.h>
+	<CoreServices/CoreServices.h>
+	<ApplicationServices/ApplicationServices.h>
+	<QTML.h>
+	<FixMath.h>
+	<QuickTimeComponents.h>
+	<TextUtils.h>
+	<MediaHandlers.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\qtml.h
+	<MacTypes.h>
+	<MacMemory.h>
+	<MacWindows.h>
+	<OSUtils.h>
+	<Files.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\mactypes.h
+	<ConditionalMacros.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\conditionalmacros.h
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\macmemory.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\mixedmode.h
+	<MacTypes.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\macwindows.h
+	<MacTypes.h>
+	<Aliases.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<Drag.h>
+	<Events.h>
+	<Menus.h>
+	<MixedMode.h>
+	<QDOffscreen.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<Icons.h>
+	<MacErrors.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\aliases.h
+	<MacTypes.h>
+	<AppleTalk.h>
+	<Files.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\appletalk.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\osutils.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<MacMemory.h>
+	<Patches.h>
+	<DateTimeUtils.h>
+	<Endian.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\patches.h
+	<MacTypes.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\datetimeutils.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\endian.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\files.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<OSUtils.h>
+	<TextCommon.h>
+	<UTCUtils.h>
+	<Finder.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\textcommon.h
+	<MacTypes.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\utcutils.h
+	<MacTypes.h>
+	<MacErrors.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\macerrors.h
+	<ConditionalMacros.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\finder.h
+	<MacTypes.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\appleevents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Notification.h>
+	<Events.h>
+	<AEDataModel.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\notification.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\events.h
+	<OSUtils.h>
+	<Quickdraw.h>
+	<MacTypes.h>
+	<Endian.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\quickdraw.h
+	<Components.h>
+	<MacTypes.h>
+	<MixedMode.h>
+	<QuickdrawText.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\components.h
+	<MacErrors.h>
+	<MacTypes.h>
+	<MixedMode.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\quickdrawtext.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\aedatamodel.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\collections.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\drag.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+	<AppleEvents.h>
+	<Quickdraw.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\menus.h
+	<MacTypes.h>
+	<Events.h>
+	<Quickdraw.h>
+	<Fonts.h>
+	<TextCommon.h>
+	<Processes.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\fonts.h
+	<MacTypes.h>
+	<Files.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<MacErrors.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\processes.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\qdoffscreen.h
+	<MacErrors.h>
+	<Quickdraw.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\icons.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Files.h>
+	<CodeFragments.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\codefragments.h
+	<MacTypes.h>
+	<Files.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\fixmath.h
+	<MacTypes.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\quicktimecomponents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<Sound.h>
+	<QuickTimeMusic.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\imagecompression.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<QDOffscreen.h>
+	<Components.h>
+	<StandardFile.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\standardfile.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Files.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\dialogs.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Events.h>
+	<MacWindows.h>
+	<TextEdit.h>
+	<Controls.h>
+	<MacErrors.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\textedit.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<MixedMode.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\controls.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Menus.h>
+	<TextEdit.h>
+	<Drag.h>
+	<Icons.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\movies.h
+	<Quickdraw.h>
+	<Aliases.h>
+	<Events.h>
+	<Menus.h>
+	<Components.h>
+	<ImageCompression.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\video.h
+	<Quickdraw.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\sound.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Components.h>
+	<MixedMode.h>
+	<Movies.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\quicktimemusic.h
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<MacMemory.h>
+	<Sound.h>
+	<Endian.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\textutils.h
+	<MacTypes.h>
+	<NumberFormatting.h>
+	<StringCompare.h>
+	<DateTimeUtils.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\numberformatting.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<IntlResources.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\intlresources.h
+	<MacTypes.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\stringcompare.h
+	<MacTypes.h>
+	<TextCommon.h>
+	<Script.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\script.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<IntlResources.h>
+	<Events.h>
+
+1289826126 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\quicktime\include\mediahandlers.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<Components.h>
+	<Movies.h>
+	<Sound.h>
+
+1289826128 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\videoinput\include\videoinput.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<wchar.h>
+	<windows.h>
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\video\ofgstutils.h
+	<gst/gst.h>
+	<pthread.h>
+	"ofConstants.h"
+
+1289826122 c:\openframeworks\of_prerelease_v0062_win_cb_fat\libs\openframeworks\video\ofvideoplayer.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGstUtils.h"
+	"ofQtUtils.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvblob.h
+	"ofxCvConstants.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvgrayscaleimage.h
+	"ofxCvImage.h"
+	"ofxCvBlob.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvimage.h
+	"ofxCvConstants.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvfloatimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvcolorimage.h
+	"ofxCvImage.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvfloatimage.h
+	"ofxCvImage.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvshortimage.h
+	"ofxCvImage.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvgrayscaleimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvimage.cpp
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvBlob.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvshortimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvcolorimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\main.cpp
+	"ofMain.h"
+	"testApp.h"
+	"ofAppGlutWindow.h"
+
+1304250176 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\testapp.h
+	"ofMain.h"
+	<deque>
+	"MainMenu.h"
+	"TukeApp.h"
+	"HelpPane.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.h
+	"ofMain.h"
+	"TukeApp.h"
+	"MenuButton.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\tukeapp.h
+	"ofMain.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\menubutton.h
+	"ofMain.h"
+	"ImageCache.h"
+	"InteractiveObject.h"
+	"AppSettings.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\imagecache.h
+	"ofMain.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\interactiveobject.h
+	"ofMain.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\appsettings.h
+	"ofMain.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\helppane.h
+	"ofxXmlGui.h"
+	"AppSettings.h"
+	"ColorScheme.h"
+	"ofxDirList.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\ofxxmlgui.h
+	"GuiContainer.h"
+	"GuiSlider.h"
+	"GuiToggle.h"
+	"GuiSegmentedControl.h"
+	"GuiList.h"
+	"GuiButton.h"
+	"GuiFloatField.h"
+	"GuiDoubleField.h"
+	"GuiPanner.h"
+	"GuiTitle.h"
+	"GuiSlider2D.h"
+	"GuiDrawable.h"
+	"GuiTextField.h"
+	"GuiIntField.h"
+	"GuiColorPicker.h"
+	"GuiIntSlider.h"
+	"GuiMeter.h"
+	"GuiImage.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guicontainer.h
+	"GuiControl.h"
+	"ofxXmlSettings.h"
+	"GuiResources.h"
+
+1304251418 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guicontrol.h
+	"ofMain.h"
+	"ofxXmlSettings.h"
+	"GuiListener.h"
+	"GuiResources.h"
+	"ColorUtils.h"
+	"StringUtils.h"
+	"ParameterInfo.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\src\ofxxmlsettings.h
+	"ofMain.h"
+	<string.h>
+	"tinyxml.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guilistener.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guiresources.h
+	<map>
+	"ofImage.h"
+	"ofTrueTypeFont.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\util\colorutils.h
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\util\stringutils.h
+	<vector>
+	<string>
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guislider.h
+	"GuiControl.h"
+	"ofxMacKeys.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guitoggle.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guisegmentedcontrol.h
+	"GuiControl.h"
+	"GuiButton.h"
+	"StringUtils.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guibutton.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guilist.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guifloatfield.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guidoublefield.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guipanner.h
+	"GuiSlider.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guititle.h
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guislider2d.h
+	"StringUtils.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guidrawable.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guitextfield.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guiintfield.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guicolorpicker.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guiintslider.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guimeter.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\image\guiimage.h
+	"GuiResources.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\colorscheme.h
+
+1289826118 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxdirlist\src\ofxdirlist.h
+	"ofMain.h"
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<dirent.h>
+	<windows.h>
+	<tchar.h>
+	<string.h>
+	<assert.h>
+
+1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\testapp.cpp
+	"testApp.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guicontainer.cpp
+	"GuiContainer.h"
+	<sys/stat.h>
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guicontrol.cpp
+	"GuiControl.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guiresources.cpp
+	"GuiResources.h"
+	<sys/stat.h>
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\guitypes.cpp
+	"GuiControl.h"
+	"GuiTitle.h"
+	"GuiButton.h"
+	"GuiSlider.h"
+	"GuiToggle.h"
+	"GuiTextField.h"
+	"GuiFPSCounter.h"
+	"GuiIntField.h"
+	"GuiFloatField.h"
+	"GuiDoubleField.h"
+	"GuiSlider2D.h"
+	"GuiImage.h"
+	"GuiImageButton.h"
+	"GuiImageToggle.h"
+	"GuiNiceButton.h"
+	"GuiSegmentedControl.h"
+	"GuiText.h"
+	"GuiColorPicker.h"
+	"GuiKeyboard.h"
+	"GuiKnob.h"
+	"GuiContour.h"
+	"GuiMeter.h"
+	"GuiVU.h"
+	"GuiList.h"
+	"GuiGrid.h"
+	"GuiPanner.h"
+	"GuiContainer.h"
+	"GuiDrawable.h"
+	"GuiIntSlider.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guifpscounter.h
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\image\guiimagebutton.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\image\guiimagetoggle.h
+	"GuiToggle.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\nice\guinicebutton.h
+	"GuiImageButton.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guitext.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guikeyboard.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guiknob.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guicontour.h
+	"GuiControl.h"
+	"StringUtils.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guivu.h
+	"GuiControl.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guigrid.h
+	"GuiControl.h"
+	"GridSequence.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\util\gridsequence.h
+	<list>
+	"StringUtils.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\builder\guibuildermenu.cpp
+	"GuiBuilderMenu.h"
+	<Carbon/Carbon.h>
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\builder\guibuildermenu.h
+	"GuiMenu.h"
+	"GuiBuilderInspector.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\container\guimenu.h
+	"GuiContainer.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\builder\guibuilderinspector.h
+	"GuiContainer.h"
+	"GuiListener.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\container\guimenu.cpp
+	"GuiMenu.h"
+	"GuiButton.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\ofxxmlgui.cpp
+	"ofxXmlGui.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\util\colorutils.cpp
+	"ColorUtils.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\util\stringutils.cpp
+	"StringUtils.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\appsettings.cpp
+	"AppSettings.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\imagecache.cpp
+	"ImageCache.h"
+	<sys/stat.h>
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\parameterinfo.h
+
+1304252501 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.cpp
+	"MainMenu.h"
+	"MenuButton.h"
+	"TestTApp.h"
+	"testApp.h"
+	"Sampler.h"
+	"drawing.h"
+	"fluid001.h"
+	"ImageObject.h"
+	"deathBox.h"
+	"baroque.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\testtapp.h
+	"TukeApp.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\sampler.h
+	"ofMain.h"
+	"Sample.h"
+	"Vision.h"
+	"Particle.h"
+	"TukeApp.h"
+
+1304251418 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\sample.h
+	<stdio.h>
+	<string>
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\vision.h
+	"AppSettings.h"
+	"ofMain.h"
+	"ofxOpenCv.h"
+	"ofxCvOpticalFlowLK.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxopencv.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxcvopticalflowlk\ofxcvopticalflowlk.h
+	"ofMain.h"
+	"ofxCvConstants.h"
+	"ofxCvGrayscaleImage.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\particle.h
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.h
+	"TukeApp.h"
+	"ofxOpenCv.h"
+	"Blob.h"
+	"ofxDirList.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\blob.h
+	"ofMain.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.h
+	"TukeApp.h"
+	"ofxMSAFluid.h"
+	"ParticleSystem.h"
+	"ofxOpenCv.h"
+	"ofxCvOpticalFlowLK.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluid.h
+	"ofxMSAFluidSolver.h"
+	"ofxMSAFluidDrawer.h"
+	"ofxMSAFluidCLSolver.h"
+	"ofxMSAFluidCLDrawer.h"
+	"ofxMSAFluidParticleUpdater.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluidsolver.h
+	"ofMain.h"
+	"aaa_msa_ofmain.h"
+	"ofxMSAFluidCLSolver.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluiddrawer.h
+	"ofMain.h"
+	"ofxMSAFluidSolver.h"
+	"ofxMSAFluidCLDrawer.h"
+
+1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluidparticleupdater.h
+	"ofxMSAParticleUpdater.h"
+	"ofxMSAFluid.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\particlesystem.h
+	"ParticleMemo.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\particlememo.h
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\imageobject.h
+	"InteractiveObject.h"
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\deathbox.h
+	"TukeApp.h"
+	"ofxVectorMath.h"
+	"ofxBox2d.h"
+	"Filter.h"
+	"ofxDirList.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxvectormath.h
+	"ofxVec2f.h"
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	"ofxMatrix3x3.h"
+	"ofxMatrix4x4.h"
+	"ofxQuaternion.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxvec2f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxvec3f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxvec4f.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxmatrix3x3.h
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxmatrix4x4.h
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	"ofxQuaternion.h"
+	<cmath>
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxvectormath\src\ofxquaternion.h
+	"ofxVec3f.h"
+	"ofxVec4f.h"
+	<cmath>
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2d.h
+	"ofxBox2dUtils.h"
+	"ofxBox2dBaseShape.h"
+	"ofxBox2dCircle.h"
+	"ofxBox2dPolygon.h"
+	"ofxBox2dRect.h"
+	"ofxBox2dLine.h"
+	"ofxBox2dSoftBody.h"
+	"ofxBox2dJoint.h"
+	"ofxBox2dRender.h"
+	"ofxBox2dContactListener.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dutils.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\include\box2d.h
+	"../Source/Common/b2Settings.h"
+	"../Source/Collision/Shapes/b2CircleShape.h"
+	"../Source/Collision/Shapes/b2PolygonShape.h"
+	"../Source/Collision/Shapes/b2EdgeShape.h"
+	"../Source/Collision/b2BroadPhase.h"
+	"../Source/Dynamics/b2WorldCallbacks.h"
+	"../Source/Dynamics/b2World.h"
+	"../Source/Dynamics/b2Body.h"
+	"../Source/Dynamics/Contacts/b2Contact.h"
+	"../Source/Dynamics/Joints/b2DistanceJoint.h"
+	"../Source/Dynamics/Joints/b2GearJoint.h"
+	"../Source/Dynamics/Joints/b2LineJoint.h"
+	"../Source/Dynamics/Joints/b2MouseJoint.h"
+	"../Source/Dynamics/Joints/b2PrismaticJoint.h"
+	"../Source/Dynamics/Joints/b2PulleyJoint.h"
+	"../Source/Dynamics/Joints/b2RevoluteJoint.h"
+	"../Source/Dynamics/Controllers/b2BuoyancyController.h"
+	"../Source/Dynamics/Controllers/b2ConstantForceController.h"
+	"../Source/Dynamics/Controllers/b2ConstantAccelController.h"
+	"../Source/Dynamics/Controllers/b2GravityController.h"
+	"../Source/Dynamics/Controllers/b2TensorDampingController.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\b2settings.h
+	<assert.h>
+	<math.h>
+	"jtypes.h"
+	"Fixed.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\jtypes.h
+	<stdint.h>
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\fixed.h
+	<stdio.h>
+	"nds.h"
+	<execinfo.h>
+	<signal.h>
+	<exception>
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\shapes\b2circleshape.h
+	"b2Shape.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\shapes\b2shape.h
+	"../../Common/b2Math.h"
+	"../b2Collision.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\b2math.h
+	"b2Settings.h"
+	"math.h"
+	<cmath>
+	<cfloat>
+	<cstdlib>
+	<stdio.h>
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\b2collision.h
+	"../Common/b2Math.h"
+	<climits>
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\shapes\b2polygonshape.h
+	"b2Shape.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\shapes\b2edgeshape.h
+	"b2Shape.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\b2broadphase.h
+	"../Common/b2Settings.h"
+	"b2Collision.h"
+	"b2PairManager.h"
+	<climits>
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\collision\b2pairmanager.h
+	"../Common/b2Settings.h"
+	"../Common/b2Math.h"
+	<climits>
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\b2worldcallbacks.h
+	"../Common/b2Settings.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\b2world.h
+	"../Common/b2Math.h"
+	"../Common/b2BlockAllocator.h"
+	"../Common/b2StackAllocator.h"
+	"b2ContactManager.h"
+	"b2WorldCallbacks.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\b2blockallocator.h
+	"b2Settings.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\common\b2stackallocator.h
+	"b2Settings.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\b2contactmanager.h
+	"../Collision/b2BroadPhase.h"
+	"../Dynamics/Contacts/b2NullContact.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\contacts\b2nullcontact.h
+	"../../Common/b2Math.h"
+	"b2Contact.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\contacts\b2contact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\b2body.h
+	"../Common/b2Math.h"
+	"../Collision/Shapes/b2Shape.h"
+	"Joints/b2Joint.h"
+	"Controllers/b2Controller.h"
+	<memory>
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2joint.h
+	"../../Common/b2Math.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2controller.h
+	"../../Dynamics/b2World.h"
+	"../../Dynamics/b2Body.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2distancejoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2gearjoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2linejoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2mousejoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2prismaticjoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2pulleyjoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\joints\b2revolutejoint.h
+	"b2Joint.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2buoyancycontroller.h
+	"b2Controller.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2constantforcecontroller.h
+	"b2Controller.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2constantaccelcontroller.h
+	"b2Controller.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2gravitycontroller.h
+	"b2Controller.h"
+
+1304249781 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxbox2d\lib\box2d\source\dynamics\controllers\b2tensordampingcontroller.h
+	"b2Controller.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dbaseshape.h
+	"ofMain.h"
+	"Box2D.h"
+	"ofxBox2dUtils.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dcircle.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dpolygon.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2drect.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dline.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dsoftbody.h
+	"ofxBox2d.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2djoint.h
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2drender.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2dcontactlistener.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\filter.h
+	<math.h>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\menubutton.cpp
+	"MenuButton.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\deathbox.cpp
+	"AppSettings.h"
+	"deathBox.h"
+	"stdio.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2circleshape.cpp
+	"b2CircleShape.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2circleshape.h
+	"b2Shape.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2shape.h
+	"../../Common/b2Math.h"
+	"../b2Collision.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2math.h
+	"b2Settings.h"
+	"math.h"
+	<cmath>
+	<cfloat>
+	<cstdlib>
+	<stdio.h>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2settings.h
+	<assert.h>
+	<math.h>
+	"jtypes.h"
+	"Fixed.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\jtypes.h
+	<stdint.h>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\fixed.h
+	<stdio.h>
+	"nds.h"
+	<execinfo.h>
+	<signal.h>
+	<exception>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collision.h
+	"../Common/b2Math.h"
+	<climits>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2edgeshape.cpp
+	"b2EdgeShape.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2edgeshape.h
+	"b2Shape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2polygonshape.cpp
+	"b2PolygonShape.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2polygonshape.h
+	"b2Shape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2shape.cpp
+	"b2Shape.h"
+	"b2CircleShape.h"
+	"b2PolygonShape.h"
+	"b2EdgeShape.h"
+	"../b2Collision.h"
+	"../b2BroadPhase.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2broadphase.h
+	"../Common/b2Settings.h"
+	"b2Collision.h"
+	"b2PairManager.h"
+	<climits>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2pairmanager.h
+	"../Common/b2Settings.h"
+	"../Common/b2Math.h"
+	<climits>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2blockallocator.h
+	"b2Settings.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2broadphase.cpp
+	"b2BroadPhase.h"
+	<algorithm>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collidecircle.cpp
+	"b2Collision.h"
+	"Shapes/b2CircleShape.h"
+	"Shapes/b2PolygonShape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collidepoly.cpp
+	"b2Collision.h"
+	"Shapes/b2PolygonShape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collision.cpp
+	"b2Collision.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2distance.cpp
+	"b2Collision.h"
+	"Shapes/b2CircleShape.h"
+	"Shapes/b2PolygonShape.h"
+	"Shapes/b2EdgeShape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2pairmanager.cpp
+	"b2PairManager.h"
+	"b2BroadPhase.h"
+	<algorithm>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\collision\b2timeofimpact.cpp
+	"b2Collision.h"
+	"Shapes/b2Shape.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2blockallocator.cpp
+	"b2BlockAllocator.h"
+	<cstdlib>
+	<memory>
+	<climits>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2math.cpp
+	"b2Math.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2settings.cpp
+	"b2Settings.h"
+	<cstdlib>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2stackallocator.cpp
+	"b2StackAllocator.h"
+	"b2Math.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\common\b2stackallocator.h
+	"b2Settings.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2circlecontact.cpp
+	"b2CircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+	<cstring>
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2circlecontact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"b2Contact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2body.h
+	"../Common/b2Math.h"
+	"../Collision/Shapes/b2Shape.h"
+	"Joints/b2Joint.h"
+	"Controllers/b2Controller.h"
+	<memory>
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2joint.h
+	"../../Common/b2Math.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2controller.h
+	"../../Dynamics/b2World.h"
+	"../../Dynamics/b2Body.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2world.h
+	"../Common/b2Math.h"
+	"../Common/b2BlockAllocator.h"
+	"../Common/b2StackAllocator.h"
+	"b2ContactManager.h"
+	"b2WorldCallbacks.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2contactmanager.h
+	"../Collision/b2BroadPhase.h"
+	"../Dynamics/Contacts/b2NullContact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2nullcontact.h
+	"../../Common/b2Math.h"
+	"b2Contact.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2worldcallbacks.h
+	"../Common/b2Settings.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contact.cpp
+	"b2Contact.h"
+	"b2CircleContact.h"
+	"b2PolyAndCircleContact.h"
+	"b2PolyContact.h"
+	"b2EdgeAndCircleContact.h"
+	"b2PolyAndEdgeContact.h"
+	"b2ContactSolver.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Dynamics/b2World.h"
+	"../../Dynamics/b2Body.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandcirclecontact.h
+	"b2Contact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polycontact.h
+	"b2Contact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2edgeandcirclecontact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	"../../Collision/Shapes/b2CircleShape.h"
+	"b2Contact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandedgecontact.h
+	"b2Contact.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contactsolver.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../b2World.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contactsolver.cpp
+	"b2ContactSolver.h"
+	"b2Contact.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../../Common/b2StackAllocator.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2edgeandcirclecontact.cpp
+	"b2EdgeAndCircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	<new>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandcirclecontact.cpp
+	"b2PolyAndCircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandedgecontact.cpp
+	"b2PolyAndEdgeContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	"../../Collision/Shapes/b2PolygonShape.h"
+	<new>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polycontact.cpp
+	"b2PolyContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<memory>
+	<new>
+	<cstring>
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2buoyancycontroller.cpp
+	"b2BuoyancyController.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2buoyancycontroller.h
+	"b2Controller.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantaccelcontroller.cpp
+	"b2ConstantAccelController.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantaccelcontroller.h
+	"b2Controller.h"
+
+1304249776 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantforcecontroller.cpp
+	"b2ConstantForceController.h"
+
+1304249776 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantforcecontroller.h
+	"b2Controller.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2controller.cpp
+	"b2Controller.h"
+	"../../Common/b2BlockAllocator.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2gravitycontroller.cpp
+	"b2GravityController.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2gravitycontroller.h
+	"b2Controller.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2tensordampingcontroller.cpp
+	"b2TensorDampingController.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2tensordampingcontroller.h
+	"b2Controller.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2distancejoint.cpp
+	"b2DistanceJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2distancejoint.h
+	"b2Joint.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2gearjoint.cpp
+	"b2GearJoint.h"
+	"b2RevoluteJoint.h"
+	"b2PrismaticJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2gearjoint.h
+	"b2Joint.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2revolutejoint.h
+	"b2Joint.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2prismaticjoint.h
+	"b2Joint.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2joint.cpp
+	"b2Joint.h"
+	"b2DistanceJoint.h"
+	"b2LineJoint.h"
+	"b2MouseJoint.h"
+	"b2RevoluteJoint.h"
+	"b2PrismaticJoint.h"
+	"b2PulleyJoint.h"
+	"b2GearJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/b2BroadPhase.h"
+	<new>
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2linejoint.h
+	"b2Joint.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2mousejoint.h
+	"b2Joint.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2pulleyjoint.h
+	"b2Joint.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2linejoint.cpp
+	"b2LineJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2mousejoint.cpp
+	"b2MouseJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2prismaticjoint.cpp
+	"b2PrismaticJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2pulleyjoint.cpp
+	"b2PulleyJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2revolutejoint.cpp
+	"b2RevoluteJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../b2Island.h"
+
+1304249777 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2island.h
+	"../Common/b2Math.h"
+	"b2Body.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2body.cpp
+	"b2Body.h"
+	"b2World.h"
+	"Joints/b2Joint.h"
+	"../Collision/Shapes/b2Shape.h"
+	"../Collision/Shapes/b2EdgeShape.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2contactmanager.cpp
+	"b2ContactManager.h"
+	"b2World.h"
+	"b2Body.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2island.cpp
+	"b2Island.h"
+	"b2Body.h"
+	"b2World.h"
+	"Contacts/b2Contact.h"
+	"Contacts/b2ContactSolver.h"
+	"Joints/b2Joint.h"
+	"../Common/b2StackAllocator.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2world.cpp
+	"b2World.h"
+	"b2Body.h"
+	"b2Island.h"
+	"Joints/b2PulleyJoint.h"
+	"Contacts/b2Contact.h"
+	"Contacts/b2ContactSolver.h"
+	"../Collision/b2Collision.h"
+	"../Collision/Shapes/b2CircleShape.h"
+	"../Collision/Shapes/b2PolygonShape.h"
+	"../Collision/Shapes/b2EdgeShape.h"
+	<new>
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2worldcallbacks.cpp
+	"b2WorldCallbacks.h"
+	"../Collision/Shapes/b2Shape.h"
+
+1304249777 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\ofxbox2ddeath\scr\ofxbox2d.cpp
+	"ofxBox2d.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2circleshape.cpp
+	"b2CircleShape.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2circleshape.h
+	"b2Shape.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2shape.h
+	"../../Common/b2Math.h"
+	"../b2Collision.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2math.h
+	"b2Settings.h"
+	"math.h"
+	<cmath>
+	<cfloat>
+	<cstdlib>
+	<stdio.h>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2settings.h
+	<assert.h>
+	<math.h>
+	"jtypes.h"
+	"Fixed.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\jtypes.h
+	<stdint.h>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\fixed.h
+	<stdio.h>
+	"nds.h"
+	<execinfo.h>
+	<signal.h>
+	<exception>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collision.h
+	"../Common/b2Math.h"
+	<climits>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2edgeshape.cpp
+	"b2EdgeShape.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2edgeshape.h
+	"b2Shape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2polygonshape.cpp
+	"b2PolygonShape.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2polygonshape.h
+	"b2Shape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\shapes\b2shape.cpp
+	"b2Shape.h"
+	"b2CircleShape.h"
+	"b2PolygonShape.h"
+	"b2EdgeShape.h"
+	"../b2Collision.h"
+	"../b2BroadPhase.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2broadphase.h
+	"../Common/b2Settings.h"
+	"b2Collision.h"
+	"b2PairManager.h"
+	<climits>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2pairmanager.h
+	"../Common/b2Settings.h"
+	"../Common/b2Math.h"
+	<climits>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2blockallocator.h
+	"b2Settings.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2broadphase.cpp
+	"b2BroadPhase.h"
+	<algorithm>
+	<cstring>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collidecircle.cpp
+	"b2Collision.h"
+	"Shapes/b2CircleShape.h"
+	"Shapes/b2PolygonShape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collidepoly.cpp
+	"b2Collision.h"
+	"Shapes/b2PolygonShape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2collision.cpp
+	"b2Collision.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2distance.cpp
+	"b2Collision.h"
+	"Shapes/b2CircleShape.h"
+	"Shapes/b2PolygonShape.h"
+	"Shapes/b2EdgeShape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2pairmanager.cpp
+	"b2PairManager.h"
+	"b2BroadPhase.h"
+	<algorithm>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\collision\b2timeofimpact.cpp
+	"b2Collision.h"
+	"Shapes/b2Shape.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2blockallocator.cpp
+	"b2BlockAllocator.h"
+	<cstdlib>
+	<memory>
+	<climits>
+	<cstring>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2math.cpp
+	"b2Math.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2settings.cpp
+	"b2Settings.h"
+	<cstdlib>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2stackallocator.cpp
+	"b2StackAllocator.h"
+	"b2Math.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\common\b2stackallocator.h
+	"b2Settings.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2circlecontact.cpp
+	"b2CircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+	<cstring>
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2circlecontact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"b2Contact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2body.h
+	"../Common/b2Math.h"
+	"../Collision/Shapes/b2Shape.h"
+	"Joints/b2Joint.h"
+	"Controllers/b2Controller.h"
+	<memory>
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2joint.h
+	"../../Common/b2Math.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2controller.h
+	"../../Dynamics/b2World.h"
+	"../../Dynamics/b2Body.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2world.h
+	"../Common/b2Math.h"
+	"../Common/b2BlockAllocator.h"
+	"../Common/b2StackAllocator.h"
+	"b2ContactManager.h"
+	"b2WorldCallbacks.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2contactmanager.h
+	"../Collision/b2BroadPhase.h"
+	"../Dynamics/Contacts/b2NullContact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2nullcontact.h
+	"../../Common/b2Math.h"
+	"b2Contact.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2worldcallbacks.h
+	"../Common/b2Settings.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contact.cpp
+	"b2Contact.h"
+	"b2CircleContact.h"
+	"b2PolyAndCircleContact.h"
+	"b2PolyContact.h"
+	"b2EdgeAndCircleContact.h"
+	"b2PolyAndEdgeContact.h"
+	"b2ContactSolver.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2Shape.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Dynamics/b2World.h"
+	"../../Dynamics/b2Body.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandcirclecontact.h
+	"b2Contact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polycontact.h
+	"b2Contact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2edgeandcirclecontact.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	"../../Collision/Shapes/b2CircleShape.h"
+	"b2Contact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandedgecontact.h
+	"b2Contact.h"
+
+1304249778 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contactsolver.h
+	"../../Common/b2Math.h"
+	"../../Collision/b2Collision.h"
+	"../b2World.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2contactsolver.cpp
+	"b2ContactSolver.h"
+	"b2Contact.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../../Common/b2StackAllocator.h"
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2edgeandcirclecontact.cpp
+	"b2EdgeAndCircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	<new>
+	<cstring>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandcirclecontact.cpp
+	"b2PolyAndCircleContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<new>
+	<cstring>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polyandedgecontact.cpp
+	"b2PolyAndEdgeContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/Shapes/b2EdgeShape.h"
+	"../../Collision/Shapes/b2PolygonShape.h"
+	<new>
+	<cstring>
+
+1304249778 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\contacts\b2polycontact.cpp
+	"b2PolyContact.h"
+	"../b2Body.h"
+	"../b2WorldCallbacks.h"
+	"../../Common/b2BlockAllocator.h"
+	<memory>
+	<new>
+	<cstring>
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2buoyancycontroller.cpp
+	"b2BuoyancyController.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2buoyancycontroller.h
+	"b2Controller.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantaccelcontroller.cpp
+	"b2ConstantAccelController.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantaccelcontroller.h
+	"b2Controller.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantforcecontroller.cpp
+	"b2ConstantForceController.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2constantforcecontroller.h
+	"b2Controller.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2controller.cpp
+	"b2Controller.h"
+	"../../Common/b2BlockAllocator.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2gravitycontroller.cpp
+	"b2GravityController.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2gravitycontroller.h
+	"b2Controller.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2tensordampingcontroller.cpp
+	"b2TensorDampingController.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\controllers\b2tensordampingcontroller.h
+	"b2Controller.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2distancejoint.cpp
+	"b2DistanceJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2distancejoint.h
+	"b2Joint.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2gearjoint.cpp
+	"b2GearJoint.h"
+	"b2RevoluteJoint.h"
+	"b2PrismaticJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2gearjoint.h
+	"b2Joint.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2revolutejoint.h
+	"b2Joint.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2prismaticjoint.h
+	"b2Joint.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2joint.cpp
+	"b2Joint.h"
+	"b2DistanceJoint.h"
+	"b2LineJoint.h"
+	"b2MouseJoint.h"
+	"b2RevoluteJoint.h"
+	"b2PrismaticJoint.h"
+	"b2PulleyJoint.h"
+	"b2GearJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../../Common/b2BlockAllocator.h"
+	"../../Collision/b2BroadPhase.h"
+	<new>
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2linejoint.h
+	"b2Joint.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2mousejoint.h
+	"b2Joint.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2pulleyjoint.h
+	"b2Joint.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2linejoint.cpp
+	"b2LineJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2mousejoint.cpp
+	"b2MouseJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2prismaticjoint.cpp
+	"b2PrismaticJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2pulleyjoint.cpp
+	"b2PulleyJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\joints\b2revolutejoint.cpp
+	"b2RevoluteJoint.h"
+	"../b2Body.h"
+	"../b2World.h"
+	"../b2Island.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2island.h
+	"../Common/b2Math.h"
+	"b2Body.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2body.cpp
+	"b2Body.h"
+	"b2World.h"
+	"Joints/b2Joint.h"
+	"../Collision/Shapes/b2Shape.h"
+	"../Collision/Shapes/b2EdgeShape.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2contactmanager.cpp
+	"b2ContactManager.h"
+	"b2World.h"
+	"b2Body.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2island.cpp
+	"b2Island.h"
+	"b2Body.h"
+	"b2World.h"
+	"Contacts/b2Contact.h"
+	"Contacts/b2ContactSolver.h"
+	"Joints/b2Joint.h"
+	"../Common/b2StackAllocator.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2world.cpp
+	"b2World.h"
+	"b2Body.h"
+	"b2Island.h"
+	"Joints/b2PulleyJoint.h"
+	"Contacts/b2Contact.h"
+	"Contacts/b2ContactSolver.h"
+	"../Collision/b2Collision.h"
+	"../Collision/Shapes/b2CircleShape.h"
+	"../Collision/Shapes/b2PolygonShape.h"
+	"../Collision/Shapes/b2EdgeShape.h"
+	<new>
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\lib\box2d\source\dynamics\b2worldcallbacks.cpp
+	"b2WorldCallbacks.h"
+	"../Collision/Shapes/b2Shape.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2d.cpp
+	"ofxBox2d.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2d.h
+	"ofxBox2dUtils.h"
+	"ofxBox2dBaseShape.h"
+	"ofxBox2dCircle.h"
+	"ofxBox2dPolygon.h"
+	"ofxBox2dRect.h"
+	"ofxBox2dLine.h"
+	"ofxBox2dSoftBody.h"
+	"ofxBox2dJoint.h"
+	"ofxBox2dRender.h"
+	"ofxBox2dContactListener.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dutils.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dbaseshape.h
+	"ofMain.h"
+	"Box2D.h"
+	"ofxBox2dUtils.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dcircle.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dpolygon.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2drect.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dline.h
+	"ofMain.h"
+	"ofxBox2dBaseShape.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dsoftbody.h
+	"ofxBox2d.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2djoint.h
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2drender.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\deathbox\src\ofxbox2ddeath\scr\ofxbox2dcontactlistener.h
+	"ofMain.h"
+	"Box2D.h"
+
+1304249779 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\blob.cpp
+	"Blob.h"
+
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\drawing.cpp
+	"drawing.h"
+
+1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\particlememo.cpp
+	"ParticleMemo.h"
+	"fluid001.h"
+	"msaColor.h"
+
+1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\msacolor.h
+	"ofMain.h"
+
+1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\particlesystem.cpp
+	"fluid001.h"
+	"ParticleSystem.h"
+
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.cpp
+	"fluid001.h"
+	"ParticleMemo.h"
+	"msaColor.h"
+	"ParticleSystem.h"
+	"AppSettings.h"
+
+1304249780 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\sample.cpp
+	"Sample.h"
+	"WavFile.h"
+	"ofMain.h"
+
+1304251848 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\wavfile.h
+	<stdio.h>
+	<math.h>
+	<fstream>
+	<iostream>
+	<string>
+
+1304252115 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\sampler\sampler.cpp
+	"Sampler.h"
+	"stdio.h"
+	"ofxDirList.h"
+	"AppSettings.h"
+	"Mutex.h"
+
+1304251958 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mutex.h
+	<pthread.h>
+	<semaphore.h>
+	<Windows.h>
+	<process.h>
+
+1304249781 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxcvopticalflowlk\ofxcvopticalflowlk.cpp
+	"ofxCvOpticalFlowLK.h"
+
+1289826118 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxdirlist\src\ofxdirlist.cpp
+	"ofxDirList.h"
+	<algorithm>
+	<string>
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
+1289826120 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxxmlsettings\src\ofxxmlsettings.cpp
+	"ofxXmlSettings.h"
+	<vector>
+	<string>
+	<iostream>
+
+1304252501 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.h
+	"TukeApp.h"
+	"ofxOpenCv.h"
+	"ofxCvHaarFinder.h"
+	"ofxXmlSettings.h"
+	"ofImageAdv.h"
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.h
+	"ofMain.h"
+	"ofxCvMain.h"
+
+1289826120 c:\openframeworks\of_prerelease_v0062_win_cb_fat\addons\ofxopencv\src\ofxcvmain.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofimageadv.h
+	"ofImage.h"
+
+1304252501 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.cpp
+	"baroque.h"
+
+1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.cpp
+	"ofxCvHaarFinder.h"
+
