@@ -277,21 +277,22 @@
 								<string>EA953BDC136C5BB00030D789</string>
 								<string>AFB9C4E8136D7FFC00E8A7C1</string>
 								<string>AFB9C25F136C750B00E8A7C1</string>
+								<string>AFB9C248136C74E300E8A7C1</string>
 								<string>AFB9C20D136C6F8C00E8A7C1</string>
 								<string>E4C2422310CC54B6004149E2</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>20</integer>
+									<integer>26</integer>
+									<integer>23</integer>
 									<integer>6</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {226, 760}}</string>
+							<string>{{0, 60}, {226, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -319,12 +320,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>AFB9C1B6136C61BF00E8A7C1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>drawing.h</string>
+								<string>drawing.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFB9C1B7136C61BF00E8A7C1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>drawing.h</string>
+										<string>drawing.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB9C638136DAA4F00E8A7C1</string>
+										<string>AFB9C67B136DB4BA00E8A7C1</string>
 										<key>history</key>
 										<array>
 											<string>AFB9C24A136C74EA00E8A7C1</string>
@@ -356,7 +359,6 @@
 											<string>AFB9C458136D64C100E8A7C1</string>
 											<string>AFB9C45C136D64C100E8A7C1</string>
 											<string>AFB9C45D136D64C100E8A7C1</string>
-											<string>AFB9C45E136D64C100E8A7C1</string>
 											<string>AFB9C469136D65D900E8A7C1</string>
 											<string>AFB9C47A136D685500E8A7C1</string>
 											<string>AFB9C47E136D685500E8A7C1</string>
@@ -366,20 +368,22 @@
 											<string>AFB9C4AB136D796200E8A7C1</string>
 											<string>AFB9C5B2136D836100E8A7C1</string>
 											<string>AFB9C5B3136D836100E8A7C1</string>
-											<string>AFB9C5B4136D836100E8A7C1</string>
-											<string>AFB9C5B5136D836100E8A7C1</string>
 											<string>AFB9C5D4136D8A3500E8A7C1</string>
 											<string>AFB9C5D6136D8A3500E8A7C1</string>
 											<string>AFB9C5D8136D8A3500E8A7C1</string>
 											<string>AFB9C5E8136D8BB600E8A7C1</string>
 											<string>AFB9C5E9136D8BB600E8A7C1</string>
-											<string>AFB9C5F3136D8D8500E8A7C1</string>
 											<string>AFB9C5FE136D9E3500E8A7C1</string>
 											<string>AFB9C5FF136D9E3500E8A7C1</string>
-											<string>AFB9C61D136DA8A300E8A7C1</string>
-											<string>AFB9C635136DAA4F00E8A7C1</string>
 											<string>AFB9C636136DAA4F00E8A7C1</string>
-											<string>AFB9C637136DAA4F00E8A7C1</string>
+											<string>AFB9C641136DAC6900E8A7C1</string>
+											<string>AFB9C642136DAC6900E8A7C1</string>
+											<string>AFB9C659136DAE2000E8A7C1</string>
+											<string>AFB9C65A136DAE2000E8A7C1</string>
+											<string>AFB9C65B136DAE2000E8A7C1</string>
+											<string>AFB9C65C136DAE2000E8A7C1</string>
+											<string>AFB9C669136DB0C200E8A7C1</string>
+											<string>AFB9C66A136DB0C200E8A7C1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -697,7 +701,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFB9C639136DAA4F00E8A7C1</string>
 		<string>AFB9C5CC136D842B00E8A7C1</string>
 		<string>AFB9C5CD136D842B00E8A7C1</string>
 		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0062_osxSL_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>

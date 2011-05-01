@@ -43,34 +43,31 @@ void drawing::init(){
 	blobColor.r = 116;
 	blobColor.g= 80;
 	blobColor.b =116;
-	currentSound = (files[(int)ofRandom(0, files.size())]);
-
-
-	sample.loadSound("1.wav", false);
-	sample.setVolume(1.);
-	
+	currentSound = (files[(int)ofRandom(0, files.size())]);	
 	numFiles = files.size();
-	targetPos.x = ofGetWidth()/2;
-	targetPos.y = ofGetHeight()/2;
-	
-	transparency = 0;
-	explode = false;
-	usingMouseInput=false;
-	_x = 100;
-	_y = 100;
+
+	start();
 	
 }
+//--------------------------------------------------------------
 
 void drawing::start()
 {
+	sample.loadSound("1.wav", false);
+	sample.setVolume(1.);
 	targetPos.x = ofGetWidth()/2;
-	targetPos.y = ofGetHeight()/2;
-	
+	_y = targetPos.y = ofGetHeight()/2;
+	_x = 100;	
 	transparency = 0;
 	explode = false;
 	usingMouseInput=false;
-	_x = 100;
-	_y = 100;
+	ofEnableAlphaBlending();
+	for (int i=0;i<LOWPASS;i++)
+	{
+		smoothPos[i].x=_x;
+		smoothPos[i].y=_y;
+	}
+
 	//blobColor = AppSettings::color1;
 //	crossColor = AppSettings::color2;
 //	backgroundColor =AppSettings::color3;
@@ -85,7 +82,7 @@ void drawing::update(){
 	if (!usingMouseInput)
 	{
 		
-			colorImg.setFromPixels(video->getPixels(), 320,240);
+		colorImg.setFromPixels(video->getPixels(), 320,240);
 		 grayImage = colorImg;
 
 		
@@ -102,23 +99,19 @@ void drawing::update(){
 		{
 			
 			lastBlobPosition = blobPosition;
+			float tmp_x, tmp_y;
 			if (_x<ofGetWidth()/2)
-			{
-				_x = blobPosition.x = ofGetWidth()-contourFinder.blobs[0].boundingRect.x*ofGetWidth()/320;
-				
-			}
+				tmp_x = blobPosition.x = ofGetWidth()-contourFinder.blobs[0].boundingRect.x*ofGetWidth()/320;
 			else
-				_x = blobPosition.x = ofGetWidth()-(contourFinder.blobs[0].boundingRect.x+contourFinder.blobs[0].boundingRect.width)*ofGetWidth()/320;
+				tmp_x = blobPosition.x = ofGetWidth()-(contourFinder.blobs[0].boundingRect.x+contourFinder.blobs[0].boundingRect.width)*ofGetWidth()/320;
 			
-			_y = blobPosition.y = contourFinder.blobs[0].boundingRect.y*ofGetHeight()/240;
+			tmp_y = blobPosition.y = contourFinder.blobs[0].boundingRect.y*ofGetHeight()/240;
 				
 			indexSmoothPos = (indexSmoothPos+1)%LOWPASS;
 			
-			smoothPos[indexSmoothPos].x = _x;
-			smoothPos[indexSmoothPos].y = _y;
-			
-			float tmp_x, tmp_y;
-			tmp_x = tmp_y =0;
+			smoothPos[indexSmoothPos].x = tmp_x;
+			smoothPos[indexSmoothPos].y = tmp_y;
+
 			for (int i = 0 ; i<LOWPASS ; i++)
 			{
 				tmp_x+=smoothPos[i].x;
@@ -137,9 +130,10 @@ void drawing::update(){
 		
 		transparency = 180;
 		
-		if(sample.getIsPlaying()==false){
-			sample.play();
-		}
+		sample.play();
+//		if(sample.getIsPlaying()==true){
+//			sample.
+//		}
 		
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
@@ -282,17 +276,23 @@ void drawing::mouseDragged(int x, int y, int button){
 	//cout << "speed " << speed << endl;
 	float newwidth = MAX(0.5,1/speed);
 	
+	indexSmoothPos = (indexSmoothPos+1)%LOWPASS;
+	smoothPos[indexSmoothPos].x = x;
+	smoothPos[indexSmoothPos].y = y;
 	_x=x;
 	_y=y;
+	
 	
 	if (ofDist(x, y, targetPos.x, targetPos.y)<80) //Hit the target!
 	{
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
 		currentSound = files[i];
+		sample.loadSound(currentSound, true);
 		//change the position of the target
 		targetPos.x  =(int)ofRandom(0,ofGetWidth());
 		targetPos.y = (int)ofRandom(0, ofGetHeight());
+		explode=true;
 	//	blobColor.b = (int)ofRandom(0,255);
 	}
 	if (speed > 0.1 && speed<1.5)
