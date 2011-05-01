@@ -36,6 +36,7 @@
 
 #ifndef MSAFLUID_USE_OPENCL
 
+#include "AppSettings.h"
 
 #include "ofxMSAFluidDrawer.h"
 #define FLUID_TEXTURE
@@ -291,6 +292,11 @@ void ofxMSAFluidDrawer::drawVectors(float x, float y, float renderWidth, float r
 	glEnable(GL_LINE_SMOOTH);
 	glEnable(GL_BLEND);
 	glLineWidth(0.1);
+	ofColor color1 = AppSettings::color1;
+	color1.r /= 255.f;
+	color1.g /= 255.f;
+	color1.b /= 255.f;
+	ofColor color2 = AppSettings::color2;
 	for (int j=0; j<fh-2; j++ ){
 		for (int i=0; i<fw-2; i++ ){
 			_fluidSolver->getInfoAtCell(i+1, j+1, &vel, NULL);
@@ -307,14 +313,16 @@ void ofxMSAFluidDrawer::drawVectors(float x, float y, float renderWidth, float r
 	#ifndef TARGET_OPENGLES
 					glBegin(GL_LINES);
 
-					glColor4f(0, 0.2, 0.8, 0.0); glVertex2f(i, j);
-					glColor4f(0, 0.2, 0.8, 0.8); glVertex2f(i + vel.x, j + vel.y);
+					glColor4f(color1.r, color1.g, color1.b, 0.0); 
+				glVertex2f(i, j);
+					glColor4f(color1.r, color1.g, color1.b, 0.8); 
+				glVertex2f(i + vel.x, j + vel.y);
 					glEnd();
 
 				
 					float distance = ofDist(i, j, vel.x, vel.y);
 
-					ofSetColor(255, 255, 255, (_fluidSolver->_avgSpeed*10000)*distance);
+					ofSetColor(color2.r, color2.g, color2.b, (_fluidSolver->_avgSpeed*10000)*distance);
 					ofNoFill();
 					ofEllipse(i + vel.x, j + vel.y, 0.5, 0.5);
 				

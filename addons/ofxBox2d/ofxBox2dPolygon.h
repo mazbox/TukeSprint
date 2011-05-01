@@ -347,7 +347,7 @@ public:
 				ofVertex(vertices[i].x, vertices[i].y);
 			}
 			ofEndShape();
-			ofDisableAlphaBlending();
+			//ofDisableAlphaBlending();
 			
 			ofSetColor(0xffffff);
 			ofPoint c = getCenter();
@@ -382,7 +382,7 @@ public:
 				}
 				ofEndShape(true);
 				
-				ofDisableAlphaBlending();
+			//	ofDisableAlphaBlending();
 				
 			}
 			

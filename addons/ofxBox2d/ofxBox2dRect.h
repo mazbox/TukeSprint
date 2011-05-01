@@ -108,7 +108,7 @@ public:
 			ofVertex(verts[i].x*OFX_BOX2D_SCALE, verts[i].y*OFX_BOX2D_SCALE);
 		}
 		ofEndShape(true);	
-		ofDisableAlphaBlending();
+		//ofDisableAlphaBlending();
 	}
 	
 };

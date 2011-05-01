@@ -13,6 +13,7 @@ public:
 	float age;
 	bool alive;
 	static ofImage particle;
+	ofImage *actualImage;
 	//	static ofxControlPanel *gui;
 	static ofColor *color;
 	float maxSize;
@@ -21,7 +22,14 @@ public:
 		if(particle.width==0) {
 			particle.loadImage("resources/particle.png");
 			particle.setAnchorPercent(0.5, 0.5);
+			
 		}
+		if(AppSettings::image!=NULL) {
+			actualImage = AppSettings::image;
+		} else {
+			actualImage = &particle;
+		}
+		
 		alive = true;
 		age = 0;
 		pos.x = x;
@@ -29,7 +37,7 @@ public:
 		speed *= 60;// this is the speed of the particle
 		vel.x = speed*cos(angle);
 		vel.y = speed*sin(angle);
-		maxSize = 60;
+		maxSize = 120;
 		maxAge = 80;
 	}
 	void update() {
@@ -46,6 +54,8 @@ public:
 			radius = 0;
 		}
 		ofSetColor(color->r, color->g, color->b, alpha);
-		particle.draw(pos.x, pos.y, radius, radius);
+		actualImage->setAnchorPercent(0.5, 0.5);
+		actualImage->draw(pos.x, pos.y, radius, radius);
+		actualImage->setAnchorPercent(0, 0);
 	}
 };

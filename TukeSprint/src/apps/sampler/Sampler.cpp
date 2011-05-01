@@ -60,6 +60,9 @@ void Sampler::init(){
 	// 1 num buffers (latency)
 
 
+	controlMutex.lock();
+	sample.loadFromFile("./../sounds/harp.wav");
+	controlMutex.unlock();
 
 
 	//--------- PANEL 1
@@ -103,17 +106,6 @@ void Sampler::update() {
 	lastMaxLevel = currMaxLevel;
 
 
-	int soundIndex = 0; // this is where it chooses the sound
-	if(soundIndex!=lastSound) {
-		printf("loading %s\n", sounds[soundIndex].c_str());
-		string file = "./../sounds/" + sounds[soundIndex];
-		//pthread_mutex_lock(&controlMutex);
-		controlMutex.lock();
-		sample.loadFromFile(file);
-		controlMutex.unlock();
-		//pthread_mutex_unlock(&controlMutex);
-	}
-	lastSound = soundIndex;
 
 	vision.update();
 	for(int i = 0; i < particles.size(); i++) {
@@ -245,7 +237,7 @@ void Sampler::playSound(float volume, float pitch) {
 }
 
 void Sampler::spawnParticle(ofPoint pos, float volume) {
-	int star = 12;
+	int star = 3;
 	for(int i = 0; i < star; i++) {
 		float angle = (float)i/star;
 		angle *= 2*PI;
@@ -341,11 +333,18 @@ int Sampler::valueToNote(float value) {
 	}
 
 
-	return noteNum + 12; // set the pitch here
+	return noteNum + 4; // set the pitch here
 
 }
 
 
 void Sampler::soundChanged() {
-	
+
+	controlMutex.lock();
+	string sndUrl = AppSettings::soundFile;
+	if(sndUrl=="") {
+		sndUrl = "./../sounds/harp.wav";
+	}
+	sample.loadFromFile(sndUrl);
+	controlMutex.unlock();
 }
