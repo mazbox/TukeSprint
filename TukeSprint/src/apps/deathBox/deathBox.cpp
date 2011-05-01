@@ -147,12 +147,12 @@ void deathBox::update() {
 		if(inputLevel>threshold){
 
 			if(contBool==false){
-				customParticles[i]->addAttractionPoint((screenW/2,0,0), 0, 1.0f, 1);
+				//customParticles[i]->addAttractionPoint((screenW/2,0,0), 0, 1.0f, 1);
 				customParticles[i]->addImpulseForce(upDirection.y, upForce.y);
 				//customParticles[i]->addImpulseForce(upDirection.y, inputLevel*10);
 			}
 			if(contBool==true){
-				customParticles[i]->addAttractionPoint((screenW,0,0), 0, 1.0f, 1);
+				//customParticles[i]->addAttractionPoint((screenW,0,0), 0, 1.0f, 1);
 				//customParticles[i]->addAttractionPoint((0,0,0), 0, 1.0f, 1);
 				
 				customParticles[i]->addImpulseForce(upDirection.y, upForce.y);
@@ -255,25 +255,32 @@ void deathBox::keyReleased(int key) {
 
 //--------------------------------------------------------------
 void deathBox::mouseMoved(int x, int y ) {
-	mouseX=x;
-	mouseY=y;
+//	mouseX=x;
+//	mouseY=y;
 }
 
 //--------------------------------------------------------------
 void deathBox::mouseDragged(int x, int y, int button) {
-	mouseX=x;
-	mouseY=y;
+//	mouseX=x;
+//	mouseY=y;
+	
+	for (int i=0; i<customParticles.size(); i++){
+		
+		customParticles[i]->addRepulsionForce(ofPoint(x, y), 150, 5000);
+		
+	}
 }
 
 //--------------------------------------------------------------
 void deathBox::mousePressed(int x, int y, int button) {
 	
 	
-//	for (int i=0; i<customParticles.size(); i++){
-//	
-//		customParticles[i]->addRepulsionForce(ofPoint(x, y), 50, 5000);
-//		
-//	}
+	for (int i=0; i<customParticles.size(); i++){
+		
+		
+		customParticles[i]->addRepulsionForce(ofPoint(x, y), 150, 5000);
+		
+	}
 	
 }
 
