@@ -8,9 +8,22 @@ deathBox::deathBox() {
 
 }
 
+ofColor getRandomColor() {
+	ofColor c1 = AppSettings::color1;
+	ofColor c2 = AppSettings::color2;
+	
+	float mix = ofRandom(0, 1);
+	
+	ofColor out;
+	out.r = c1.r*mix + c2.r*(1.f-mix);
+	out.g = c1.g*mix + c2.g*(1.f-mix);
+	out.b = c1.b*mix + c2.b*(1.f-mix);
+	
+	return out;
+}
 //--------------------------------------------------------------
 void deathBox::init() {
-	
+	AppSettings::addListener(this);
 	
 	colorImg.allocate(320,240);
 	
@@ -306,9 +319,7 @@ void deathBox::generateParticles(int height,int x,int y){
 	p->setRadius();
 	//p.setup(box2d.getWorld(), ofRandom(0,ofGetWidth()),2*(ofGetHeight()/3), r);
 	p->setup(box2d.getWorld(), ofRandom(x,y),height, r);
-	p->color.r = AppSettings::color1.r+ofRandom(20, 100);
-	p->color.g = AppSettings::color1.g;
-	p->color.b = AppSettings::color1.b+ofRandom(150, 255);
+	p->color = getRandomColor();
 	customParticles.push_back(p);
 	
 }
@@ -420,5 +431,12 @@ void deathBox::drawWalls(){
 	ofEndShape();
 	
 	ofPopStyle();
+	
+}
+
+void deathBox::colorChanged() {
+	for(int i = 0; i < customParticles.size(); i++) {
+		customParticles[i]->color = getRandomColor();
+	}
 	
 }
