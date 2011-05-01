@@ -2,9 +2,11 @@
 #include "stdio.h"
 #include "ofxDirList.h"
 #include "AppSettings.h"
+#include "Mutex.h"
 
 
-pthread_mutex_t         controlMutex = PTHREAD_MUTEX_INITIALIZER;
+//pthread_mutex_t         controlMutex = PTHREAD_MUTEX_INITIALIZER;
+Mutex controlMutex;
 
 
 #define PENTATONIC "pentatonic"
@@ -16,12 +18,12 @@ ofImage Particle::particle;
 
 ofColor *Particle::color;
 //--------------------------------------------------------------
-void Sampler::init(){	 
-	
-	
+void Sampler::init(){
+
+
 	movementThreshold = 0.5;
 	Particle::color = &AppSettings::color3;
-	
+
 	recordBufferSize = SAMPLERATE*MAX_RECORD_SECONDS;
 	recordBuffer = new float[recordBufferSize];
 	recordPos = 0;
@@ -29,40 +31,40 @@ void Sampler::init(){
 	inputLevel = 0;
 	playbackSpeed = 1;
 	lastSound = -1;
-	
-	
+
+
 	ofxDirList DIR;
-	
+
 	int numFiles = DIR.listDir("./../sounds");
 	for(int i = 0; i < numFiles; i++) {
 		sounds.push_back(DIR.getName(i));
 	}
-	
-	
+
+
 	// this is the last time that there was a note
 	noteLastTime = -10;
 	lastNote = 0;
-	
-	
+
+
 	scales.push_back(PENTATONIC);
 	scales.push_back(MAJOR);
 	scales.push_back(MINOR);
 	scales.push_back(CHROMATIC);
 
-	
+
 	memset(recordBuffer, 0, recordBufferSize*sizeof(float));
-	// 1 output channels, 
+	// 1 output channels,
 	// 2 input channels
 	// 44100 samples per second
 	// 256 samples per buffer
 	// 1 num buffers (latency)
 
-	
 
-		
+
+
 	//--------- PANEL 1
 
-	
+
 	vision.setup();
 }
 
@@ -70,7 +72,7 @@ void Sampler::init(){
 
 int lastMaxLevel = -1;
 void Sampler::update() {
-	ofBackground(0,0,0);	
+	ofBackground(0,0,0);
 	vision.video = video;
 	// the vision code works out how much average change there is in each of
 	// either vertical or horizontal strips across the screen.
@@ -97,20 +99,22 @@ void Sampler::update() {
 			currMaxLevel = -1;
 		}
 	}
-	
+
 	lastMaxLevel = currMaxLevel;
 
-	
+
 	int soundIndex = 0; // this is where it chooses the sound
 	if(soundIndex!=lastSound) {
 		printf("loading %s\n", sounds[soundIndex].c_str());
 		string file = "./../sounds/" + sounds[soundIndex];
-		pthread_mutex_lock(&controlMutex);
+		//pthread_mutex_lock(&controlMutex);
+		controlMutex.lock();
 		sample.loadFromFile(file);
-		pthread_mutex_unlock(&controlMutex);
+		controlMutex.unlock();
+		//pthread_mutex_unlock(&controlMutex);
 	}
 	lastSound = soundIndex;
-	
+
 	vision.update();
 	for(int i = 0; i < particles.size(); i++) {
 		particles[i].update();
@@ -130,30 +134,30 @@ void Sampler::draw(){
 	// fade out a note
 	if(ofGetElapsedTimef() - noteLastTime < 1.5f) {
 		float alpha = 0.5*ofMap(ofGetElapsedTimef() - noteLastTime, 0, 1.5, 255, 0);
-		
+
 		//if(vision.vertical) {
 		float height = (float) ofGetHeight()/vision.levels.size();
 		//ofRect(0, height*lastNote, ofGetWidth(), height);
-		
+
 		glBegin(GL_QUAD_STRIP);
 		ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b, alpha/2);
 		glVertex2f(0, height*lastNote);
 		glVertex2f(ofGetWidth(), height*lastNote);
-		
+
 		ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b, alpha);
 		glVertex2f(0, height*lastNote+height/2);
 		glVertex2f(ofGetWidth(), height*lastNote + height/2);
-		
+
 		ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b, alpha/2);
 		glVertex2f(0, height*lastNote+height);
 		glVertex2f(ofGetWidth(), height*lastNote + height);
-		
-		glEnd();
-		
-	}
-	
 
-	
+		glEnd();
+
+	}
+
+
+
 
 	ofSetColor(0xFFFFFF);
 
@@ -184,14 +188,14 @@ void Sampler::audioRequested (float * output, int bufferSize, int nChannels) {
 	}
 }
 //--------------------------------------------------------------
-void Sampler::audioReceived 	(float * input, int bufferSize, int nChannels){	
+void Sampler::audioReceived 	(float * input, int bufferSize, int nChannels){
 
 
-	pthread_mutex_lock(&controlMutex);
+	controlMutex.lock();
 	for(int i = 0; i < bufferSize; i++) {
-		
+
 		float inp = input[i*nChannels];
-		
+
 		// do the recording
 		if(recording && recordPos<recordBufferSize) {
 			recordBuffer[recordPos++] = inp;
@@ -203,7 +207,7 @@ void Sampler::audioReceived 	(float * input, int bufferSize, int nChannels){
 			inputLevel *= 0.99995;
 		}
 	}
-	pthread_mutex_unlock(&controlMutex);
+	controlMutex.unlock();
 
 }
 
@@ -223,7 +227,7 @@ void Sampler::playSound(float volume, float pitch) {
 	sample.trigger(volume);
 	noteLastTime = ofGetElapsedTimef();
 	lastNote = vision.levels.size() - pitch*vision.levels.size();
-	
+
 	// do some stuff here
 	ofPoint pos, force;
 	if(vision.getBiggestFlowPoint(&pos, &force)) {
@@ -248,7 +252,7 @@ void Sampler::mousePressed(int x, int y, int button){
 	int note = valueToNote(1.f-((float)y/ofGetHeight()));
 	playbackSpeed = noteToSpeed(note);
 	sample.trigger(1);
-	
+
 }
 
 //--------------------------------------------------------------
@@ -277,26 +281,26 @@ int Sampler::valueToNote(float value) {
 		notesInScale = 12;
 	}
 	int maxOctaves = 2;
-	
+
 	// how many octaves we want
 	value *= maxOctaves;
-	
+
 	// how many notes in the scale
 	value *= notesInScale;
-	
+
 	// this is the position in the scale
 	int noteInScale = floor(value);
-	
+
 	// this is the chromatic position
 	int noteNum = 0;
-	
+
 	// work out the octave offset
 	noteNum = floor(noteInScale/notesInScale)*12;
-	
+
 	// add the note offset
-	
-	
-	
+
+
+
 	if(scales[scale]==PENTATONIC) {
 		switch(noteInScale%notesInScale) {
 			case 0: noteNum += 0;  break;
@@ -329,9 +333,9 @@ int Sampler::valueToNote(float value) {
 	} else if(scales[scale]==CHROMATIC) {
 		noteNum += noteInScale%notesInScale;
 	}
-	
-	
+
+
 	return noteNum + 12; // set the pitch here
-			
+
 }
 
