@@ -192,6 +192,18 @@ GuiToggle *ofxXmlGui::addToggle(string name, string imageUrl, bool &ptr) {
 	t->load();
 	return t;
 }
+
+GuiToggle *ofxXmlGui::addToggle(string name, bool &ptr, string imageUrl, string imageOnUrl, string imageDownUrl) {
+	GuiToggle *t = (GuiToggle*)currPage->add("toggle", name, name);		
+	t->value = &ptr;
+	t->width = controlSize;
+	t->toggleOnUrl = imageOnUrl;
+	t->toggleOffUrl = imageUrl;
+	t->toggleDownUrl = imageDownUrl;
+	t->load();
+	return t;
+}
+
 string optionsToString(vector<string> &options) {
 	string optionsString = "";
 	for(int i = 0; i < options.size(); i++) {
@@ -249,9 +261,17 @@ GuiList *ofxXmlGui::addList(string name, int &value, string options) {
 	return gl;
 }
 
-GuiButton *ofxXmlGui::addButton(string name) {
+GuiButton *ofxXmlGui::addButton(string name, string imageUrl, string imageDownUrl) {
 	GuiButton *button = (GuiButton*)currPage->add("button", name, name);
+	
 	button->width = controlSize;
+	if(imageUrl!="") {
+		button->upImgUrl = imageUrl;
+	}
+	if(imageDownUrl!="") {
+		button->downImgUrl = imageDownUrl;
+	}
+	button->load();
 	return button;
 }
 GuiFloatField *ofxXmlGui::addFloatField(string name, float &value) {

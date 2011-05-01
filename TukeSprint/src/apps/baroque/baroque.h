@@ -40,7 +40,7 @@ public:
 
 	void init();
 	string getName() { return "Baroque Masks"; } 
-	string getScreenshotFileName() { return "icons/test.png"; }
+	string getScreenshotFileName() { return "resources/icons/baroque.png"; }
 	
 	void update();
 	void draw();

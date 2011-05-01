@@ -72,6 +72,7 @@ public:
 	GuiToggle *addToggle(string name, bool &ptr);	
 	
 	GuiToggle *addToggle(string name, string imageUrl, bool &ptr);
+	GuiToggle *addToggle(string name, bool &ptr, string imageUrl, string imageOnUrl, string imageDownUrl);
 	
 	/** Adds a set of buttons that you can switch between */
 	GuiSegmentedControl *addSegmentedControl(string name, int &value, vector<string> &options);
@@ -87,7 +88,7 @@ public:
 	GuiList *addList(string name, int &value, string options);
 	
 	/** Adds a button that you can listen for when its pressed */
-	GuiButton *addButton(string name);	
+	GuiButton *addButton(string name, string imageUrl = "", string imageDownUrl = "");	
 	
 	/** Adds a floating point number display field (not editable) */
 	GuiFloatField *addFloatField(string name, float &value);

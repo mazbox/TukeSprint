@@ -342,7 +342,6 @@
 		EA20C358136C46D60038E922 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenu.cpp; sourceTree = "<group>"; };
 		EA20C35A136C47520038E922 /* InteractiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveObject.h; sourceTree = "<group>"; };
 		EA20C35B136C47520038E922 /* MenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuButton.h; sourceTree = "<group>"; };
-		EA953A9C136C488A0030D789 /* TestTApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTApp.h; sourceTree = "<group>"; };
 		EA953AB5136C49E10030D789 /* ImageCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageCache.cpp; sourceTree = "<group>"; };
 		EA953AB6136C49E10030D789 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		EA953B46136C543B0030D789 /* docgen.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = docgen.py; sourceTree = "<group>"; };
@@ -1014,7 +1013,6 @@
 				EA20C35B136C47520038E922 /* MenuButton.h */,
 				EA20C357136C46D60038E922 /* MainMenu.h */,
 				EA20C358136C46D60038E922 /* MainMenu.cpp */,
-				EA953A9C136C488A0030D789 /* TestTApp.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				EA20C34E136C42D10038E922 /* TukeApp.h */,
 				EA20C34F136C43090038E922 /* AppSettings.h */,

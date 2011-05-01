@@ -10,17 +10,21 @@
 #include "AppSettings.h"
 #include "ColorScheme.h"
 #include "ofxDirList.h"
+#include "ofxCvColorImage.h"
 
 class HelpPane: public GuiListener {
 public:
 	ofTrueTypeFont font;
 	ofTrueTypeFont bigFont;
+	ofImage bg;
+	
 	ofImage logo;
-	void setup(ofVideoGrabber &video) {
+	void setup(ofxCvColorImage &video) {
+		bg.loadImage("resources/guiBackground.png");
 		logo.loadImage("resources/sam.png");
 		logo.setAnchorPercent(0, 1);
 		bigFont.loadFont("resources/Arial Bold.ttf", 32);
-		font.loadFont("resources/Arial Bold.ttf", 22);
+		font.loadFont("resources/Arial.ttf", 19);
 		soundId = 0;
 		imageId = 0;
 		imagePreview.loadImage("resources/no-image.png");
@@ -30,13 +34,15 @@ public:
 	
 		gui.addTitle("Video", font, 0)->position(col1, 160);
 		gui.addDrawable("camera", video)->position(col1, 200)->size(200, 150);
+		gui.addToggle("mirror camera", AppSettings::mirrorCamera, "resources/mirror.png", "resources/mirrorOn.png", "resources/mirrorDown.png")->position(col1, 360);
 		
-		gui.addTitle("Volume", font, 0)->position(col1, 370);
-		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(col1, 390);
 		
-		gui.addTitle("Microphone", font, 0)->position(col1, 480);
-		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1.5)->position(col1, 506);
-		gui.addMeter("Mic level", AppSettings::micLevel)->position(col1, 537);
+		gui.addTitle("Volume", font, 0)->position(col1, 410);
+		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(col1, 430);
+		
+		gui.addTitle("Microphone", font, 0)->position(col1, 500);
+		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1.5)->position(col1, 526);
+		gui.addMeter("Mic level", AppSettings::micLevel)->position(col1, 557);
 		
 		int col2 = 320;
 		
@@ -69,20 +75,21 @@ public:
 		int col4 = col3 + 100;
 		gui.addTitle("Custom Picture", font, 0)->position(col3, 160);
 		gui.addImage("img", imagePreview)->position(col3, 200);
-		gui.addList("image", imageId, imageFiles)->position(col4, 200);
+		gui.addList("image", imageId, imageFiles)->position(col4, 200)->size(284, 167);
 
 		
-		gui.addTitle("Custom Sound", font, 0)->position(col3, 350);
-		gui.addButton("play sound")->position(col3, 380);
-		gui.addList("sound", soundId, soundFiles)->position(col4, 380);
+		gui.addTitle("Custom Sound", font, 0)->position(col3, 450);
+		gui.addButton("play sound", "resources/play.png", "resources/playDown.png")->position(col3, 480);
+		gui.addList("sound", soundId, soundFiles)->position(col4, 480)->size(284, 167);
 
 		
-		gui.addButton("back")->position(700, 720);
+		gui.addButton("back", "resources/back.png", "resources/backDown.png")->position(778, 690);
 		
 		gui.addListener(this);
 	}
 	
 	void listFilesIntoVector(string dir, vector<string> &dest) {
+		dest.push_back("None (default)");
 		ofxDirList DIR;
 		if(dir.find("images")!=-1) {
 			DIR.allowExt("jpeg");
@@ -115,9 +122,17 @@ public:
 		if(control->name=="back") {
 			disable();
 		} else if(control->name=="image") {
-			imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+			if(imageId==0) {
+				imagePreview.loadImage("resources/no-image.png");
+			} else {
+				imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+			}
 		} else if(control->name=="sound") {
-			soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+			if(soundId==0) {
+				
+			} else {
+				soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+			}
 		} else if(control->name=="play sound") {
 			soundPreview.play();
 		}
@@ -161,9 +176,12 @@ public:
 	
 	void draw() {
 		
+		ofFill();
 		// draw background
 		ofSetColor(255, 255, 255);
+		
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());
+		bg.draw(0, 0);
 		logo.draw(0, 768);
 		// draw the highlight
 		ofRectangle rect(colorSchemes[AppSettings::colorScheme]->control->x,

@@ -18,7 +18,7 @@ class Sampler : public TukeApp{
 public:
 	
 	string getName() { return "Air Harp"; } 
-	string getScreenshotFileName() { return "icons/sampler.png"; }
+	string getScreenshotFileName() { return "resources/icons/sampler.png"; }
 	void init();
 	void update();
 	void draw();

@@ -90,7 +90,7 @@ public:
 	deathBox();
 	void init();
 	string getName() { return "The Bubble Box"; } 
-	string getScreenshotFileName() { return "icons/test.png"; }
+	string getScreenshotFileName() { return "resources/icons/bubblebox.png"; }
 
 	void update();
 	void draw();

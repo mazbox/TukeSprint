@@ -15,7 +15,7 @@ class drawing : public TukeApp{
 		void init();
 		void start();
 		string getName() { return "Catch the Sun"; } 
-		string getScreenshotFileName() { return "icons/drawing.png"; }
+		string getScreenshotFileName() { return "resources/icons/drawing.png"; }
 
 		void keyPressed  (int key);
 		void keyReleased(int key);

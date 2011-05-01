@@ -44,8 +44,8 @@ public:
 		fval(value) = 0.5;
 		min = 0;
 		max = 1;
-		bgColor = 0x505050;
-		fgColor = 0x960000;
+		bgColor = 0xFFFFFF;
+		fgColor = 0x0066DD;
 		sliderBGUrl = "";
 		sliderFGUrl = "";
 		sliderHandleUrl = "";
@@ -90,6 +90,8 @@ public:
 			
 			if(vertical) ofRect(x, y+height-height*val, width, height*val);
 			else ofRect(x, y, width*val, height);
+
+		
 		}
 		
 		if(sliderHandle!=NULL) {
@@ -101,6 +103,15 @@ public:
 				sliderHandle->draw(x+val*(width-sliderHandle->getWidth()), y);
 			}
 		}
+		
+		ofSetHexColor(fgColor);
+		if(sliderFG==NULL) {
+			ofNoFill();
+			ofSetHexColor(0);
+			ofRect(x, y, width, height);
+			ofFill();
+		}
+		
 		ofSetColor(255, 255, 255);
 		drawLabel();
 	}
