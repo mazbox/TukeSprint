@@ -61,7 +61,7 @@ void ofxCvHaarFinder::draw( float x, float y ) {
 		ofRect( blobs[i].boundingRect.x, blobs[i].boundingRect.y, 
                 blobs[i].boundingRect.width, blobs[i].boundingRect.height );
 	}
-	ofDisableAlphaBlending();
+	//ofDisableAlphaBlending();
 
 	glPopMatrix();
 }

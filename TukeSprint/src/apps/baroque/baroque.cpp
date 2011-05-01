@@ -533,7 +533,7 @@ void baroque::drawFlash(){
 	ofRect(0,0,ofGetWidth(), ofGetHeight());
 	ofNoFill();
 	
-	ofDisableAlphaBlending();
+	//ofDisableAlphaBlending();
 	
 }
 
@@ -727,7 +727,7 @@ void baroque::drawMasks(bool useOldData){
 		//			ofDrawBitmapString("face "+ofToString(i), blobCX, blobCY);
 		//			drawCross(blobCX, blobCY, 200.f, 200.f);
 	}	
-	ofDisableAlphaBlending();	
+	//ofDisableAlphaBlending();	
 	
 	if(pleaseSaveBackground)
 		saveBackground();

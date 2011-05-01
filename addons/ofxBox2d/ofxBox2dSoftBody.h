@@ -336,7 +336,7 @@ public:
 			p2 *= OFX_BOX2D_SCALE;
 			ofLine(p1.x, p1.y, p2.x, p2.y);	   
 		}
-		ofDisableAlphaBlending();
+		//ofDisableAlphaBlending();
 		
 		
 		center.draw();
