@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision
+END
+b2Distance.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2Distance.cpp
+END
+b2Collision.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2Collision.cpp
+END
+b2PairManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2PairManager.h
+END
+b2BroadPhase.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2BroadPhase.h
+END
+b2CollideCircle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2CollideCircle.cpp
+END
+b2CollidePoly.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2CollidePoly.cpp
+END
+b2Collision.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2Collision.h
+END
+b2TimeOfImpact.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2TimeOfImpact.cpp
+END
+b2PairManager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2PairManager.cpp
+END
+b2BroadPhase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/b2BroadPhase.cpp
+END
