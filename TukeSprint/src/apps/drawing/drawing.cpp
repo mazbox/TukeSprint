@@ -317,7 +317,6 @@ void drawing::mousePressed(int x, int y, int button){
 	currMouse = ofPoint(x,y);
 	current++;
 	usingMouseInput=true;
-
 }
 
 
