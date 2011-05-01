@@ -13,7 +13,7 @@ void baroque::init(){
 	threshold = 80;
 	
 	//lets load in our face xml file
-	haarFinder.setup("haarXML/haarcascade_frontalface_default.xml");
+ 	haarFinder.setup("haarXML/haarcascade_frontalface_default.xml");
 	
 	//randomiseAllPoints();
 	

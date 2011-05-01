@@ -326,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>AFB9C1B6136C61BF00E8A7C1</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>baroque.cpp</string>
+								<string>drawing.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -334,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>AFB9C1B7136C61BF00E8A7C1</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>baroque.cpp</string>
+										<string>drawing.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>AFB9C622136DA8B500E8A7C1</string>
+										<string>AFB9C62A136DAA1500E8A7C1</string>
 										<key>history</key>
 										<array>
 											<string>AFB9C24A136C74EA00E8A7C1</string>
@@ -380,8 +380,8 @@
 											<string>AFB9C5FE136D9E3500E8A7C1</string>
 											<string>AFB9C5FF136D9E3500E8A7C1</string>
 											<string>AFB9C61D136DA8A300E8A7C1</string>
-											<string>AFB9C620136DA8B500E8A7C1</string>
-											<string>AFB9C621136DA8B500E8A7C1</string>
+											<string>AFB9C628136DAA1500E8A7C1</string>
+											<string>AFB9C629136DAA1500E8A7C1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -699,7 +699,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>AFB9C623136DA8B500E8A7C1</string>
 		<string>AFB9C5CC136D842B00E8A7C1</string>
 		<string>AFB9C5CD136D842B00E8A7C1</string>
 		<string>/Users/jean-baptistethiebaut/Documents/tukesprint/of_preRelease_v0062_osxSL_FAT/apps/TukeSprint/TukeSprint/TukeSprint.xcodeproj</string>
