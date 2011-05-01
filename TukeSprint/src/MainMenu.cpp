@@ -8,7 +8,6 @@
 
 #include "MainMenu.h"
 #include "MenuButton.h"
-#include "TestTApp.h"
 #include "testApp.h"
 #include "Sampler.h"
 #include "drawing.h"
@@ -24,8 +23,8 @@ void MainMenu::init() {
 	apps.push_back(new Sampler());
 	apps.push_back(new drawing());
 
-	apps.push_back(new fluid001("Fluid 1", "icons/test.png", 60, 0.00028, 0.00006, 0.003, 15, 3, 0));
-	apps.push_back(new fluid001("Fluid 2", "icons/test.png", 60, 0.00017, 0.00011, 0.006, 14, 0, 0));
+	apps.push_back(new fluid001("Fluid 1", "resources/icons/fluid1.png", 60, 0.00028, 0.00006, 0.003, 15, 3, 0));
+	apps.push_back(new fluid001("Fluid 2", "resources/icons/fluid2.png", 60, 0.00017, 0.00011, 0.006, 14, 0, 0));
 
 
 	apps.push_back(new deathBox());

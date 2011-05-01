@@ -14,7 +14,7 @@ void testApp::setup(){
 	currApp = NULL;
 	showMainMenu();
 	help.setup(colorImg);
-
+	ofBackground(255, 255, 255);
 	ofSoundStreamSetup(2, 1, this, 44100, 1024, 1);
 }
 
