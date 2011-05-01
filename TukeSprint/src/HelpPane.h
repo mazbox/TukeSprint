@@ -35,7 +35,7 @@ public:
 		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(col1, 390);
 		
 		gui.addTitle("Microphone", font, 0)->position(col1, 480);
-		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1)->position(col1, 506);
+		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1.5)->position(col1, 506);
 		gui.addMeter("Mic level", AppSettings::micLevel)->position(col1, 537);
 		
 		int col2 = 320;

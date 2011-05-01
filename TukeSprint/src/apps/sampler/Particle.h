@@ -19,18 +19,18 @@ public:
 	float maxAge;
 	Particle(float x = 0, float y = 0, float speed = 0, float angle = 0) {
 		if(particle.width==0) {
-			particle.loadImage("particle.png");
+			particle.loadImage("resources/particle.png");
 			particle.setAnchorPercent(0.5, 0.5);
 		}
 		alive = true;
 		age = 0;
 		pos.x = x;
 		pos.y = y;
-		speed *= 2;// this is the speed of the particle
+		speed *= 60;// this is the speed of the particle
 		vel.x = speed*cos(angle);
 		vel.y = speed*sin(angle);
-		maxSize = 20;
-		maxAge = 5;
+		maxSize = 60;
+		maxAge = 80;
 	}
 	void update() {
 		age++;

@@ -21,7 +21,7 @@ ofColor *Particle::color;
 void Sampler::init(){
 
 
-	movementThreshold = 0.01;
+	movementThreshold = 0.02;
 	Particle::color = &AppSettings::color3;
 
 	recordBufferSize = SAMPLERATE*MAX_RECORD_SECONDS;
@@ -127,8 +127,13 @@ void Sampler::update() {
 
 //--------------------------------------------------------------
 void Sampler::draw(){
+	
+	glPushMatrix();
+
+	float w = ofGetHeight()*320.f/240.f;
+	glTranslatef((ofGetWidth() - w)/2, 0, 0);
+	glScalef(w/(float)ofGetWidth(), 1, 1);
 	ofFill();
-	ofEnableAlphaBlending();
 	vision.draw();
 
 	// fade out a note
@@ -164,7 +169,7 @@ void Sampler::draw(){
 	for(int i = 0; i < particles.size(); i++) {
 		particles[i].draw();
 	}
-	ofDisableAlphaBlending();
+	glPopMatrix();
 	//gui.draw();
 }
 

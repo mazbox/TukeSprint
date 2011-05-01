@@ -132,7 +132,7 @@ public:
 		//flow.draw(0, 0, ofGetWidth(), ofGetHeight());
 		// additive blending
 		ofEnableAlphaBlending();
-		ofSetColor(255, 255, 255, 150);
+		ofSetColor(255, 255, 255, 220);
 		camImg.draw(0, 0, ofGetWidth(), ofGetHeight());
 		glBlendFunc(GL_ONE, GL_ONE);
 		
