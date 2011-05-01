@@ -9,11 +9,11 @@ void testApp::setup(){
 	ofSetFrameRate(30);
 	ofEnableAlphaBlending();
 	video.initGrabber(320, 240);
-	
+	colorImg.allocate(320, 240);
 	mainMenu.init();
 	currApp = NULL;
 	showMainMenu();
-	help.setup(video);
+	help.setup(colorImg);
 
 	ofSoundStreamSetup(2, 1, this, 44100, 1024, 1);
 }
@@ -39,7 +39,10 @@ void testApp::showHelp() {
 void testApp::update() {
 	video.grabFrame();
 	if(currApp!=NULL) {
+		colorImg.setFromPixels(video.getPixels(), 320, 240);
+		colorImg.mirror(false, AppSettings::mirrorCamera);
 		currApp->video = &video;
+		
 		currApp->update();
 	}
 }

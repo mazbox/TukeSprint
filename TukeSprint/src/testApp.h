@@ -7,6 +7,7 @@
 #include "MainMenu.h"
 #include "TukeApp.h"
 #include "HelpPane.h"
+#include "ofxCvColorImage.h"
 
 class testApp : public ofBaseApp{
 
@@ -34,6 +35,7 @@ public:
 private:
 	HelpPane help;
 	ofVideoGrabber video;
+	ofxCvColorImage colorImg;
 	static testApp *instance;
 	// for storing the last 4 keys pressed.
 	deque<int> keyQueue;

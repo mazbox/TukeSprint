@@ -60,7 +60,7 @@ public:
 		
 		if(down) ofSetHexColor(0xFFFFFF);
 		else ofSetHexColor(0);
-		resources->getDefaultFont()->drawString(name, x+3, y+14);
+		//resources->getDefaultFont()->drawString(name, x+3, y+14);
 	}
 	
 	
