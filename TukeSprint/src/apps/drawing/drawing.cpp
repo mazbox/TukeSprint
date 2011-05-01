@@ -68,6 +68,8 @@ void drawing::start()
 		smoothPos[i].y=_y;
 	}
 
+	pulsatingCircle=35;
+	
 	//blobColor = AppSettings::color1;
 //	crossColor = AppSettings::color2;
 //	backgroundColor =AppSettings::color3;
@@ -124,7 +126,7 @@ void drawing::update(){
 		}
 	}
 
-	if (!explode && ofDist(_x, _y, targetPos.x, targetPos.y)<80) //Hit the target!
+	if (!explode && ofDistSquared(_x, _y, targetPos.x, targetPos.y)<=pulsatingCircle) //Hit the target!
 	{
 		explode = true;
 		explosionTimer = ofGetElapsedTimeMillis();
@@ -135,6 +137,9 @@ void drawing::update(){
 		currentSound = files[i];
 		sample.loadSound(currentSound, false);
 		sample.play();
+		for (int j = 0;j<30;j++)
+			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-4,4),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
+
 //		if(sample.getIsPlaying()==true){
 //			sample.
 //		}
@@ -159,7 +164,7 @@ void drawing::update(){
 			float xacc = ofSign(blobPosition.x-lastBlobPosition.x)*(pow(abs((int)(_x-lastBlobPosition.x)),0.3));
 			float yacc = ofSign(blobPosition.y-lastBlobPosition.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
 		//	cout << "xacc, yacc " << xacc << " " << yacc << endl;
-			blobs.push_back(blob(_x,_y,xacc,yacc,BLOB_SIZE+(int)(10/(speed)), currentSound, blobColor));
+		//	blobs.push_back(blob(_x,_y,xacc,yacc,BLOB_SIZE+(int)(10/(speed)), currentSound, blobColor));
 		}
 	
 	}
@@ -180,10 +185,14 @@ void drawing::draw(){
 //	ofSetColor(blobColor.r,blobColor.g,blobColor.b,80);
 	ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b,80);
 	float variation = sin(ofGetElapsedTimeMillis()/5*PI/360);
-	//draw the cross
-	ofRect(_x-30, _y-75, 30, 120);
-	ofRect(_x-75, _y-30, 120, 30);
-
+	//draw the image
+	if (AppSettings::image)
+		AppSettings::image->draw(_x,_y);
+	else
+	{
+		ofRect(_x-30, _y-75, 30, 120);
+		ofRect(_x-75, _y-30, 120, 30);
+	}
 	ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
 //	ofSetColor(200, 200, 0, transparency);
 	ofRect(0, 0, ofGetWidth(), ofGetHeight());
@@ -206,7 +215,8 @@ void drawing::draw(){
 		ofCircle(targetPos.x, targetPos.y, 35);
 		//ofSetColor(200, 200, 0,80);
 		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
-		ofCircle(targetPos.x,targetPos.y,55+20*cos(ofGetElapsedTimeMillis()/5*PI/360));
+		pulsatingCircle=55+20*cos(ofGetElapsedTimeMillis()/5*PI/360);
+		ofCircle(targetPos.x,targetPos.y,pulsatingCircle);
 	}
 	else
 	{
@@ -284,25 +294,22 @@ void drawing::mouseDragged(int x, int y, int button){
 	_y=y;
 	
 	
-	if (ofDist(x, y, targetPos.x, targetPos.y)<80) //Hit the target!
+	if (ofDistSquared(x, y, targetPos.x, targetPos.y)<pulsatingCircle) //Hit the target!
 	{
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
 		currentSound = files[i];
 		sample.loadSound(currentSound, false);
+
+		for (int j = 0;j<30;j++)
+			blobs.push_back(blob(targetPos.x,targetPos.y,ofRandom(-4,4),ofRandom(-4,4),BLOB_SIZE, currentSound, blobColor));
+
 		//change the position of the target
 		targetPos.x  =(int)ofRandom(0,ofGetWidth());
 		targetPos.y = (int)ofRandom(0, ofGetHeight());
 		explode=true;
-	//	blobColor.b = (int)ofRandom(0,255);
-	}
-	if (speed > 0.1 && speed<1.5)
-	{
-		float xacc = ofSign(x-prevMouse.x)*(pow(abs((int)(_x-lastBlobPosition.x)),0.3));
-		float yacc = ofSign(y-prevMouse.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
 		
-		blobs.push_back(blob(x,y,xacc,yacc,BLOB_SIZE, currentSound,AppSettings::color1));
-		
+		blobColor.b = (int)ofRandom(0,255);
 	}
 }
 
