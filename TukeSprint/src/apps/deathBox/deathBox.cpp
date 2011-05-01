@@ -1,6 +1,7 @@
 #include "AppSettings.h"
 #include "deathBox.h"
 #include "stdio.h"
+#include "AppSettings.h"
 
 //--------------------------------------------------------------
 deathBox::deathBox() {	
@@ -10,6 +11,9 @@ deathBox::deathBox() {
 //--------------------------------------------------------------
 void deathBox::init() {
 	
+	
+	colorImg.allocate(320,240);
+	
 	//a counter and bool for timing explosion animations
 	counter=0;
 	
@@ -17,8 +21,8 @@ void deathBox::init() {
 	contCounter=0;
 	
 	myBool=false;
-	contBool=false;
-	//contBool=true;
+	//contBool=false;
+	contBool=true;
 
 	
 	cutoff = 1000.f;
@@ -91,33 +95,14 @@ void deathBox::init() {
 }
 
 //--------------------------------------------------------------
-/*
- void deathBox::eventsIn(guiCallbackData & data){
-	
-	//lets send all events to our logger
-	if( data.groupName != "events logger"){
-		string logStr = data.groupName;
-		
-		if( data.fVal.size() ){
-			for(int i = 0; i < data.fVal.size(); i++) logStr += " - "+ofToString(data.fVal[i], 4);
-		}
-		if( data.iVal.size() ){
-			for(int i = 0; i < data.iVal.size(); i++) logStr += " - "+ofToString(data.iVal[i]);
-		}	
-		if( data.sVal.size() ){
-			for(int i = 0; i < data.sVal.size(); i++) logStr += " - "+data.sVal[i];
-		}
-		
-		logger.log(OF_LOG_NOTICE, "event - %s", logStr.c_str());
-	}
-	startTime=0;
-}
-*/
+
 
 //--------------------------------------------------------------
 void deathBox::update() {
 		
-	ofBackground(red_colour, green_colour, blue_colour);
+	ofBackground(0, 0, 0);
+	
+	colorImg.setFromPixels(video->getPixels(), 320, 240);
 	
 	box2d.update();
 	
@@ -134,7 +119,7 @@ void deathBox::update() {
 		if(contCounter<500){
 			generateParticles(screenH-80,screenW/3,screenW-(screenW/3));
 			contCounter++;
-			cout<<contCounter<<" contCounter \n";
+			//cout<<contCounter<<" contCounter \n";
 			
 		}
 		drawContainer();
@@ -152,6 +137,7 @@ void deathBox::update() {
 	filter.calc_filter_coeffs(1,cutoff,2,0,false);
 	
 	threshold = AppSettings::micLevel;
+	
 	
 	for (int i=0; i<customParticles.size(); i++){
 		
@@ -181,6 +167,11 @@ void deathBox::draw() {
 	//if(gui.getValueI("DIFF_MODE")!=0){
 	//	images[gui.getValueI("DIFF_MODE")-1].draw(screenW/3,screenH/2, screenW/3,screenH/2);
 	//}
+	
+	ofPushStyle();
+	colorImg.draw(screenW/3, screenH/2, screenW/3, screenH/2);
+	ofPopStyle();
+	
 	
 	for(int i=0; i<customParticles.size(); i++) {
 		customParticles[i]->draw();
@@ -215,6 +206,7 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 		
 		//get max value from buffer
 		float value = MAX(ABS(input[i*2]),ABS(input[i*2+1]));
+		
 		if(inputLevel<value) inputLevel = value;
 		
 		//if its not peaking reduce level by a bit
@@ -289,9 +281,9 @@ void deathBox::generateParticles(int height,int x,int y){
 	p->setRadius();
 	//p.setup(box2d.getWorld(), ofRandom(0,ofGetWidth()),2*(ofGetHeight()/3), r);
 	p->setup(box2d.getWorld(), ofRandom(x,y),height, r);
-	p->color.r = ofRandom(20, 100);
-	p->color.g = 0;
-	p->color.b = ofRandom(150, 255);
+	p->color.r = AppSettings::color1.r+ofRandom(20, 100);
+	p->color.g = AppSettings::color1.g;
+	p->color.b = AppSettings::color1.b+ofRandom(150, 255);
 	customParticles.push_back(p);
 	
 }
