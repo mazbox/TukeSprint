@@ -930,7 +930,7 @@
 	"GuiButton.h"
 	"StringUtils.h"
 
-1304266065 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guibutton.h
+1304272865 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guibutton.h
 	"GuiControl.h"
 
 1304266065 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\controls\basic\guilist.h
@@ -2399,12 +2399,13 @@
 	<string>
 	<iostream>
 
-1304267101 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.h
+1304272865 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\baroque.h
 	"TukeApp.h"
 	"ofxOpenCv.h"
 	"ofxCvHaarFinder.h"
 	"ofxXmlSettings.h"
 	"ofImageAdv.h"
+	"AppSettings.h"
 
 1304252509 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.h
 	"ofMain.h"
