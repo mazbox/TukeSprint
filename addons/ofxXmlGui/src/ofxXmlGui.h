@@ -41,6 +41,7 @@ public:
 	GuiContainer *addPage(string name);
 	
 	GuiImage *addImage(string name, ofImage &image);
+	GuiImage *addImage(string name, string path);
 	/** show a different page */
 	void setPage(string name);
 	void setPage(int pageNumber);

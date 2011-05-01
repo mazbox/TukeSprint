@@ -24,7 +24,12 @@ GuiImage	*ofxXmlGui::addImage(string name, ofImage &img) {
 	image->img = &img;
 	return image;
 }
-
+GuiImage *ofxXmlGui::addImage(string name, string path) {
+	GuiImage *image = (GuiImage*)currPage->add("image", name, name);
+	image->img = new ofImage();
+	image->img->loadImage(path);
+	return image;
+}
 GuiMeter	*ofxXmlGui::addMeter(string name, float &ptr) {
 	GuiMeter *meter = (GuiMeter*)currPage->add("meter", name, name);
 	meter->value = &ptr;

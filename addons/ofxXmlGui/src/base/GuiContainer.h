@@ -156,8 +156,8 @@ public:
 	
 	int numChildren();
 	
-	
-	
+	int bgColor;	
+	bool drawBackground;
 protected:
 	
 	// adds an actual element to the gui
@@ -170,6 +170,7 @@ protected:
 	ofImage *bg;
 	string bgImgUrl;
 	int layoutType;
+
 	void propagateListeners(GuiListener **listeners, int numListeners);
 private:
 	bool autoSaving;

@@ -20,14 +20,10 @@
 
 void MainMenu::init() {
 
-	apps.push_back(new TestTApp());
+
 	apps.push_back(new Sampler());
 	apps.push_back(new drawing());
 	apps.push_back(new fluid001());
-
-	apps.push_back(new TestTApp());
-	apps.push_back(new Sampler());
-	apps.push_back(new drawing());
 	apps.push_back(new deathBox());
 	
 	int itemsPerRow = 3;
@@ -66,6 +62,7 @@ void MainMenu::init() {
 }
 
 void MainMenu::draw() {
+	glLineWidth(1);
 	ofBackground(255, 255, 255);
 	for(int i = 0; i < items.size(); i++) {
 		items[i]->draw();

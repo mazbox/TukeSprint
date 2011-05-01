@@ -48,6 +48,11 @@ void testApp::draw(){
 	if(currApp!=NULL) {
 		currApp->draw();
 	}
+	
+	if(help.isEnabled()) {
+		ofSetColor(255, 255, 255, 127);
+		ofRect(0, 0, ofGetWidth(), ofGetHeight());
+	}
 }
 
 //--------------------------------------------------------------
@@ -73,6 +78,9 @@ void testApp::checkKeyPresses() {
 		} else if(keyQueue[0]=='m' && keyQueue[1]=='e' 
 				  && keyQueue[2]=='n' && keyQueue[3]=='u') {
 			showMainMenu();
+		} else if(keyQueue[0]=='q' && keyQueue[1]=='u' 
+				  && keyQueue[2]=='i' && keyQueue[3]=='t') {
+			OF_EXIT_APP(0);
 		}
 		//printf("%c %c %c %c\n", keyQueue[0], keyQueue[1], keyQueue[2], keyQueue[3]);
 	}

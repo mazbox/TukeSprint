@@ -23,8 +23,10 @@ GuiContainer::GuiContainer() {
 	resources = &res;
 	bg = NULL;
 	bgImgUrl = "";
+	bgColor = OFXXMLGUI_DEFAULT_BG_COLOR;
 	autoSaving = false;
 	loadedFromFile = false;
+	drawBackground = true;
 }
 /**
  * This points a control's value to the parameter
@@ -202,13 +204,15 @@ void GuiContainer::draw() {
 	ofFill();
 	glPushMatrix();
 	glTranslatef(x, y, 0);
-	if(bg!=NULL) {
-		ofSetHexColor(0xFFFFFF);
-		bg->draw(0, 0);
-	} else {
+	if(drawBackground) {
+		if(bg!=NULL) {
+			ofSetHexColor(0xFFFFFF);
+			bg->draw(0, 0);
+		} else {
 
-		ofSetHexColor(OFXXMLGUI_DEFAULT_BG_COLOR);
-		ofRect(0, 0, width, height);
+			ofSetHexColor(bgColor);
+			ofRect(0, 0, width, height);
+		}
 	}
 	for(int i = 0; i < controls.size(); i++) {
 		if(controls[i]->isContainer()) {

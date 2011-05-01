@@ -18,6 +18,7 @@ public:
 		imageId = 0;
 		imagePreview.loadImage("resources/no-image.png");
 		gui.setup(10, 10, 200);
+		gui.addImage("title", "resources/settings.png");
 		gui.addDrawable("camera", video);
 		gui.addMeter("Mic level", AppSettings::micLevel);
 		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1);
@@ -43,6 +44,7 @@ public:
 		gui.addButton("back");
 		
 		gui.addListener(this);
+		gui.drawBackground = false;
 	}
 	
 	void listFilesIntoVector(string dir, vector<string> &dest) {
