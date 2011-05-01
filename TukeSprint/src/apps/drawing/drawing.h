@@ -60,6 +60,7 @@ class drawing : public TukeApp{
 	ofPoint lastBlobPosition;
 	int indexSmoothPos;
 	ofPoint smoothPos[45];
+	float pulsatingCircle;
 	
 
 	vector<string> files;
