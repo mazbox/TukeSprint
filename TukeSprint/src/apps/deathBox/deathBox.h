@@ -83,11 +83,12 @@ public:
 };
 
 // -------------------------------------------------
-
-class deathBox : public TukeApp {
+#include "AppSettings.h"
+class deathBox : public TukeApp, public AppSettingsListener {
 	
 public:
 	
+	void colorChanged();
 	deathBox();
 	void init();
 	string getName() { return "The Bubble Box"; } 
