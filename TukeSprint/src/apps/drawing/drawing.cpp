@@ -129,15 +129,15 @@ void drawing::update(){
 		explosionTimer = ofGetElapsedTimeMillis();
 		
 		transparency = 180;
-		
+		//change the sound randomly
+		int i = (int)ofRandom(0,files.size());
+		currentSound = files[i];
+		sample.loadSound(currentSound, false);
 		sample.play();
 //		if(sample.getIsPlaying()==true){
 //			sample.
 //		}
 		
-		//change the sound randomly
-		int i = (int)ofRandom(0,files.size());
-		currentSound = files[i];
 		//cout <<numFiles<< " " << i << " sound changed to:" << currentSound << endl;
 		//change the position of the target
 		blobColor.b = (int)ofRandom(40,205);
@@ -288,7 +288,7 @@ void drawing::mouseDragged(int x, int y, int button){
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
 		currentSound = files[i];
-		sample.loadSound(currentSound, true);
+		sample.loadSound(currentSound, false);
 		//change the position of the target
 		targetPos.x  =(int)ofRandom(0,ofGetWidth());
 		targetPos.y = (int)ofRandom(0, ofGetHeight());
