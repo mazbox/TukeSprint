@@ -4,8 +4,9 @@
 
 //--------------------------------------------------------------
 void baroque::init(){
-
-    colorImg.allocate(320,240);
+	AppSettings::addListener(this);
+	sound.loadSound("./../sounds/stringies.wav");
+	colorImg.allocate(320,240);
 	grayImage.allocate(320,240);
 	grayBg.allocate(320,240);
 	grayDiff.allocate(320,240);
@@ -269,6 +270,7 @@ void baroque::update(){
 			timeFirstFace = currentTime;
 			faceTimeElapsed = 0.f;
 			faceFound = true; //then we have some faces, so set faceFound to true
+			sound.play();
 		}
 	}else
 	{
@@ -327,7 +329,8 @@ void baroque::draw(){
 			//we are still in graceperiod, so draw with the old data
 			drawMasks(true);
 		}else{
-			makeRandomMask();			
+			makeRandomMask();
+			
 		}
 
 	}
@@ -734,4 +737,12 @@ void baroque::drawMasks(bool useOldData){
 	
 	if(runFlash)
 		drawFlash();
+}
+
+void baroque::soundChanged() {
+	string sndUrl = AppSettings::soundFile;
+	if(sndUrl=="") {
+		sndUrl = "./../sounds/stringies.wav";
+	}
+	sound.loadSound(sndUrl);
 }

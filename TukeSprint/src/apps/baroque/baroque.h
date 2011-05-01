@@ -33,11 +33,12 @@ struct OldTrackBlob { // for remembering the last frame with a face in it's info
 	ofRectangle rect;
 	ofPoint centroid;
 };
+#include "AppSettings.h"
 
-class baroque : public TukeApp{
+class baroque : public TukeApp, public AppSettingsListener {
 
 public:
-
+	void soundChanged();
 	void init();
 	string getName() { return "Baroque Masks"; } 
 	string getScreenshotFileName() { return "resources/icons/baroque.png"; }
@@ -113,5 +114,6 @@ private:
 	float flashTimeRemaining; //flash time remaining
 	float lastFrameTime;
 	float deltaFromLastFrame;
+	ofSoundPlayer sound;
 };
 
