@@ -12,8 +12,9 @@
 #include "Particle.h"
 
 #include "TukeApp.h"
+#include "AppSettings.h"
 
-class Sampler : public TukeApp{
+class Sampler : public TukeApp, public AppSettingsListener {
 	
 public:
 	
@@ -23,6 +24,7 @@ public:
 	void update();
 	void draw();
 
+	void soundChanged();
 
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);

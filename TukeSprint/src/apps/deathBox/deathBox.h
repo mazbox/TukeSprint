@@ -25,6 +25,7 @@ class CustomParticle : public ofxBox2dCircle {
 	
 public:
 	CustomParticle() {
+		
 	}
 
 	ofColor color;

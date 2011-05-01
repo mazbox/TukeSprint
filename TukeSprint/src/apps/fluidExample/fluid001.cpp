@@ -156,8 +156,7 @@ void fluid001::setupOCV(){
 void fluid001::updateOCV(){
 
    		colorImg.setFromPixels(video->getPixels(), VISION_WIDTH, VISION_HEIGHT);
-
-		colorImg.mirror(false, true);
+		colorImg.mirror(false, AppSettings::mirrorCamera);
 		grayImage = colorImg;
 
 		flow.calc(grayLast, grayImage, 7);

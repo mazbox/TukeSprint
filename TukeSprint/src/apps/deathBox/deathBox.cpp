@@ -103,7 +103,7 @@ void deathBox::update() {
 	ofBackground(0, 0, 0);
 	
 	colorImg.setFromPixels(video->getPixels(), 320, 240);
-	
+	colorImg.mirror(false, AppSettings::mirrorCamera);
 	box2d.update();
 	
 	//generateParticles(820);
@@ -204,7 +204,7 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 	float max = 0;
 	float maxFiltered = 0;
 	
-	printf("audio");
+	//printf("audio");
 	
 	// samples are "interleaved"
 	for (int i = 0; i < bufferSize; i++){
@@ -226,7 +226,7 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 		
 	}
 	
-	printf("%f\n", inputLevel);
+	//printf("%f\n", inputLevel);
 	bufferCounter++;
 	
 }
@@ -342,7 +342,7 @@ void deathBox::popOnHighFreq(){
 	if(ofGetFrameNum()>30){
 		if(filteredInputLevel>filterThreshold){
 			myBool=true;
-			cout<<filteredInputLevel<<"FILTERED \n";		
+			//cout<<filteredInputLevel<<"FILTERED \n";		
 		}
 		
 		
