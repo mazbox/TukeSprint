@@ -88,9 +88,9 @@ void deathBox::init() {
 	upDirection.x = 20;
 	upDirection.y = 20;
 	upForce.x = 20;
-	upForce.y = 10;
+	upForce.y = 150;
 	
-	threshold=0.27;
+	threshold=0.1;
 	
 }
 
@@ -136,7 +136,10 @@ void deathBox::update() {
 	
 	filter.calc_filter_coeffs(1,cutoff,2,0,false);
 	
-	threshold = AppSettings::micLevel;
+	//threshold = 0.2;//AppSettings::micLevel;
+
+	
+	//cout << inputLevel << "    " << threshold << endl;
 	
 	
 	for (int i=0; i<customParticles.size(); i++){
@@ -200,22 +203,30 @@ void deathBox::audioReceived (float * input, int bufferSize, int nChannels){
 	
 	float max = 0;
 	float maxFiltered = 0;
-
+	
+	printf("audio");
+	
 	// samples are "interleaved"
 	for (int i = 0; i < bufferSize; i++){
 		
 		//get max value from buffer
-		float value = MAX(ABS(input[i*2]),ABS(input[i*2+1]));
+		float value = ABS(input[i*nChannels])*50.0;
 		
 		if(inputLevel<value) inputLevel = value;
 		
 		//if its not peaking reduce level by a bit
 		else inputLevel *= 0.9995;
 		
-		float filteredOutput = filter.filter((input[i*2]+input[i*2+1])*0.5);
+		float filteredOutput = filter.filter((input[i*nChannels]));
+		
 		if(filteredInputLevel<filteredOutput) filteredInputLevel = filteredOutput;
+		
 		else filteredInputLevel *= 0.9995;
+		
+		
 	}
+	
+	printf("%f\n", inputLevel);
 	bufferCounter++;
 	
 }
@@ -277,6 +288,7 @@ void deathBox::generateParticles(int height,int x,int y){
 	CustomParticle *p = new CustomParticle();
 	//p.setPhysics(0.4, 0.53, 0.31);
 	p->setPhysics(10.9, 0.53, 0);
+	
 	
 	p->setRadius();
 	//p.setup(box2d.getWorld(), ofRandom(0,ofGetWidth()),2*(ofGetHeight()/3), r);
