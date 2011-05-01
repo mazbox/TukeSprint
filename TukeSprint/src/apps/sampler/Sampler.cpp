@@ -18,7 +18,7 @@ ofColor *Particle::color;
 //--------------------------------------------------------------
 void Sampler::init(){	 
 	
-	ofBackground(0,0,0);	
+	
 	movementThreshold = 0.5;
 	Particle::color = &AppSettings::color3;
 	
@@ -70,6 +70,7 @@ void Sampler::init(){
 
 int lastMaxLevel = -1;
 void Sampler::update() {
+	ofBackground(0,0,0);	
 	vision.video = video;
 	// the vision code works out how much average change there is in each of
 	// either vertical or horizontal strips across the screen.

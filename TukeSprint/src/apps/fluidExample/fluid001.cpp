@@ -1,4 +1,4 @@
-#include "fluid001.h"
+ #include "fluid001.h"
 #include "ParticleMemo.h"
 #include "msaColor.h"
 #include "ParticleSystem.h"
@@ -60,6 +60,7 @@ void fluid001::init() {
    	fluidSolver.enableRGB(true).setFadeSpeed(0.006).setDeltaT(0.5).setVisc(0.00017).setColorDiffusion(0.00011);
 	fluidDrawer.setup(&fluidSolver);
 	
+
 	windowResized(ofGetWidth(), ofGetHeight());
 
 }

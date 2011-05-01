@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes
+END
+b2EdgeShape.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2EdgeShape.h
+END
+b2PolygonShape.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2PolygonShape.h
+END
+b2Shape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2Shape.cpp
+END
+b2CircleShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2CircleShape.cpp
+END
+b2EdgeShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2EdgeShape.cpp
+END
+b2Shape.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2Shape.h
+END
+b2CircleShape.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2CircleShape.h
+END
+b2PolygonShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/20/trunk/of_preRelease_v0061_osx_FAT/addons/ofxBox2d/src/lib/Box2D/Source/Collision/Shapes/b2PolygonShape.cpp
+END
