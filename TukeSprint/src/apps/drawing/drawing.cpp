@@ -32,7 +32,7 @@ void drawing::init(){
 //	
 	for(int i = 0; i < numFiles; i++){
 		files.push_back( DIR.getPath(i));
-		printf("name is %s - path is %s \n", DIR.getName(i).c_str(), DIR.getPath(i).c_str() );
+		//printf("name is %s - path is %s \n", DIR.getName(i).c_str(), DIR.getPath(i).c_str() );
 	}
 		
 	if (numFiles==0)

@@ -81,7 +81,7 @@ void baroque::init(){
 		
 		//now for all the faces, load in all their strokes
 		//now lets load in the XML if it exists
-		cout << "loading: " << faces[i].XMLLocation << endl;
+		//cout << "loading: " << faces[i].XMLLocation << endl;
 		
 		//we load our settings file
 		if( XML.loadFile(faces[i].XMLLocation) ){

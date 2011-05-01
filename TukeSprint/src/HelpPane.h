@@ -16,8 +16,11 @@ class HelpPane: public GuiListener {
 public:
 	ofTrueTypeFont font;
 	ofTrueTypeFont bigFont;
+	ofImage bg;
+	
 	ofImage logo;
 	void setup(ofxCvColorImage &video) {
+		bg.loadImage("resources/guiBackground.png");
 		logo.loadImage("resources/sam.png");
 		logo.setAnchorPercent(0, 1);
 		bigFont.loadFont("resources/Arial Bold.ttf", 32);
@@ -86,6 +89,7 @@ public:
 	}
 	
 	void listFilesIntoVector(string dir, vector<string> &dest) {
+		dest.push_back("None (default)");
 		ofxDirList DIR;
 		if(dir.find("images")!=-1) {
 			DIR.allowExt("jpeg");
@@ -118,9 +122,17 @@ public:
 		if(control->name=="back") {
 			disable();
 		} else if(control->name=="image") {
-			imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+			if(imageId==0) {
+				imagePreview.loadImage("resources/no-image.png");
+			} else {
+				imagePreview.loadImage(string("./../images/")+imageFiles[imageId]);
+			}
 		} else if(control->name=="sound") {
-			soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+			if(soundId==0) {
+				
+			} else {
+				soundPreview.loadSound(string("./../sounds/")+soundFiles[soundId]);
+			}
 		} else if(control->name=="play sound") {
 			soundPreview.play();
 		}
@@ -167,7 +179,9 @@ public:
 		ofFill();
 		// draw background
 		ofSetColor(255, 255, 255);
+		
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());
+		bg.draw(0, 0);
 		logo.draw(0, 768);
 		// draw the highlight
 		ofRectangle rect(colorSchemes[AppSettings::colorScheme]->control->x,
