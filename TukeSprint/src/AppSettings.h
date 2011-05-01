@@ -17,6 +17,7 @@ public:
 	static ofColor color3;
 	
 	static float micVolume;
+	static float outputVolume;
 
 	static float micLevel;
 	// the default image of any imagery
@@ -24,4 +25,5 @@ public:
 	
 	// is the camera available
 	static bool cameraAvailable;
+	static bool mirrorCamera;
 };

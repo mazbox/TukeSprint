@@ -48,6 +48,7 @@ public:
 	void nextPage();
 	void prevPage();
 	
+	GuiTitle *addTitle(string writing, ofTrueTypeFont &font, int color = 0xFFFFFF);
 	GuiTitle *addTitle(string label);
 	
 	/** add an ofBaseDraws to the gui */
