@@ -48,6 +48,7 @@ public:
 	void nextPage();
 	void prevPage();
 	
+	GuiTitle *addTitle(string writing, ofTrueTypeFont &font, int color = 0xFFFFFF);
 	GuiTitle *addTitle(string label);
 	
 	/** add an ofBaseDraws to the gui */
@@ -70,6 +71,7 @@ public:
 	/** Toggle button. */
 	GuiToggle *addToggle(string name, bool &ptr);	
 	
+	GuiToggle *addToggle(string name, string imageUrl, bool &ptr);
 	
 	/** Adds a set of buttons that you can switch between */
 	GuiSegmentedControl *addSegmentedControl(string name, int &value, vector<string> &options);

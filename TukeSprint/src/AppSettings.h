@@ -10,13 +10,14 @@
 
 class AppSettings {
 public: 
-	static int colourMode;
+	static int colorScheme;
 	
 	static ofColor color1;
 	static ofColor color2;
 	static ofColor color3;
 	
 	static float micVolume;
+	static float outputVolume;
 
 	static float micLevel;
 	// the default image of any imagery
@@ -24,4 +25,5 @@ public:
 	
 	// is the camera available
 	static bool cameraAvailable;
+	static bool mirrorCamera;
 };

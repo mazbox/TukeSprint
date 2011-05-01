@@ -210,8 +210,8 @@ void GuiContainer::draw() {
 			bg->draw(0, 0);
 		} else {
 
-			ofSetHexColor(bgColor);
-			ofRect(0, 0, width, height);
+			//ofSetHexColor(bgColor);
+			//ofRect(0, 0, width, height);
 		}
 	}
 	for(int i = 0; i < controls.size(); i++) {

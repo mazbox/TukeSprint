@@ -69,7 +69,7 @@ public:
 		float learnSpeed = 0.5;//gui->getValueF("learnSpeed");
 		
 		camImg.setFromPixels(video->getPixels(), VISION_WIDTH, VISION_HEIGHT);
-		
+		camImg.mirror(false, AppSettings::mirrorCamera);
 		greyImg = camImg;
 		blendImage = greyImg;
 		

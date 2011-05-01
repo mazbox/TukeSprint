@@ -51,8 +51,7 @@ void testApp::draw(){
 	}
 	
 	if(help.isEnabled()) {
-		ofSetColor(255, 255, 255, 127);
-		ofRect(0, 0, ofGetWidth(), ofGetHeight());
+		help.draw();
 	}
 }
 
