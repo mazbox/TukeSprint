@@ -21,7 +21,7 @@ ofColor *Particle::color;
 void Sampler::init(){
 
 
-	movementThreshold = 0.5;
+	movementThreshold = 0.02;
 	Particle::color = &AppSettings::color3;
 
 	recordBufferSize = SAMPLERATE*MAX_RECORD_SECONDS;
@@ -127,8 +127,13 @@ void Sampler::update() {
 
 //--------------------------------------------------------------
 void Sampler::draw(){
+	
+	glPushMatrix();
+
+	float w = ofGetHeight()*320.f/240.f;
+	glTranslatef((ofGetWidth() - w)/2, 0, 0);
+	glScalef(w/(float)ofGetWidth(), 1, 1);
 	ofFill();
-	ofEnableAlphaBlending();
 	vision.draw();
 
 	// fade out a note
@@ -164,7 +169,7 @@ void Sampler::draw(){
 	for(int i = 0; i < particles.size(); i++) {
 		particles[i].draw();
 	}
-	ofDisableAlphaBlending();
+	glPopMatrix();
 	//gui.draw();
 }
 
@@ -222,6 +227,7 @@ void Sampler::mouseDragged(int x, int y, int button){
 }
 
 void Sampler::playSound(float volume, float pitch) {
+
 	int note = valueToNote(pitch);
 	playbackSpeed = noteToSpeed(note);
 	sample.trigger(volume);
@@ -249,10 +255,10 @@ void Sampler::spawnParticle(ofPoint pos, float volume) {
 
 //--------------------------------------------------------------
 void Sampler::mousePressed(int x, int y, int button){
-	int note = valueToNote(1.f-((float)y/ofGetHeight()));
+	/*int note = valueToNote(1.f-((float)y/ofGetHeight()));
 	playbackSpeed = noteToSpeed(note);
 	sample.trigger(1);
-
+*/
 }
 
 //--------------------------------------------------------------

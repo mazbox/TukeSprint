@@ -29,16 +29,16 @@ public:
 		gui.addTitle("Settings", bigFont, 0)->position(col1, 85);
 	
 		gui.addTitle("Video", font, 0)->position(col1, 160);
-		gui.addDrawable("camera", video)->position(col1, 195);
+		gui.addDrawable("camera", video)->position(col1, 200)->size(200, 150);
 		
 		gui.addTitle("Volume", font, 0)->position(col1, 370);
 		gui.addSlider("volume", AppSettings::outputVolume, 0, 1)->position(col1, 390);
 		
 		gui.addTitle("Microphone", font, 0)->position(col1, 480);
-		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1)->position(col1, 506);
+		gui.addSlider("microphone volume", AppSettings::micVolume, 0, 1.5)->position(col1, 506);
 		gui.addMeter("Mic level", AppSettings::micLevel)->position(col1, 537);
 		
-		int col2 = 272;
+		int col2 = 320;
 		
 		gui.addTitle("Colour", font, 0)->position(col2, 160);
 		colorSchemes.push_back(new ColorScheme("scheme0", "resources/colourSchemes/Palette1.png", 0x6a0100, 0xc09d4d, 0xfbe7c0));
@@ -68,13 +68,13 @@ public:
 		int col3 = 580;
 		int col4 = col3 + 100;
 		gui.addTitle("Custom Picture", font, 0)->position(col3, 160);
-		gui.addImage("img", imagePreview)->position(col3, 180);
-		gui.addList("image", imageId, imageFiles)->position(col4, 180);
+		gui.addImage("img", imagePreview)->position(col3, 200);
+		gui.addList("image", imageId, imageFiles)->position(col4, 200);
 
 		
-		gui.addTitle("Custom Sound", font, 0)->position(col3, 300);
-		gui.addButton("play sound")->position(col3, 330);
-		gui.addList("sound", soundId, soundFiles)->position(col4, 330);
+		gui.addTitle("Custom Sound", font, 0)->position(col3, 350);
+		gui.addButton("play sound")->position(col3, 380);
+		gui.addList("sound", soundId, soundFiles)->position(col4, 380);
 
 		
 		gui.addButton("back")->position(700, 720);
@@ -164,7 +164,7 @@ public:
 		// draw background
 		ofSetColor(255, 255, 255);
 		ofRect(0, 0, ofGetWidth(), ofGetHeight());
-		logo.draw(0, ofGetHeight());
+		logo.draw(0, 768);
 		// draw the highlight
 		ofRectangle rect(colorSchemes[AppSettings::colorScheme]->control->x,
 		colorSchemes[AppSettings::colorScheme]->control->y,
@@ -176,6 +176,10 @@ public:
 		rect.height += 10;
 		ofSetColor(255, 0, 0);
 		ofRect(rect.x, rect.y, rect.width, rect.height);
+		ofNoFill();
+		ofSetColor(0,0,0);
+		ofRect(0, 0, 1024, 768);
+		ofFill();
 		
 	}
 	bool isEnabled() {
