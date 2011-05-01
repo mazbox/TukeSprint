@@ -40,11 +40,8 @@ void ParticleSystem::updateAndDraw(){
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glVertexPointer(2, GL_FLOAT, 0, posArray);
 
-		
 		glEnableClientState(GL_COLOR_ARRAY);
 		glColorPointer(3, GL_FLOAT, 0, colArray);
-		
-	//	cout << particleType << endl;
 		
 		switch(particleType) {
 				 

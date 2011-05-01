@@ -289,6 +289,7 @@ void ofxMSAFluidDrawer::drawVectors(float x, float y, float renderWidth, float r
 
 	ofPoint vel;
 	glEnable(GL_LINE_SMOOTH);
+	glEnable(GL_BLEND);
 	glLineWidth(0.1);
 	for (int j=0; j<fh-2; j++ ){
 		for (int i=0; i<fw-2; i++ ){
@@ -314,7 +315,7 @@ void ofxMSAFluidDrawer::drawVectors(float x, float y, float renderWidth, float r
 					float distance = ofDist(i, j, vel.x, vel.y);
 
 					ofSetColor(255, 255, 255, (_fluidSolver->_avgSpeed*10000)*distance);
-					//ofNoFill();
+					ofNoFill();
 					ofEllipse(i + vel.x, j + vel.y, 0.5, 0.5);
 				
 	#endif

@@ -13,9 +13,15 @@
 
 class fluid001 : public TukeApp{
 public:
+	
+	fluid001(string N, string icon, int cellsX, float vis, float colorDiff, float colorFade, int solver, int drawMode, int particleType);
+	~fluid001();
+	
 	void init();
-	string getName() { return "Fluid 1"; } 
-	string getScreenshotFileName() { return "icons/test.png"; }
+	
+	string getName() { return Name; } 
+	string getScreenshotFileName() { return iconPath; }
+	
 	void update();
 	void draw();
 	void exit();
@@ -26,10 +32,6 @@ public:
 	void mousePressed(int x, int y, int button);
 	void mouseReleased();
 	void windowResized(int w, int h);
-
-
-	//caontrol all of the ingoing presets
-	void setPresets();
 	
 	
 	//deals with openCV
@@ -39,41 +41,45 @@ public:
 	void addToFluid(float x, float y, float dx, float dy, bool addColor = true, bool addForce = true);
 	void opticalFlowToFluid();
 			
-	int				fluidCellsX;
-	bool				resizeFluid;
-	bool				drawFluid;
-	bool				drawParticles;
-	bool				renderUsingVA;
+	int						fluidCellsX;
+	bool					resizeFluid;
+	bool					drawFluid;
+	bool					drawParticles;
+	bool					renderUsingVA;
 	
 	ofxMSAFluidSolver		fluidSolver;
 	ofxMSAFluidDrawer		fluidDrawer;	
 	
 	ParticleSystem			particleSystem;
 	
-	int				pmouseX, pmouseY;
+	int						pmouseX, pmouseY;
 	
 	ofSoundPlayer 			sample[3];
+	
+	
+	string Name;
+	string iconPath;
 
 	
 	// ----- OPEN CV STUFF
 	ofVideoGrabber 			vidGrabber;
 	ofxCvColorImage			colorImg;
 	
-	ofxCvGrayscaleImage 		grayImage;
-	ofxCvGrayscaleImage 		grayLast;
+	ofxCvGrayscaleImage 	grayImage;
+	ofxCvGrayscaleImage 	grayLast;
 	ofxCvOpticalFlowLK		flow;
 	
 	// cache these for slightly better performance
 	struct {
-		int			width;
-		int			height;
+		int				width;
+		int				height;
 		float			invWidth;
 		float			invHeight;
 		float			aspectRatio;
 		float			aspectRatio2;
 	} window;
 	
-	int mouseX, mouseY;	
+	int					mouseX, mouseY;	
 };
 
 extern fluid001 *myApp;

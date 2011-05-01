@@ -35,9 +35,7 @@ void ParticleMemo::update() {
 	vx = myApp->fluidSolver.u[fluidIndex] * myApp->window.width * mass * FLUID_FORCE + vx * MOMENTUM;
 	vy = myApp->fluidSolver.v[fluidIndex] * myApp->window.height * mass * FLUID_FORCE + vy * MOMENTUM;
 	
-//	color.r = myApp->fluidSolver.r[fluidIndex] + 0.5;
-//	color.g = myApp->fluidSolver.g[fluidIndex] + 0.5;
-//	color.b = myApp->fluidSolver.b[fluidIndex] + 0.5;
+
 	
 	
 	// update position
