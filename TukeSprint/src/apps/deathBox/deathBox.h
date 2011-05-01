@@ -6,6 +6,7 @@
 #include "Filter.h"
 //#include "ofxControlPanel.h"
 #include "ofxDirList.h"
+#include "ofxOpenCv.h"
 
 #define TOPGRAPHICTYPETOPBORDER 40.f
 #define TOPGRAPHICTYPEBOTTOMBORDER 30.f
@@ -88,7 +89,7 @@ public:
 	
 	deathBox();
 	void init();
-	string getName() { return "THE DEATH BOX"; } 
+	string getName() { return "The Bubble Box"; } 
 	string getScreenshotFileName() { return "icons/test.png"; }
 
 	void update();
@@ -175,6 +176,9 @@ public:
 	float 					threshold;
 	float 					filterThreshold;
 	int 					startTime;
+	
+	
+	ofxCvColorImage		colorImg;
 	
 	
 	
