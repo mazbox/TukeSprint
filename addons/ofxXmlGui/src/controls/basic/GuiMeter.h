@@ -137,7 +137,7 @@ public:
 		
 		maskOff();
 		ofSetColor(255, 255, 255);
-		resources->getDefaultFont()->drawString(name, x, y);
+		//resources->getDefaultFont()->drawString(name, x, y);
 	}
 	
 	

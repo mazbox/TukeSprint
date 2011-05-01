@@ -112,8 +112,9 @@ public:
 			} else {
 				resources->getDefaultFont()->drawString(name + "   " + ofToString(fval(value), 3), x, y);
 			}
-		} else {
 			resources->getDefaultFont()->drawString(name, x, y);
+		} else {
+			
 		}
 	}
 	

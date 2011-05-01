@@ -182,6 +182,15 @@ GuiToggle *ofxXmlGui::addToggle(string name, bool &ptr) {
 	return slider;
 }
 
+GuiToggle *ofxXmlGui::addToggle(string name, string imageUrl, bool &ptr) {
+	GuiToggle *t = (GuiToggle*)currPage->add("toggle", name, name);		
+	t->value = &ptr;
+	t->width = controlSize;
+	t->toggleOnUrl = imageUrl;
+	t->toggleOffUrl = imageUrl;
+	t->load();
+	return t;
+}
 string optionsToString(vector<string> &options) {
 	string optionsString = "";
 	for(int i = 0; i < options.size(); i++) {
