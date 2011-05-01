@@ -7,6 +7,7 @@ void testApp::setup(){
 	instance = this;
 	
 	ofSetFrameRate(30);
+	ofEnableAlphaBlending();
 	video.initGrabber(320, 240);
 	
 	mainMenu.init();

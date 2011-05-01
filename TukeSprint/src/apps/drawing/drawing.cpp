@@ -1,5 +1,5 @@
 #include "drawing.h"
-
+#include "AppSettings.h"
 
 //--------------------------------------------------------------
 void drawing::init(){
@@ -44,7 +44,11 @@ void drawing::init(){
 	blobColor.g= 80;
 	blobColor.b =116;
 	currentSound = (files[(int)ofRandom(0, files.size())]);
-	printf("files size: %d\n",files.size());
+
+
+	sample.loadSound("1.wav", false);
+	sample.setVolume(1.);
+	
 	numFiles = files.size();
 	targetPos.x = ofGetWidth()/2;
 	targetPos.y = ofGetHeight()/2;
@@ -52,8 +56,26 @@ void drawing::init(){
 	transparency = 0;
 	explode = false;
 	usingMouseInput=false;
+	_x = 100;
+	_y = 100;
+	
 }
 
+void drawing::start()
+{
+	targetPos.x = ofGetWidth()/2;
+	targetPos.y = ofGetHeight()/2;
+	
+	transparency = 0;
+	explode = false;
+	usingMouseInput=false;
+	_x = 100;
+	_y = 100;
+	//blobColor = AppSettings::color1;
+//	crossColor = AppSettings::color2;
+//	backgroundColor =AppSettings::color3;
+
+}
 //--------------------------------------------------------------
 void drawing::update(){
 	// update the sound playing system:
@@ -114,6 +136,11 @@ void drawing::update(){
 		explosionTimer = ofGetElapsedTimeMillis();
 		
 		transparency = 180;
+		
+		if(sample.getIsPlaying()==false){
+			sample.play();
+		}
+		
 		//change the sound randomly
 		int i = (int)ofRandom(0,files.size());
 		currentSound = files[i];
@@ -129,10 +156,7 @@ void drawing::update(){
 		ofPoint lastPos = smoothPos[(indexSmoothPos+LOWPASS+1)%LOWPASS];
 		float dist  = ofDist(_x, _y, lastPos.x,lastPos.y);
 		
-
 		float speed = powf(dist/time,0.3);
-
-		
 		float newwidth = MAX(0.5,1/speed);
 
 		if (speed > 0.1 && speed < 1.5)
@@ -141,7 +165,6 @@ void drawing::update(){
 			float yacc = ofSign(blobPosition.y-lastBlobPosition.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
 		//	cout << "xacc, yacc " << xacc << " " << yacc << endl;
 			blobs.push_back(blob(_x,_y,xacc,yacc,BLOB_SIZE+(int)(10/(speed)), currentSound, blobColor));
-			cout << xacc << " " << yacc <<" speed "<< speed << endl;
 		}
 	
 	}
@@ -158,49 +181,16 @@ void drawing::update(){
 void drawing::draw(){
 	
 	transparency = MAX(transparency-5,0);
-#ifdef DEBUG
-	ofSetColor(0xffffff);
-	colorImg.draw(20,20);
-	grayImage.draw(360,20);
-	grayBg.draw(20,280);
-	grayDiff.draw(360,280);
-	
-	// then draw the contours:
-	
-	ofFill();
-	ofSetColor(0x333333);
-	ofRect(360,540,320,240);
-	ofSetColor(0xffffff);
-	
-	// we could draw the whole contour finder
-	contourFinder.draw(360,540);
-	
-	// or, instead we can draw each blob individually,
-	// this is how to get access to them:
-    for (int i = 0; i < contourFinder.nBlobs; i++){
-        contourFinder.blobs[i].draw(360,540);
-    }
-	
-	// finally, a report:
-	
-	ofSetColor(0x000000);
-	char reportStr[1024];
-	sprintf(reportStr, "bg subtraction and blob detection\npress ' ' to capture bg\nthreshold %i (press: +/-)\nnum blobs found %i, fps: %f", threshold, contourFinder.nBlobs, ofGetFrameRate());
-	ofDrawBitmapString(reportStr, 20, 400);
-	
-#endif
-	
-//	ofSetColor(30, 30, 190,80); 
-	ofSetColor(blobColor.r,blobColor.g,blobColor.b,80);
+	ofBackground(AppSettings::color3.r, AppSettings::color3.g, AppSettings::color3.b);
+//	ofSetColor(blobColor.r,blobColor.g,blobColor.b,80);
+	ofSetColor(AppSettings::color1.r, AppSettings::color1.g, AppSettings::color1.b,80);
 	float variation = sin(ofGetElapsedTimeMillis()/5*PI/360);
 	//draw the cross
 	ofRect(_x-30, _y-75, 30, 120);
 	ofRect(_x-75, _y-30, 120, 30);
-	
-//	ofRect(0, _y-30,ofGetWidth(),30);
-	
-	//ofBackground(200, 200, 0, transparency);
-	ofSetColor(200, 200, 0, transparency);
+
+	ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
+//	ofSetColor(200, 200, 0, transparency);
 	ofRect(0, 0, ofGetWidth(), ofGetHeight());
 	for (int i = 0 ; i<blobs.size() ; i++)
 	{
@@ -216,9 +206,11 @@ void drawing::draw(){
  
 	if (!explode)
 	{
-		ofSetColor(200, 200, 0,140);
+		//ofSetColor(200, 200, 0,140);
+		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,140);
 		ofCircle(targetPos.x, targetPos.y, 35);
-		ofSetColor(200, 200, 0,80);
+		//ofSetColor(200, 200, 0,80);
+		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
 		ofCircle(targetPos.x,targetPos.y,55+20*cos(ofGetElapsedTimeMillis()/5*PI/360));
 	}
 	else
@@ -232,13 +224,14 @@ void drawing::draw(){
 		else //draw the explosion animation
 		{
 			float variation = (ofGetElapsedTimeMillis()-explosionTimer)/2500.;
-			cout << "time elapsed" << variation;
-			ofSetColor(200, 200, 0,140);
+			//ofSetColor(200, 200, 0,140);
+			ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,140);
 			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x), targetPos.y, 15);
 			ofCircle(targetPos.x+variation*(-targetPos.x), targetPos.y, 15);
 			ofCircle(targetPos.x, targetPos.y+variation*(ofGetHeight()-targetPos.y), 15);
 			ofCircle(targetPos.x, targetPos.y+variation*(-targetPos.y), 15);
-			ofSetColor(200, 200, 0,80);
+			//ofSetColor(200, 200, 0,80);
+			ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b,80);
 			ofCircle(targetPos.x+variation*(ofGetWidth()-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
 			ofCircle(targetPos.x+variation*(-targetPos.x),targetPos.y,25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
 			ofCircle(targetPos.x,targetPos.y+variation*(ofGetHeight()-targetPos.y),25+10*cos(ofGetElapsedTimeMillis()/5*PI/360));			
@@ -300,13 +293,14 @@ void drawing::mouseDragged(int x, int y, int button){
 		//change the position of the target
 		targetPos.x  =(int)ofRandom(0,ofGetWidth());
 		targetPos.y = (int)ofRandom(0, ofGetHeight());
-		blobColor.b = (int)ofRandom(0,255);
+	//	blobColor.b = (int)ofRandom(0,255);
 	}
 	if (speed > 0.1 && speed<1.5)
 	{
 		float xacc = ofSign(x-prevMouse.x)*(pow(abs((int)(_x-lastBlobPosition.x)),0.3));
 		float yacc = ofSign(y-prevMouse.y)*(pow(abs((int)(_y-lastBlobPosition.y)),0.3));
-		blobs.push_back(blob(x,y,xacc,yacc,BLOB_SIZE, currentSound,blobColor));
+		
+		blobs.push_back(blob(x,y,xacc,yacc,BLOB_SIZE, currentSound,AppSettings::color1));
 		
 	}
 }
@@ -324,6 +318,8 @@ void drawing::mousePressed(int x, int y, int button){
 void drawing::mouseReleased(int x, int y, int button){
 	prevMouse = currMouse;
 	currMouse = ofPoint(x,y);
+	_x=x;
+	_y=y;
 	usingMouseInput=false;
 }
 
