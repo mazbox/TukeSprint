@@ -13,6 +13,7 @@
 #include "Sampler.h"
 #include "drawing.h"
 #include "fluid001.h"
+#include "deathBox.h"
 
 void MainMenu::init() {
 
@@ -20,6 +21,7 @@ void MainMenu::init() {
 	apps.push_back(new Sampler());
 	apps.push_back(new drawing());
 	apps.push_back(new fluid001());
+	apps.push_back(new deathBox());
 	
 	int itemsPerRow = 3;
 	int PADDING = 10;

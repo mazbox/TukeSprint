@@ -25,10 +25,8 @@ void fluid001::init() {
 	
 	//set presets for how the aplication will look - this is all that will change in the different versions
 	setPresets();
-	
-	window.aspectRatio	= 1;
-	window.width = ofGetWidth();
-	window.height = ofGetHeight();
+
+	windowResized(ofGetWidth(),ofGetHeight());
 }
 
 //--------------------------------------------------------------
