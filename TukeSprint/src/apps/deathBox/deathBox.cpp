@@ -269,6 +269,12 @@ void deathBox::mouseDragged(int x, int y, int button) {
 void deathBox::mousePressed(int x, int y, int button) {
 	
 	
+//	for (int i=0; i<customParticles.size(); i++){
+//	
+//		customParticles[i]->addRepulsionForce(ofPoint(x, y), 50, 5000);
+//		
+//	}
+	
 }
 
 //--------------------------------------------------------------
