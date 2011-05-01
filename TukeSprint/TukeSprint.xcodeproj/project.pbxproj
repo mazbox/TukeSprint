@@ -1535,9 +1535,7 @@
 				AFB9C26E136C75CA00E8A7C1 /* fluid001.cpp in Sources */,
 				AFB9C293136C77B100E8A7C1 /* ofxMSAFluidDrawer.cpp in Sources */,
 				AFB9C294136C77B100E8A7C1 /* ofxMSAFluidSolver.cpp in Sources */,
-<<<<<<< HEAD
 				EA953FB1136D66B50030D789 /* MenuButton.cpp in Sources */,
-=======
 				AFB9C394136D5B5200E8A7C1 /* deathBox.cpp in Sources */,
 				AFB9C3A7136D5E4C00E8A7C1 /* ofxMatrix3x3.cpp in Sources */,
 				AFB9C3A8136D5E4C00E8A7C1 /* ofxMatrix4x4.cpp in Sources */,
@@ -1584,7 +1582,6 @@
 				AFB9C43B136D5F6F00E8A7C1 /* b2PulleyJoint.cpp in Sources */,
 				AFB9C43C136D5F6F00E8A7C1 /* b2RevoluteJoint.cpp in Sources */,
 				AFB9C43D136D5F6F00E8A7C1 /* ofxBox2d.cpp in Sources */,
->>>>>>> 160a2b80f98added5f8bced911f059452c2d5d00
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
