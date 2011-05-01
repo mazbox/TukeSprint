@@ -62,16 +62,11 @@ void drawing::update(){
 	//OpenCV stuff
 	if (!usingMouseInput)
 	{
-		bool bNewFrame = false;	
-		video->grabFrame();
-		bNewFrame = video->isFrameNew();
 		
-		if (bNewFrame){
-
 			colorImg.setFromPixels(video->getPixels(), 320,240);
 		 grayImage = colorImg;
 
-		}
+		
 		 
 		// take the abs value of the difference between background and incoming and then threshold:
 		grayDiff.absDiff(grayBg, grayImage);
