@@ -1099,7 +1099,7 @@
 
 1304249782 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxxmlgui\src\base\parameterinfo.h
 
-1304252501 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.cpp
+1304259649 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\mainmenu.cpp
 	"MainMenu.h"
 	"MenuButton.h"
 	"TestTApp.h"
@@ -1156,7 +1156,7 @@
 1304249779 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\drawing\blob.h
 	"ofMain.h"
 
-1304249780 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.h
+1304260020 c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\fluidexample\fluid001.h
 	"TukeApp.h"
 	"ofxMSAFluid.h"
 	"ParticleSystem.h"
@@ -2420,4 +2420,11 @@
 
 1304252509 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\tukesprint\src\apps\baroque\ofxcvhaarfinder\ofxcvhaarfinder.cpp
 	"ofxCvHaarFinder.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluiddrawer.cpp
+	"ofxMSAFluidDrawer.h"
+
+1304249782 source:c:\openframeworks\of_prerelease_v0062_win_cb_fat\apps\tukesprint\addons\ofxmsafluid\src\ofxmsafluidsolver.cpp
+	"math/rand.h"
+	"ofxMSAFluidSolver.h"
 

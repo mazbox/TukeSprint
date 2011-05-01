@@ -64,7 +64,6 @@ public:
 	
 	void update() {
 
-			
 
 		float learnSpeed = 0.5;//gui->getValueF("learnSpeed");
 		
@@ -87,6 +86,7 @@ public:
 		//vertical = gui->getValueB("vertical");
 		unsigned char *pixels = diffImg.getPixels();
 		for(int i = 0; i < numLevels; i++) {
+
 			ofRectangle rect;
 			//if(vertical) {
 				rect.x = 0;
@@ -100,6 +100,7 @@ public:
 			//	rect.x = rect.width*i;
 			//}
 			float value = getAveragePixelValueInRect(pixels, &rect);
+
 			levels.push_back(value);
 		}
 		
@@ -132,7 +133,7 @@ public:
 		// additive blending
 		ofEnableAlphaBlending();
 		ofSetColor(255, 255, 255, 150);
-		video->draw(0, 0, ofGetWidth(), ofGetHeight());
+		camImg.draw(0, 0, ofGetWidth(), ofGetHeight());
 		glBlendFunc(GL_ONE, GL_ONE);
 		
 		ofSetColor(AppSettings::color2.r, AppSettings::color2.g, AppSettings::color2.b);

@@ -13,6 +13,7 @@ class drawing : public TukeApp{
 		void update();
 		void draw();
 		void init();
+		void start();
 		string getName() { return "Catch the Sun"; } 
 		string getScreenshotFileName() { return "icons/drawing.png"; }
 
@@ -43,6 +44,8 @@ class drawing : public TukeApp{
 	
 	ofxCvContourFinder 	contourFinder;
 	
+	ofSoundPlayer sample;
+	
 	ofPoint targetPos;
 	bool explode;
 	bool usingMouseInput;
@@ -62,6 +65,8 @@ class drawing : public TukeApp{
 	vector<string> files;
 	string currentSound;
 	ofColor blobColor;
+	ofColor crossColor;
+	ofColor backgroundColor;
 	
 	int numFiles;
 	int transparency;

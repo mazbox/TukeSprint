@@ -31,7 +31,7 @@ void MainMenu::init() {
 	apps.push_back(new deathBox());
 	apps.push_back(new baroque());
 
-	
+
 	int itemsPerRow = 3;
 	int ITEM_PADDING = 20;
 	int SCREEN_PADDING = 50;
@@ -39,21 +39,21 @@ void MainMenu::init() {
 	float buttonHeight = ((float)(ofGetHeight() - 2*ITEM_PADDING - 2*SCREEN_PADDING))/3.f;
 	for(int i = 0; i < apps.size(); i++) {
 		apps[i]->init();
-		
+
 		MenuButton *appButton = new MenuButton();
 
 
 		appButton->setup(apps[i]->getName(), ofPoint(), apps[i]->getScreenshotFileName());
 		appButton->setListener(this);
-		
+
 		items.push_back(appButton);
-		
+
 		int row = i%itemsPerRow;
 		int col = i/itemsPerRow;
-		
+
 		items[i]->width = buttonWidth;
 		items[i]->height = buttonHeight;
-		
+
 		items[i]->x = SCREEN_PADDING + row*(items[i]->width + ITEM_PADDING);
 		items[i]->y = SCREEN_PADDING + col*(items[i]->height + ITEM_PADDING);
 	}
@@ -90,7 +90,7 @@ void MainMenu::draw() {
 			rolledOverItem = NULL;
 		}
 	}
-	
+
 	if(rolledOverItem!=NULL) {
 		ofSetColor(0, 0, 0, 100*boxAlpha);
 		ofRect(0, 0, ofGetWidth(), rolledOverItem->y);
@@ -108,14 +108,14 @@ void MainMenu::drawBoxAroundItem(InteractiveObject *item) {
 		rollingOverItem = true;
 		rolledOverItem = item;
 	}
-	
+
 }
 /** mouse events */
-void MainMenu::mouseMoved(int x, int y ) { 
+void MainMenu::mouseMoved(int x, int y ) {
 	for(int i = 0; i < items.size(); i++) {
 		items[i]->touchOver(x, y);
 	}
-	
+
 	for(int i = 0; i < items.size(); i++) {
 		if(items[i]->inside(x, y)) {
 			drawBoxAroundItem(items[i]);
@@ -123,15 +123,15 @@ void MainMenu::mouseMoved(int x, int y ) {
 		}
 	}
 	drawBoxAroundItem(NULL);
-	
-	
+
+
 }
-void MainMenu::mouseDragged(int x, int y, int button) { 
+void MainMenu::mouseDragged(int x, int y, int button) {
 	for(int i = 0; i < items.size(); i++) {
 		items[i]->touchMoved(x, y, button);
 	}
 }
-void MainMenu::mousePressed(int x, int y, int button) { 
+void MainMenu::mousePressed(int x, int y, int button) {
 	for(int i = 0; i < items.size(); i++) {
 		items[i]->touchDown(x, y, button);
 	}

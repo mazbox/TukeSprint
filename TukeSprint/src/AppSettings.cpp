@@ -8,6 +8,7 @@
 
 
 #include "AppSettings.h"
+int AppSettings::colorScheme = 0;
 ofColor AppSettings::color1;
 ofColor AppSettings::color2;
 ofColor AppSettings::color3;

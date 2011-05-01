@@ -10,7 +10,7 @@
 
 class AppSettings {
 public: 
-	static int colourMode;
+	static int colorScheme;
 	
 	static ofColor color1;
 	static ofColor color2;

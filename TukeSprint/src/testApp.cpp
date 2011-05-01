@@ -7,6 +7,7 @@ void testApp::setup(){
 	instance = this;
 	
 	ofSetFrameRate(30);
+	ofEnableAlphaBlending();
 	video.initGrabber(320, 240);
 	
 	mainMenu.init();
@@ -144,5 +145,15 @@ void testApp::audioReceived( float * input, int bufferSize, int nChannels ) {
 
 }
 void testApp::audioRequested( float * output, int bufferSize, int nChannels ) {
-
+	if(currApp!=NULL) {
+		currApp->audioRequested(output, bufferSize, nChannels);
+		float vol = AppSettings::outputVolume;
+		for(int i = 0; i < bufferSize*nChannels; i++) {
+			output[i] *= vol;
+		}
+	} else {
+		for(int i = 0; i < bufferSize*nChannels; i++) {
+			output[i] = 0;
+		}
+	}
 }

@@ -21,7 +21,7 @@ ofColor *Particle::color;
 void Sampler::init(){
 
 
-	movementThreshold = 0.5;
+	movementThreshold = 0.01;
 	Particle::color = &AppSettings::color3;
 
 	recordBufferSize = SAMPLERATE*MAX_RECORD_SECONDS;
@@ -222,6 +222,7 @@ void Sampler::mouseDragged(int x, int y, int button){
 }
 
 void Sampler::playSound(float volume, float pitch) {
+
 	int note = valueToNote(pitch);
 	playbackSpeed = noteToSpeed(note);
 	sample.trigger(volume);
@@ -249,10 +250,10 @@ void Sampler::spawnParticle(ofPoint pos, float volume) {
 
 //--------------------------------------------------------------
 void Sampler::mousePressed(int x, int y, int button){
-	int note = valueToNote(1.f-((float)y/ofGetHeight()));
+	/*int note = valueToNote(1.f-((float)y/ofGetHeight()));
 	playbackSpeed = noteToSpeed(note);
 	sample.trigger(1);
-
+*/
 }
 
 //--------------------------------------------------------------
