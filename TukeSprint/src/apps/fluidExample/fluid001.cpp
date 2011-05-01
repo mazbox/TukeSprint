@@ -54,6 +54,10 @@ void fluid001::init() {
 	sample[1].loadSound("2.wav", false);
 	sample[2].loadSound("3.wav", false);
 	
+	
+	windowResized(ofGetWidth(), ofGetHeight());
+	
+	
 	// setup fluid stuff
 	fluidSolver.setup(100, 100);
 	
@@ -61,7 +65,7 @@ void fluid001::init() {
 	fluidDrawer.setup(&fluidSolver);
 	
 
-	windowResized(ofGetWidth(), ofGetHeight());
+	
 
 }
 
@@ -183,6 +187,8 @@ void fluid001::opticalFlowToFluid() {
 }
 //--------------------------------------------------------------
 void fluid001::update(){
+	
+	ofBackground(0, 0, 0);
 
 	updateOCV();
 	
