@@ -22,7 +22,7 @@ void drawing::init(){
 	threshold = 40;
 	
 	
-	LOWPASS = 45; //must be the same as the size of the array smoothPos
+	LOWPASS = 25; //must be the same as the size of the array smoothPos
 
 	ofxDirList DIR;
 	DIR.allowExt("aif");
@@ -74,6 +74,13 @@ void drawing::start()
 
 }
 //--------------------------------------------------------------
+void drawing::stop()
+{
+	sample.stop();
+	for (int i=0;i<blobs.size();i++)
+		blobs.erase(blobs.begin());
+}
+//--------------------------------------------------------------
 void drawing::update(){
 	// update the sound playing system:
 	ofSoundUpdate();
@@ -84,10 +91,8 @@ void drawing::update(){
 		
 		colorImg.setFromPixels(video->getPixels(), 320,240);
 		colorImg.mirror(false, !(AppSettings::mirrorCamera));
-		 grayImage = colorImg;
+		grayImage = colorImg;
 
-		
-		 
 		// take the abs value of the difference between background and incoming and then threshold:
 		grayDiff.absDiff(grayBg, grayImage);
 		grayDiff.threshold(threshold);
@@ -246,6 +251,7 @@ void drawing::keyPressed(int key){
 			if (threshold < 0) threshold = 0;
 			break;
 	}
+
 }
 
 //--------------------------------------------------------------

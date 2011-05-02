@@ -15,6 +15,8 @@ class drawing : public TukeApp, public AppSettingsListener{
 		void draw();
 		void init();
 		void start();
+		void stop();
+	
 		void colorChanged() { blobColor=AppSettings::color1; crossColor=AppSettings::color2; backgroundColor=AppSettings::color3;};
 		void imageChanged() {selImage=AppSettings::image;};
 		string getName() { return "Catch the Sun"; } 
@@ -62,7 +64,7 @@ class drawing : public TukeApp, public AppSettingsListener{
 	ofPoint blobPosition;
 	ofPoint lastBlobPosition;
 	int indexSmoothPos;
-	ofPoint smoothPos[45];
+	ofPoint smoothPos[25];
 	float pulsatingCircle;
 	
 
