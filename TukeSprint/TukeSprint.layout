@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="debug" />
+	<ActiveTarget name="release" />
 	<File name="src\MainMenu.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="748" topLine="12" />
+		<Cursor position="748" topLine="2" />
+	</File>
+	<File name="src\MainMenu.h" open="0" top="0" tabpos="0">
+		<Cursor position="543" topLine="15" />
 	</File>
 	<File name="src\TukeApp.h" open="0" top="0" tabpos="2">
-		<Cursor position="350" topLine="3" />
+		<Cursor position="743" topLine="30" />
 	</File>
 	<File name="src\apps\deathBox\deathBox.h" open="0" top="0" tabpos="0">
 		<Cursor position="66" topLine="0" />
@@ -43,8 +46,14 @@
 	<File name="src\apps\sampler\WavFile.h" open="0" top="0" tabpos="0">
 		<Cursor position="4706" topLine="173" />
 	</File>
-	<File name="src\testApp.h" open="0" top="0" tabpos="0">
-		<Cursor position="118" topLine="0" />
+	<File name="src\main.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="src\testApp.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="373" topLine="2" />
+	</File>
+	<File name="src\testApp.h" open="1" top="0" tabpos="2">
+		<Cursor position="118" topLine="33" />
 	</File>
 	<File name="..\addons\ofxXmlGui\src\base\GuiControl.h" open="0" top="0" tabpos="0">
 		<Cursor position="500" topLine="22" />

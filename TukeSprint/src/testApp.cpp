@@ -5,10 +5,13 @@ testApp *testApp::instance = NULL;
 //--------------------------------------------------------------
 void testApp::setup(){
 	instance = this;
-	
+
 	ofSetFrameRate(30);
 	ofEnableAlphaBlending();
-	video.initGrabber(320, 240);
+	if(!video.initGrabber(320, 240)){
+        ofLog(OF_LOG_FATAL_ERROR, "No webcam found, quitting before things get too tough.");
+        OF_EXIT_APP(0);
+    }
 	colorImg.allocate(320, 240);
 	mainMenu.init();
 	currApp = NULL;
@@ -22,7 +25,7 @@ void testApp::setup(){
 void testApp::showMainMenu() {
 	if(currApp!=NULL) {
 		currApp->stop();
-	} 
+	}
 	launchTukeApp(&mainMenu);
 }
 
@@ -42,7 +45,7 @@ void testApp::update() {
 		colorImg.setFromPixels(video.getPixels(), 320, 240);
 		colorImg.mirror(false, AppSettings::mirrorCamera);
 		currApp->video = &video;
-		
+
 		currApp->update();
 	}
 }
@@ -52,7 +55,7 @@ void testApp::draw(){
 	if(currApp!=NULL) {
 		currApp->draw();
 	}
-	
+
 	if(help.isEnabled()) {
 		help.draw();
 	}
@@ -75,13 +78,13 @@ void testApp::keyPressed(int key){
 
 void testApp::checkKeyPresses() {
 	if(keyQueue.size()==4) {
-		if(keyQueue[0]=='h' && keyQueue[1]=='e' 
+		if(keyQueue[0]=='h' && keyQueue[1]=='e'
 		   && keyQueue[2]=='l' && keyQueue[3]=='p') {
 			showHelp();
-		} else if(keyQueue[0]=='m' && keyQueue[1]=='e' 
+		} else if(keyQueue[0]=='m' && keyQueue[1]=='e'
 				  && keyQueue[2]=='n' && keyQueue[3]=='u') {
 			showMainMenu();
-		} else if(keyQueue[0]=='q' && keyQueue[1]=='u' 
+		} else if(keyQueue[0]=='q' && keyQueue[1]=='u'
 				  && keyQueue[2]=='i' && keyQueue[3]=='t') {
 			OF_EXIT_APP(0);
 		}
@@ -141,7 +144,7 @@ void testApp::audioReceived( float * input, int bufferSize, int nChannels ) {
 	}
 	if(max>AppSettings::micLevel) AppSettings::micLevel = max;
 	else AppSettings::micLevel *= 0.95;
-	
+
 	if(currApp!=NULL) {
 		currApp->audioReceived(input, bufferSize, nChannels);
 	}
